@@ -15,7 +15,7 @@ export function DashboardMockup() {
             <div className="w-3 h-3 rounded-full bg-amber-400"></div>
             <div className="w-3 h-3 rounded-full bg-green-400"></div>
           </div>
-          <div className="flex bg-white px-10 sm:px-24 py-1.5 rounded-md border border-slate-200 shadow-sm">
+          <div className="flex bg-white px-4 sm:px-24 py-1.5 rounded-md border border-slate-200 shadow-sm">
              <div className="text-xs font-mono text-slate-400 flex items-center gap-2">
                <ShieldCheck className="w-3 h-3 text-slate-400" />
                matrixvault.app
@@ -30,8 +30,8 @@ export function DashboardMockup() {
         {/* Mockup Body */}
         <div className="p-6 bg-slate-50/50 grid gap-6">
           {/* Top Stat Pills */}
-          <div className="grid grid-cols-3 gap-4">
-            <motion.div whileHover={{ y: -2 }} className="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4">
+            <motion.div whileHover={{ y: -2 }} className="bg-white rounded-xl p-3 sm:p-4 border border-slate-200 shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-[10px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider">Pending</span>
                 <div className="p-1.5 bg-blue-50 text-blue-600 rounded-md">
@@ -40,7 +40,7 @@ export function DashboardMockup() {
               </div>
               <div className="text-2xl sm:text-3xl font-extrabold text-slate-900">124</div>
             </motion.div>
-            <motion.div whileHover={{ y: -2 }} className="bg-white rounded-xl p-4 border border-red-200 shadow-sm shadow-red-100 relative overflow-hidden">
+            <motion.div whileHover={{ y: -2 }} className="bg-white rounded-xl p-3 sm:p-4 border border-red-200 shadow-sm shadow-red-100 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-full blur-xl -mr-10 -mt-10"></div>
               <div className="flex items-center justify-between mb-3 relative">
                 <span className="text-[10px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider">Active FFs</span>
@@ -50,7 +50,7 @@ export function DashboardMockup() {
               </div>
               <div className="text-2xl sm:text-3xl font-extrabold text-red-600 relative">18</div>
             </motion.div>
-            <motion.div whileHover={{ y: -2 }} className="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
+            <motion.div whileHover={{ y: -2 }} className="bg-white rounded-xl p-3 sm:p-4 border border-slate-200 shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-[10px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider">Escalations</span>
                 <div className="p-1.5 bg-amber-50 text-amber-600 rounded-md">

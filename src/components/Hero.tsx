@@ -4,12 +4,12 @@ import { DashboardMockup } from './DashboardMockup';
 
 export function Hero() {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
+    <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-32 overflow-hidden bg-slate-50">
       {/* Background patterns */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-50"></div>
-        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-red-100 rounded-full blur-[120px] mix-blend-multiply opacity-70"></div>
-        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-blue-50 rounded-full blur-[100px] mix-blend-multiply opacity-60"></div>
+        <div className="absolute top-0 right-1/4 w-64 h-64 md:w-[600px] md:h-[600px] bg-red-100 rounded-full blur-[80px] md:blur-[120px] mix-blend-multiply opacity-70"></div>
+        <div className="absolute bottom-0 left-1/4 w-64 h-64 md:w-[500px] md:h-[500px] bg-blue-50 rounded-full blur-[60px] md:blur-[100px] mix-blend-multiply opacity-60"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

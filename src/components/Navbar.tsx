@@ -45,7 +45,7 @@ export function Navbar() {
         <motion.div 
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white border-b border-slate-200"
+          className="md:hidden bg-white border-b border-slate-200 max-h-[calc(100vh-80px)] overflow-y-auto"
         >
           <div className="px-4 pt-2 pb-6 space-y-4 shadow-xl">
             <a href="#features" className="block text-base font-semibold text-slate-600 hover:text-red-600">Features</a>

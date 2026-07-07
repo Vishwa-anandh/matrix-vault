@@ -55,7 +55,7 @@ export function Integrations() {
               className="relative rounded-3xl shadow-2xl border-4 border-white object-cover h-[500px] w-full"
             />
             {/* Floating badge */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4">
+            <div className="absolute -bottom-6 left-4 sm:-left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4">
                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center">
                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" alt="SAP" className="w-8" />
                </div>
