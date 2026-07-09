@@ -6,12 +6,15 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
+import { Comparison } from './components/Comparison';
+import { RoleSimulator } from './components/RoleSimulator';
+import { AIRiskSpotlight } from './components/AIRiskSpotlight';
+import { UnifiedAudit } from './components/UnifiedAudit';
+import { SolutionsByPersona } from './components/SolutionsByPersona';
 import { Integrations } from './components/Integrations';
 import { HowItWorks } from './components/HowItWorks';
 import { SecurityTrust } from './components/SecurityTrust';
-import { Certifications } from './components/Certifications';
 import { Testimonials } from './components/Testimonials';
-import { ROICalculator } from './components/ROICalculator';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -23,11 +26,14 @@ export default function App() {
       <main>
         <Hero />
         <Features />
+        <Comparison />
+        <RoleSimulator />
+        <AIRiskSpotlight />
+        <UnifiedAudit />
+        <SolutionsByPersona />
         <Integrations />
         <HowItWorks />
         <SecurityTrust />
-        <Certifications />
-        <ROICalculator />
         <Testimonials />
         <FAQ />
       </main>

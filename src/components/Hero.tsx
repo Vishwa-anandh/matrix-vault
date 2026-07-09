@@ -71,19 +71,7 @@ export function Hero() {
                     Trusted by <span className="text-slate-900 font-bold">500+</span> teams
                   </div>
                 </div>
-                
-                <div className="hidden lg:block w-px h-8 bg-slate-200"></div>
 
-                <div className="flex items-center gap-6">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-500" />
-                    <span>SOC 2 Type II</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-500" />
-                    <span>ISO 27001</span>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </div>
