@@ -33,7 +33,7 @@ export function UnifiedAudit() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 pb-6 border-b border-slate-100 dark:border-slate-800 gap-4">
             <div className="min-w-0">
               <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-1 break-words">REQ-2023-8942: Access for Anbarasu</h3>
-              <p className="text-sm text-slate-500 dark:text-slate-400">SOX Compliance Review ID: 9482A</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400">Access Compliance Review ID: 9482A</p>
             </div>
             <button className="shrink-0 bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-xl transition-colors text-sm">
               Download Audit PDF

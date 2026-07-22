@@ -8,6 +8,7 @@ import {
   BrainCircuit,
   FileText,
   UserCheck,
+  XCircle,
   CheckCircle2,
   Sparkles,
   ArrowRight,
@@ -41,7 +42,7 @@ export function Comparison() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-transparent border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
               <Layers className="w-3.5 h-3.5 text-red-600" />
               <span>Platform Deep-Dive</span>
             </div>
@@ -123,7 +124,7 @@ export function Comparison() {
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-bold text-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-transparent border border-blue-200 text-blue-700 font-bold text-xs">
                   <Split className="w-3.5 h-3.5" /> Multi-Role Analytics
                 </span>
                 <span className="text-xs text-slate-400 font-bold">100 Roles Matrix</span>
@@ -175,7 +176,7 @@ export function Comparison() {
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 font-bold text-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-transparent border border-amber-200 text-amber-700 font-bold text-xs">
                   <BrainCircuit className="w-3.5 h-3.5" /> AI Risk Copilot
                 </span>
                 <span className="text-xs text-slate-400 font-bold">Behavioral Intelligence</span>
@@ -220,7 +221,7 @@ export function Comparison() {
           >
             <div>
               <div className="mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-bold text-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-transparent border border-purple-200 text-purple-700 font-bold text-xs">
                   <Search className="w-3.5 h-3.5" /> Discovery Engine
                 </span>
               </div>
@@ -249,7 +250,7 @@ export function Comparison() {
           >
             <div>
               <div className="mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold text-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-transparent border border-emerald-200 text-emerald-700 font-bold text-xs">
                   <FileSpreadsheet className="w-3.5 h-3.5" /> Evidence Vault
                 </span>
               </div>
@@ -258,7 +259,7 @@ export function Comparison() {
                 Scheduled Audit Export
               </h3>
               <p className="text-slate-600 text-xs font-medium leading-relaxed mb-4">
-                Automated SOX & ISO 27001 compliance packages with cryptographic timestamps.
+                Automated compliance packages with log timestamps for internal audit preparation.
               </p>
 
               <div className="bg-white border border-slate-200 rounded-xl p-3 flex items-center justify-between text-xs font-bold text-emerald-800">
@@ -280,7 +281,7 @@ export function Comparison() {
           >
             <div>
               <div className="mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 text-green-700 border border-green-200 font-bold text-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-transparent border border-green-200 text-green-700 font-bold text-xs">
                   <UserCheck className="w-3.5 h-3.5" /> Approver Coverage
                 </span>
               </div>

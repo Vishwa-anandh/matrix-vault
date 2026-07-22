@@ -16,42 +16,42 @@ const capabilities = [
     title: "Live, In-Flow SoD Checks",
     description: "Risk is analyzed inside every create/assign/revoke step — not a separate batch job run after the fact.",
     icon: ShieldCheck,
-    badgeColor: "bg-red-50 text-red-600 border-red-200",
+    badgeColor: "bg-transparent text-red-600 border-red-200",
     badge: "Real-Time Inspection"
   },
   {
     title: "Role Simulator",
     description: "Model a user's access changes and preview new SoD violations before anything touches SAP.",
     icon: Sliders,
-    badgeColor: "bg-red-50 text-red-600 border-red-200",
+    badgeColor: "bg-transparent text-red-600 border-red-200",
     badge: "Pre-Transport Modeling"
   },
   {
     title: "Role Lens",
     description: "Compare up to 100 roles side-by-side for T-Code, auth-object and permission overlap in seconds.",
     icon: Layers,
-    badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
+    badgeColor: "bg-transparent text-blue-700 border-blue-200",
     badge: "Role Overlap Matrix"
   },
   {
     title: "Radar View",
     description: "One search box across Roles, Users, Profiles, User Groups, T-Codes, SoD Rules and Findings.",
     icon: Search,
-    badgeColor: "bg-purple-50 text-purple-700 border-purple-200",
+    badgeColor: "bg-transparent text-purple-700 border-purple-200",
     badge: "Universal Search"
   },
   {
     title: "AI Risk Intelligence",
     description: "AI-generated risk scores, session summaries and executive summaries — not just raw logs.",
     icon: BrainCircuit,
-    badgeColor: "bg-amber-50 text-amber-700 border-amber-200",
+    badgeColor: "bg-transparent text-amber-700 border-amber-200",
     badge: "Behavioral Scoring"
   },
   {
     title: "Unified Audit Workspace",
     description: "Timeline, Approval Trail, SAP Logs and Notes for every request in one screen.",
     icon: FileCheck2,
-    badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
+    badgeColor: "bg-transparent text-emerald-700 border-emerald-200",
     badge: "One-Click Evidence"
   },
 ];
@@ -68,7 +68,7 @@ export function CapabilityGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-transparent border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-red-600" />
               <span>Core Platform Features</span>
             </div>
@@ -96,7 +96,7 @@ export function CapabilityGrid() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="p-3 rounded-2xl bg-red-50 text-red-600 border border-red-100 shadow-2xs">
+                    <div className="p-3 rounded-2xl bg-transparent text-red-600 border border-slate-200 shadow-2xs">
                       <Icon className="w-6 h-6" />
                     </div>
                     <span className={`text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full border ${item.badgeColor}`}>

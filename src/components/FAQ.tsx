@@ -9,7 +9,7 @@ export const faqs = [
   },
   {
     question: "Does Matrix Vault support managing Firefighter (FF) IDs and Emergency Access?",
-    answer: "Yes, Firefighter ID management is a core capability. Matrix Vault automates FF ID checkout, real-time T-Code session monitoring, and post-session AI log summarization—reducing manual review time by 90% while maintaining 100% compliance with SOX Section 404 requirements."
+    answer: "Yes, Firefighter ID management is a core capability. Matrix Vault automates FF ID checkout, real-time T-Code session monitoring, and post-session AI log summarization—reducing manual review time by 90% while maintaining full audit trail visibility."
   },
   {
     question: "How does the AI Copilot assist administrators with SAP risk intelligence?",
@@ -25,7 +25,7 @@ export const faqs = [
   },
   {
     question: "What audit evidence and compliance reports does Matrix Vault generate?",
-    answer: "Matrix Vault automatically generates audit-ready PDF and XLSX reports for SOX Section 404, ISO/IEC 27001, and SOC 2 audits. Every report includes cryptographic log verification timestamps and complete approver audit trails."
+    answer: "Matrix Vault automatically generates audit-ready PDF and XLSX reports for internal access reviews and audit preparation. Every report includes log verification timestamps and complete approver audit trails."
   },
   {
     question: "Is data encrypted and secure during SAP integration?",

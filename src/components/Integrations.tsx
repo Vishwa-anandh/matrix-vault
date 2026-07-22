@@ -61,7 +61,7 @@ export function Integrations() {
                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" alt="SAP" loading="lazy" className="w-7 sm:w-8" />
                </div>
                <div className="min-w-0">
-                 <div className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white truncate">SAP Certified</div>
+                 <div className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white truncate">SAP Integration</div>
                  <div className="text-[10px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400 truncate">Integration with S/4HANA</div>
                </div>
             </div>

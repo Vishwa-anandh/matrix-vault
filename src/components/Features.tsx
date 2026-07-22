@@ -30,7 +30,7 @@ export function Features() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-transparent border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-red-600" />
               <span>Full-Stack Governance</span>
             </div>
@@ -219,7 +219,7 @@ export function Features() {
                 Scheduled Audits & Approvers
               </h3>
               <p className="text-slate-600 text-xs font-medium leading-relaxed mb-4">
-                On-demand or scheduled SOX Compliance reports covering SoD Conflicts & Firefighter Evidence, plus visual approver coverage tracking.
+                On-demand or scheduled audit compliance reports covering SoD Conflicts & Firefighter Evidence, plus visual approver coverage tracking.
               </p>
 
               <div className="bg-white border border-slate-200 rounded-xl p-3 flex items-center justify-between">

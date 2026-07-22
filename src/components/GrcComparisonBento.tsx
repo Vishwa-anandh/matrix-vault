@@ -70,7 +70,7 @@ const grcComparisons = [
     badge: "OData Native"
   },
   {
-    category: "Audit Trail & Compliance",
+    category: "Audit Trail & Reporting",
     title: "One-Screen Audit Workspace vs. Custom BI Reports",
     matrixVault: "Audit Workspace consolidates Timeline, Approval Trail, SAP Logs, and Notes with on-demand scheduled PDF/XLSX export.",
     traditionalGrc: "Audit evidence spread across multiple logs/tables, requiring custom BI tools or manual compilation.",
@@ -95,7 +95,7 @@ export function GrcComparisonBento() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-transparent border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-red-600" />
               <span>Feature-by-Feature Comparison</span>
             </div>
@@ -123,7 +123,7 @@ export function GrcComparisonBento() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-600 border border-red-200 font-bold text-xs">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-transparent border border-red-200 text-red-600 font-bold text-xs">
                       <Icon className="w-3.5 h-3.5" /> {item.badge}
                     </span>
                     <span className="text-xs text-slate-400 font-semibold">{item.category}</span>

@@ -31,7 +31,7 @@ export function GovernancePillars() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-transparent border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
               <Zap className="w-3.5 h-3.5" />
               <span>Modern SAP Governance</span>
             </div>
@@ -56,7 +56,7 @@ export function GovernancePillars() {
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-600 border border-red-100 font-bold text-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-transparent text-red-600 border border-red-200 font-bold text-xs">
                   <ShieldCheck className="w-3.5 h-3.5" /> Inline Gatekeeper
                 </span>
                 <span className="text-xs text-slate-400 font-semibold flex items-center gap-1">
@@ -111,7 +111,7 @@ export function GovernancePillars() {
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 font-bold text-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-transparent text-amber-700 border border-amber-200 font-bold text-xs">
                   <Flame className="w-3.5 h-3.5" /> Emergency Access
                 </span>
                 <span className="text-xs text-slate-400 font-bold">AI Copilot</span>
@@ -159,7 +159,7 @@ export function GovernancePillars() {
           >
             <div>
               <div className="mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold text-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-transparent text-emerald-700 border border-emerald-200 font-bold text-xs">
                   <FileCheck2 className="w-3.5 h-3.5" /> Audit Ready
                 </span>
               </div>
@@ -168,12 +168,12 @@ export function GovernancePillars() {
                 Unified Evidence Vault
               </h3>
               <p className="text-slate-600 text-xs font-medium leading-relaxed mb-4">
-                One-click SOX & ISO 27001 audit report packages with cryptographic log verification.
+                One-click audit report packages with cryptographic log verification.
               </p>
 
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 flex items-center justify-between text-xs font-bold text-emerald-700">
                 <span className="flex items-center gap-1">
-                  <Check className="w-4 h-4" /> SOX Package
+                  <Check className="w-4 h-4" /> Audit Package
                 </span>
                 <span className="bg-white border border-slate-200 px-2 py-0.5 rounded text-[10px] text-slate-700">
                   PDF / XLSX
@@ -196,7 +196,7 @@ export function GovernancePillars() {
           >
             <div>
               <div className="mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-bold text-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-transparent text-blue-700 border border-blue-200 font-bold text-xs">
                   <Cpu className="w-3.5 h-3.5" /> Native Connectors
                 </span>
               </div>
@@ -232,7 +232,7 @@ export function GovernancePillars() {
           >
             <div>
               <div className="mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-bold text-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-transparent text-purple-700 border border-purple-200 font-bold text-xs">
                   <Search className="w-3.5 h-3.5" /> Universal Search
                 </span>
               </div>

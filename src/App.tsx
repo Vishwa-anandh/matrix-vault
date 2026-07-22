@@ -161,7 +161,7 @@ function FaqPage() {
     <>
       <Seo
         title="FAQ — Matrix Vault SAP Access Governance"
-        description="Answers to common questions about deploying Matrix Vault: timelines, Firefighter ID support, SOC 2 / ISO 27001 compliance, and the AI Copilot."
+        description="Answers to common questions about deploying Matrix Vault: timelines, Firefighter ID support, access governance features, and the AI Copilot."
         path="/faq"
         jsonLd={{
           '@context': 'https://schema.org',
