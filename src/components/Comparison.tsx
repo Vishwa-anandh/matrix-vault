@@ -91,23 +91,23 @@ export function Comparison() {
 
             {/* Pipeline Visual Component */}
             <div className="lg:w-1/2 w-full bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm space-y-3">
-              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                Live Transaction Inspection Pipeline
+              <div className="text-xs font-bold text-slate-400 lowercase tracking-wider mb-2">
+                live transaction inspection pipeline
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
                 <div className="w-full sm:w-1/3 bg-slate-50 border border-slate-200 p-3 rounded-xl">
-                  <span className="text-[10px] text-slate-400 font-bold block">STEP 1: REQUEST</span>
-                  <span className="font-bold text-slate-800">User Role Assign</span>
+                  <span className="text-[10px] text-slate-400 font-bold block">step 1: request</span>
+                  <span className="font-bold text-slate-800">user role assign</span>
                 </div>
                 <ArrowRight className="w-4 h-4 text-slate-400 hidden sm:block shrink-0" />
                 <div className="w-full sm:w-1/3 bg-red-50 border border-red-200 p-3 rounded-xl">
-                  <span className="text-[10px] text-red-500 font-bold block">STEP 2: SOD ANALYSIS</span>
-                  <span className="font-bold text-red-700">Checking Rule Matrix</span>
+                  <span className="text-[10px] text-red-500 font-bold block">step 2: sod analysis</span>
+                  <span className="font-bold text-red-700">checking rule matrix</span>
                 </div>
                 <ArrowRight className="w-4 h-4 text-slate-400 hidden sm:block shrink-0" />
                 <div className="w-full sm:w-1/3 bg-emerald-50 border border-emerald-200 p-3 rounded-xl">
-                  <span className="text-[10px] text-emerald-600 font-bold block">STEP 3: VERDICT</span>
+                  <span className="text-[10px] text-emerald-600 font-bold block">step 3: verdict</span>
                   <span className="font-bold text-emerald-800">Mitigated & Blocked</span>
                 </div>
               </div>

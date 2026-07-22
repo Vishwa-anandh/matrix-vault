@@ -81,7 +81,7 @@ export function EnterpriseImpact() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-red-600 bg-red-50 border border-red-100 px-2.5 py-1 rounded-full">
+                    <span className="text-[10px] font-extrabold lowercase tracking-wider text-red-600 bg-red-50 border border-red-100 px-2.5 py-1 rounded-full">
                       {m.badge}
                     </span>
                     <div className="w-9 h-9 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-600 group-hover:bg-red-600 group-hover:text-white transition-colors shadow-2xs">

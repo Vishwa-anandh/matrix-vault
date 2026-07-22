@@ -99,7 +99,7 @@ export function CapabilityGrid() {
                     <div className="p-3 rounded-2xl bg-transparent text-red-600 border border-slate-200 shadow-2xs">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className={`text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full border ${item.badgeColor}`}>
+                    <span className={`text-[11px] font-extrabold lowercase tracking-wider px-2.5 py-1 rounded-full border ${item.badgeColor}`}>
                       {item.badge}
                     </span>
                   </div>

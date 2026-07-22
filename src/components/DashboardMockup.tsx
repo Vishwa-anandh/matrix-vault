@@ -14,7 +14,7 @@ export function DashboardMockup() {
           <div className="flex items-center gap-3 sm:gap-6 overflow-hidden h-full min-w-0">
             <div className="flex items-center gap-1.5 text-red-600 dark:text-red-500 font-bold shrink-0">
               <ShieldCheck className="w-5 h-5" />
-              <span className="hidden sm:block text-xs font-extrabold tracking-tight">MatrixVault</span>
+              <span className="hidden sm:block text-xs font-extrabold tracking-tight">Matrix Vault</span>
             </div>
             
             <div className="flex items-center h-full gap-3 sm:gap-4 text-slate-500 dark:text-slate-400 font-semibold text-[11px] overflow-hidden">
@@ -26,7 +26,7 @@ export function DashboardMockup() {
               </div>
               <div className="h-full flex items-center hover:text-slate-700 dark:hover:text-slate-200 whitespace-nowrap hidden sm:flex">
                 <Shield className="w-3.5 h-3.5 mr-1.5" /> Governance
-                <span className="ml-1.5 bg-red-500 text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold leading-none">99+</span>
+                <span className="ml-1.5 bg-red-500 text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold leading-none">24</span>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@ export function DashboardMockup() {
                 Connected System Health
               </div>
               <div className="text-[10px] sm:text-xs font-semibold text-red-500 flex items-center gap-1 cursor-pointer hover:text-red-600 shrink-0">
-                <span className="text-green-600 dark:text-green-400">1/1 healthy</span> View all <ChevronRight className="w-3.5 h-3.5" />
+                <span className="text-green-600 dark:text-green-400">1/1 Healthy</span> View All <ChevronRight className="w-3.5 h-3.5" />
               </div>
             </div>
             <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-lg p-3 flex items-center justify-between">
@@ -79,29 +79,29 @@ export function DashboardMockup() {
           {/* Key Metrics */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
              <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden">
-                <div className="flex items-center gap-1.5 text-slate-400 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs tracking-wider">
+                <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs">
                    <ShieldAlert className="w-3.5 h-3.5 text-red-400" /> Open Violations
                 </div>
-                <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">1263</div>
+                <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">24</div>
              </motion.div>
              
              <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden">
-                <div className="flex items-center gap-1.5 text-slate-400 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs tracking-wider">
+                <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs">
                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-500" /> Pending Approvals
                 </div>
-                <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">47</div>
+                <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">18</div>
              </motion.div>
 
              <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden hidden sm:block">
-                <div className="flex items-center gap-1.5 text-slate-400 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs tracking-wider">
+                <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs">
                    <Shield className="w-3.5 h-3.5 text-red-500" /> Vulnerabilities Open
                 </div>
-                <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">9841</div>
+                <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">12</div>
              </motion.div>
 
              <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-red-50 dark:bg-red-950/40 rounded-full blur-xl -mr-10 -mt-10"></div>
-                <div className="flex items-center gap-1.5 text-slate-400 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs tracking-wider relative">
+                <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs relative">
                    <Activity className="w-3.5 h-3.5 text-red-500" /> Active FF Sessions
                 </div>
                 <div className="flex items-end gap-2 relative">
@@ -119,14 +119,14 @@ export function DashboardMockup() {
                   <div className="font-bold text-slate-700 dark:text-slate-200 flex items-center gap-1.5 text-xs">
                      {i === 0 ? <Activity className="w-3.5 h-3.5 text-red-400" /> : i === 1 ? <ShieldAlert className="w-3.5 h-3.5 text-purple-400" /> : <FileText className="w-3.5 h-3.5 text-amber-400" />} {title}
                   </div>
-                  <span className="text-red-500 font-semibold cursor-pointer text-[10px] hover:text-red-600">View all &gt;</span>
+                  <span className="text-red-500 font-semibold cursor-pointer text-[10px] hover:text-red-600">View All &gt;</span>
                 </div>
                 <div className="flex items-center gap-3 xl:gap-4">
                    <div className={`relative w-20 h-20 rounded-full border-[8px] border-slate-100 dark:border-slate-800 flex items-center justify-center shrink-0`}>
                      <div className={`absolute inset-[-8px] rounded-full border-[8px] border-transparent ${i === 0 ? 'border-t-red-500 border-r-amber-400 border-b-green-500 border-l-slate-400 transform rotate-45' : i === 1 ? 'border-t-slate-400 border-r-slate-400 border-b-green-500 border-l-amber-400 transform -rotate-12' : 'border-t-green-500 border-r-amber-400 border-b-green-500 border-l-slate-400 transform rotate-90'}`}></div>
                      <div className="text-center bg-white dark:bg-slate-900 rounded-full w-full h-full flex flex-col items-center justify-center z-10">
-                        <div className="font-black text-slate-900 dark:text-white text-lg leading-none">{i === 0 ? '31' : i === 1 ? '24' : '152'}</div>
-                        <div className="text-[8px] text-slate-400 font-bold mt-0.5 tracking-wide">Total</div>
+                        <div className="font-black text-slate-900 dark:text-white text-lg leading-none">{i === 0 ? '31' : i === 1 ? '24' : '48'}</div>
+                        <div className="text-[8px] text-slate-400 font-bold mt-0.5">Total</div>
                      </div>
                    </div>
                    <div className="space-y-2 flex-1 min-w-0">

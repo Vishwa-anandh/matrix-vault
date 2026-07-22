@@ -86,8 +86,8 @@ export function AIRiskSpotlight() {
             <div>
               {/* Card Header */}
               <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
-                <div className="flex items-center gap-2 text-red-600 font-extrabold text-xs tracking-wider uppercase">
-                  <Sparkles className="w-4 h-4 text-red-600" /> AI Risk Assessment
+                <div className="flex items-center gap-2 text-red-600 font-extrabold text-xs tracking-wider lowercase">
+                  <Sparkles className="w-4 h-4 text-red-600" /> ai risk assessment
                 </div>
                 <div className="flex items-center gap-1.5 text-red-600 font-bold text-xs">
                   <span>75/100</span>
