@@ -16,12 +16,12 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <h3 className="text-sm font-bold text-white tracking-wider mb-6">Services</h3>
+            <h3 className="text-sm font-bold text-white tracking-wider mb-6">Features</h3>
             <ul className="space-y-4">
+              <li className="text-slate-400 font-medium">Firefighter</li>
               <li className="text-slate-400 font-medium">Role Radar</li>
               <li className="text-slate-400 font-medium">Vulnerability</li>
               <li className="text-slate-400 font-medium">AI Copilot</li>
-              <li className="text-slate-400 font-medium">Firefighter</li>
             </ul>
           </div>
 
