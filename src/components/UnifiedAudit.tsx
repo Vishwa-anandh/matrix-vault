@@ -6,7 +6,7 @@ export function UnifiedAudit() {
     <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-slate-900 relative border-t border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white overflow-hidden transition-colors duration-300">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/10 rounded-full blur-[120px]"></div>
       
-      <div className="max-w-[95%] xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto mb-10">
           <motion.div
@@ -32,7 +32,7 @@ export function UnifiedAudit() {
         >
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 pb-6 border-b border-slate-100 dark:border-slate-800 gap-4">
             <div className="min-w-0">
-              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-1 break-words">REQ-2023-8942: Access for J.Smith</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-1 break-words">REQ-2023-8942: Access for Anbarasu</h3>
               <p className="text-sm text-slate-500 dark:text-slate-400">SOX Compliance Review ID: 9482A</p>
             </div>
             <button className="shrink-0 bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded-xl transition-colors text-sm">
@@ -58,7 +58,7 @@ export function UnifiedAudit() {
                 </div>
                 <div className="min-w-0">
                   <div className="text-xs text-slate-500 dark:text-slate-400 font-bold tracking-wider">Approved By</div>
-                  <div className="font-medium text-sm text-green-600 dark:text-green-400">M. Davis (Security)</div>
+                  <div className="font-medium text-sm text-green-600 dark:text-green-400">Madhu (Security)</div>
                 </div>
               </div>
             </div>

@@ -18,7 +18,7 @@ export function Hero() {
         <div className="absolute bottom-0 left-1/4 w-64 h-64 md:w-[500px] md:h-[500px] bg-blue-50 dark:bg-blue-950/20 rounded-full blur-[60px] md:blur-[100px] mix-blend-multiply dark:mix-blend-normal opacity-60"></div>
       </div>
 
-      <div className="relative z-10 max-w-[95%] xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="lg:grid lg:grid-cols-[1fr_1.3fr] lg:gap-10 xl:gap-12 items-center">
           {/* Left Text Content */}
           <div className="mb-10 lg:mb-0 text-center lg:text-left">

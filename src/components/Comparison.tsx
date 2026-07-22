@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import React from "react";
+import { motion } from "motion/react";
 import {
   ShieldCheck,
   Split,
@@ -8,226 +8,301 @@ import {
   BrainCircuit,
   FileText,
   UserCheck,
-  XCircle,
   CheckCircle2,
-  ArrowRight
+  Sparkles,
+  ArrowRight,
+  Lock,
+  Check,
+  Flame,
+  Zap,
+  ShieldAlert,
+  ArrowUpRight,
+  Layers,
+  FileSpreadsheet
 } from "lucide-react";
-
-const features = [
-  {
-    title: "Risk-Aware by Design",
-    description: "Every access action runs SoD analysis inline. It's a gate built into the transaction itself—not a separate report run days later.",
-    legacy: "Complex, multi-step provisioning workflows.",
-    matrix: "Guided wizard with built-in SoD checks.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Instant Multi-Role Comparison",
-    description: "Select up to 100 roles and get a unified breakdown of matched vs. unmatched authorizations, T-Codes, and a live SoD conflict verdict.",
-    legacy: "Manual data extraction and custom reporting.",
-    matrix: "Compare up to 100 roles instantly for overlaps.",
-    icon: Split,
-  },
-  {
-    title: "Universal Radar View",
-    description: "Search a Role, User, Profile, User Group, T-Code, or Finding and see everything connected to it in one single, unified place.",
-    legacy: "Data scattered across multiple apps and modules.",
-    matrix: "Single search bar across all security entities.",
-    icon: Search,
-  },
-  {
-    title: "AI-Generated Risk Narratives",
-    description: "Firefighter sessions come with AI-written, plain-English summaries alongside a 0-100 risk score, turning raw logs into actionable insights.",
-    legacy: "Raw logs; no behavioral risk scoring.",
-    matrix: "AI risk scoring (0-100) with session summaries.",
-    icon: BrainCircuit,
-  },
-  {
-    title: "Scheduled Compliance Reporting",
-    description: "Generate on-demand or scheduled SOX Compliance reports covering SoD Conflicts and Firefighter Evidence, delivered via PDF or XLSX.",
-    legacy: "Requires custom BI tools or manual building.",
-    matrix: "Scheduled, multi-format exportable reports.",
-    icon: FileText,
-  },
-  {
-    title: "Approver Coverage at a Glance",
-    description: "The Approver Management screen shows exactly what percentage of roles have assigned approvers and lets you close gaps in a few clicks.",
-    legacy: "Configured manually via backend org-structure.",
-    matrix: "Visual coverage (%) dashboard; assign in clicks.",
-    icon: UserCheck,
-  },
-];
+import { Link } from "react-router-dom";
 
 export function Comparison() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   return (
-    <section id="platform" className="py-12 bg-slate-50 dark:bg-slate-950 relative text-slate-900 dark:text-white overflow-hidden transition-colors duration-300">
-      {/* Background accents */}
+    <section id="platform" className="py-16 sm:py-20 lg:py-24 bg-white relative border-t border-b border-slate-200 text-slate-900 transition-colors duration-300 overflow-hidden">
+      {/* Ambient background accent */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute -top-[20%] -right-[10%] w-[70%] h-[70%] bg-red-100/40 dark:bg-red-950/20 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[10%] -left-[10%] w-[50%] h-[50%] bg-blue-100/40 dark:bg-blue-950/20 rounded-full blur-[100px]"></div>
+        <div className="absolute -top-[15%] right-[5%] w-[600px] h-[600px] bg-red-100/40 rounded-full blur-[130px]"></div>
+        <div className="absolute bottom-[5%] left-[5%] w-[500px] h-[500px] bg-blue-100/30 rounded-full blur-[110px]"></div>
       </div>
 
-      <div className="max-w-[95%] xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        
+        {/* Platform Section Header */}
+        <div className="text-center mb-12 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-slate-900 dark:text-white">
-              One Platform. <span className="text-red-600 dark:text-red-500">Every Layer of SAP Risk.</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
+              <Layers className="w-3.5 h-3.5 text-red-600" />
+              <span>Platform Deep-Dive</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-slate-900 leading-tight">
+              One Platform. <span className="text-red-600">Every Layer of SAP Risk.</span>
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed max-w-3xl mx-auto">
+            <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed max-w-3xl mx-auto">
               From access requests to audit reports, Matrix Vault watches, checks, and explains SAP risk in real time — so nothing reaches production unreviewed.
             </p>
           </motion.div>
         </div>
 
-        {/* Mobile Navigation Tabs (Horizontal Scrollable Pills) */}
-        <div className="lg:hidden flex overflow-x-auto gap-2 pb-3 mb-6 no-scrollbar snap-x -mx-4 px-4">
-          {features.map((feature, idx) => {
-            const isActive = activeIndex === idx;
-            return (
-              <button
-                key={idx}
-                onClick={() => setActiveIndex(idx)}
-                className={`snap-start shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-bold transition-all duration-200 ${
-                  isActive
-                    ? "bg-red-600 text-white shadow-md shadow-red-600/30"
-                    : "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
-                }`}
-              >
-                <feature.icon className={`w-3.5 h-3.5 ${isActive ? "text-white" : "text-slate-400 dark:text-slate-500"}`} />
-                <span className="whitespace-nowrap">{feature.title}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Interactive Showcase Layout */}
-        <div className="lg:grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        {/* Bespoke Platform Bento Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 w-full">
           
-          {/* Left Side: Desktop Navigation Tabs */}
-          <div className="hidden lg:flex lg:col-span-5 flex-col gap-3 relative">
-            {features.map((feature, idx) => {
-              const isActive = activeIndex === idx;
-              return (
-                <button
-                  key={idx}
-                  onClick={() => setActiveIndex(idx)}
-                  className={`relative w-full text-left px-4 py-3.5 rounded-2xl transition-all duration-300 flex items-center gap-3 group ${
-                    isActive 
-                      ? "bg-white dark:bg-slate-900 shadow-md ring-1 ring-slate-200 dark:ring-slate-800" 
-                      : "hover:bg-white/60 dark:hover:bg-slate-900/60"
-                  }`}
-                >
-                  <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300 ${
-                    isActive 
-                      ? "bg-red-500 text-white shadow-md shadow-red-500/20" 
-                      : "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-400 dark:text-slate-500 group-hover:text-red-500 group-hover:border-red-200"
-                  }`}>
-                    <feature.icon className="w-5 h-5" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className={`font-bold text-lg transition-colors duration-300 ${
-                      isActive 
-                        ? "text-red-600 dark:text-red-500" 
-                        : "text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white"
-                    }`}>
-                      {feature.title}
-                    </h3>
-                  </div>
-                  <ArrowRight className={`w-5 h-5 transition-all duration-300 ${
-                    isActive ? "text-red-500 opacity-100 translate-x-0" : "text-slate-400 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:text-red-300"
-                  }`} />
-                </button>
-              );
-            })}
-          </div>
+          {/* BENTO CARD 1: Full-Width 12-Column Hero Gating Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="md:col-span-12 bg-gradient-to-br from-slate-50 via-white to-red-50/30 border border-slate-200 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col lg:flex-row items-center justify-between gap-8 group"
+          >
+            <div className="lg:w-1/2 space-y-4">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600 text-white font-bold text-xs shadow-xs">
+                <Zap className="w-3.5 h-3.5" /> Inline Transaction Gatekeeper
+              </div>
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Risk-Aware Access & Pre-Provisioning Control
+              </h3>
+              <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed">
+                Every access request executes inline SoD conflict detection before assignment. It’s an active safety gate built into the transaction pipeline itself—eliminating post-audit remediation cycles.
+              </p>
 
-          {/* Right Side: Active Content Panel */}
-          <div className="lg:col-span-7 relative h-full min-h-0 lg:min-h-[450px]">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeIndex}
-                initial={{ opacity: 0, x: 20, scale: 0.95 }}
-                animate={{ opacity: 1, x: 0, scale: 1 }}
-                exit={{ opacity: 0, x: -20, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-8 md:p-10 shadow-2xl ring-1 ring-slate-900/5 dark:ring-slate-800 h-full flex flex-col justify-start relative overflow-hidden"
-              >
-                {/* Decorative large icon in background */}
-                <div className="absolute -top-10 -right-10 text-slate-50 dark:text-slate-800/40 opacity-50 pointer-events-none transform rotate-12">
-                  {React.createElement(features[activeIndex].icon, { size: 240 })}
+              <div className="flex items-center gap-4 text-xs font-bold text-slate-700 pt-2">
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-red-600" /> Sub-200ms Latency
                 </div>
-
-                <div className="relative z-10">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 font-bold text-xs tracking-widest mb-3 sm:mb-6 border border-red-100 dark:border-red-900/50">
-                    <SparklesIcon className="w-3.5 h-3.5" /> Feature Spotlight
-                  </div>
-                  
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-3 sm:mb-6 leading-tight">
-                    {features[activeIndex].title}
-                  </h3>
-                  
-                  <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-4 sm:mb-8">
-                    {features[activeIndex].description}
-                  </p>
-                  
-                  {/* Micro-Comparison */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 pt-4 sm:pt-6 border-t border-slate-100 dark:border-slate-800">
-                    <div className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-4 sm:p-6 border border-slate-200 dark:border-slate-700/50 relative overflow-hidden">
-                      <div className="absolute top-0 left-0 w-1 h-full bg-slate-300 dark:bg-slate-600"></div>
-                      <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                        <XCircle className="w-4 h-4 text-slate-400 dark:text-slate-500" />
-                        <span className="text-xs font-bold text-slate-500 dark:text-slate-400 tracking-wider">Legacy GRC</span>
-                      </div>
-                      <p className="text-sm text-slate-600 dark:text-slate-300 font-medium leading-snug">
-                        {features[activeIndex].legacy}
-                      </p>
-                    </div>
-
-                    <div className="bg-red-50 dark:bg-red-950/40 rounded-2xl p-4 sm:p-6 border border-red-100 dark:border-red-900/50 relative overflow-hidden shadow-sm">
-                      <div className="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
-                      <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                        <CheckCircle2 className="w-4 h-4 text-red-600 dark:text-red-400" />
-                        <span className="text-xs font-bold text-red-600 dark:text-red-400 tracking-wider">Matrix Vault</span>
-                      </div>
-                      <p className="text-sm text-slate-900 dark:text-white font-bold leading-snug">
-                        {features[activeIndex].matrix}
-                      </p>
-                    </div>
-                  </div>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-red-600" /> OData Connector
                 </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-          
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-red-600" /> S/4HANA Ready
+                </div>
+              </div>
+            </div>
+
+            {/* Pipeline Visual Component */}
+            <div className="lg:w-1/2 w-full bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm space-y-3">
+              <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                Live Transaction Inspection Pipeline
+              </div>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+                <div className="w-full sm:w-1/3 bg-slate-50 border border-slate-200 p-3 rounded-xl">
+                  <span className="text-[10px] text-slate-400 font-bold block">STEP 1: REQUEST</span>
+                  <span className="font-bold text-slate-800">User Role Assign</span>
+                </div>
+                <ArrowRight className="w-4 h-4 text-slate-400 hidden sm:block shrink-0" />
+                <div className="w-full sm:w-1/3 bg-red-50 border border-red-200 p-3 rounded-xl">
+                  <span className="text-[10px] text-red-500 font-bold block">STEP 2: SOD ANALYSIS</span>
+                  <span className="font-bold text-red-700">Checking Rule Matrix</span>
+                </div>
+                <ArrowRight className="w-4 h-4 text-slate-400 hidden sm:block shrink-0" />
+                <div className="w-full sm:w-1/3 bg-emerald-50 border border-emerald-200 p-3 rounded-xl">
+                  <span className="text-[10px] text-emerald-600 font-bold block">STEP 3: VERDICT</span>
+                  <span className="font-bold text-emerald-800">Mitigated & Blocked</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* BENTO CARD 2: 6-Column Multi-Role Matrix Showcase */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="md:col-span-6 bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xs hover:shadow-xl hover:bg-white hover:border-blue-200 transition-all duration-300 flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-bold text-xs">
+                  <Split className="w-3.5 h-3.5" /> Multi-Role Analytics
+                </span>
+                <span className="text-xs text-slate-400 font-bold">100 Roles Matrix</span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-2">
+                Instant 100-Role Overlap Matrix
+              </h3>
+              <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed mb-5">
+                Select up to 100 SAP roles simultaneously and analyze authorization overlaps, T-Code conflicts, and object collisions in seconds.
+              </p>
+
+              {/* Role Matrix Table Mockup */}
+              <div className="bg-white border border-slate-200 rounded-2xl p-4 space-y-2 text-xs font-mono">
+                <div className="grid grid-cols-4 font-bold text-slate-500 pb-2 border-b border-slate-100 text-[11px]">
+                  <span>SAP ROLE</span>
+                  <span>T-CODES</span>
+                  <span>OVERLAP</span>
+                  <span>STATUS</span>
+                </div>
+                <div className="grid grid-cols-4 items-center text-[11px] text-slate-700 font-semibold py-1">
+                  <span>Z_FI_ACCT</span>
+                  <span className="text-slate-500">FB01, FB02</span>
+                  <span className="text-emerald-600 font-bold">0%</span>
+                  <span className="bg-emerald-100 text-emerald-800 text-[9px] font-bold px-1.5 py-0.5 rounded w-fit">Clean</span>
+                </div>
+                <div className="grid grid-cols-4 items-center text-[11px] text-slate-700 font-semibold py-1">
+                  <span>Z_P2P_MGR</span>
+                  <span className="text-slate-500">ME21N, MIRO</span>
+                  <span className="text-red-600 font-bold">14%</span>
+                  <span className="bg-red-100 text-red-800 text-[9px] font-bold px-1.5 py-0.5 rounded w-fit">Flagged</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 mt-6 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-slate-500">
+              <span>Instant Cross-Role Inspection</span>
+              <span className="text-blue-600 font-bold">100 Roles Supported</span>
+            </div>
+          </motion.div>
+
+          {/* BENTO CARD 3: 6-Column AI Risk Narrative Showcase */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="md:col-span-6 bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xs hover:shadow-xl hover:bg-white hover:border-amber-200 transition-all duration-300 flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 font-bold text-xs">
+                  <BrainCircuit className="w-3.5 h-3.5" /> AI Risk Copilot
+                </span>
+                <span className="text-xs text-slate-400 font-bold">Behavioral Intelligence</span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-2">
+                AI-Written Firefighter Log Summaries
+              </h3>
+              <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed mb-5">
+                Matrix Vault converts raw Firefighter session logs into plain-English behavioral narratives paired with a 0-100 risk score.
+              </p>
+
+              {/* AI Narrative Preview Box */}
+              <div className="bg-white border border-slate-200 rounded-2xl p-4 space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-extrabold text-slate-900 flex items-center gap-1">
+                    <Flame className="w-3.5 h-3.5 text-amber-600" /> Session Summary
+                  </span>
+                  <span className="bg-red-100 text-red-700 text-[10px] font-extrabold px-2 py-0.5 rounded">
+                    Score: 75/100 (High Risk)
+                  </span>
+                </div>
+                <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                  User executed <strong className="text-slate-900">SE38</strong> dynamic ABAP code modification during Emergency Session <strong className="text-slate-900">FF_DEV</strong>. Flagged for review.
+                </p>
+              </div>
+            </div>
+
+            <div className="pt-4 mt-6 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-slate-500">
+              <span>Executive Plain-English Logs</span>
+              <span className="text-amber-700 font-bold">90% Review Time Saved</span>
+            </div>
+          </motion.div>
+
+          {/* BENTO CARD 4: 4-Column Universal Radar View */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="md:col-span-4 bg-slate-50 border border-slate-200 rounded-3xl p-6 shadow-xs hover:shadow-xl hover:bg-white hover:border-purple-200 transition-all duration-300 flex flex-col justify-between"
+          >
+            <div>
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-bold text-xs">
+                  <Search className="w-3.5 h-3.5" /> Discovery Engine
+                </span>
+              </div>
+
+              <h3 className="text-lg font-extrabold text-slate-900 mb-2">
+                Universal Radar View
+              </h3>
+              <p className="text-slate-600 text-xs font-medium leading-relaxed mb-4">
+                Search a User, Role, T-Code, or Finding and visualize all connected authorizations in one view.
+              </p>
+
+              <div className="bg-white border border-slate-200 rounded-xl p-3 flex items-center gap-2 text-xs text-slate-400">
+                <Search className="w-4 h-4 text-purple-600" />
+                <span className="font-mono text-slate-600 text-xs font-medium">Search "Anbarasu" or "SE38"...</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* BENTO CARD 5: 4-Column Evidence Vault */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="md:col-span-4 bg-slate-50 border border-slate-200 rounded-3xl p-6 shadow-xs hover:shadow-xl hover:bg-white hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between"
+          >
+            <div>
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold text-xs">
+                  <FileSpreadsheet className="w-3.5 h-3.5" /> Evidence Vault
+                </span>
+              </div>
+
+              <h3 className="text-lg font-extrabold text-slate-900 mb-2">
+                Scheduled Audit Export
+              </h3>
+              <p className="text-slate-600 text-xs font-medium leading-relaxed mb-4">
+                Automated SOX & ISO 27001 compliance packages with cryptographic timestamps.
+              </p>
+
+              <div className="bg-white border border-slate-200 rounded-xl p-3 flex items-center justify-between text-xs font-bold text-emerald-800">
+                <span>Export Formats:</span>
+                <span className="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold px-2 py-0.5 rounded">
+                  PDF / XLSX
+                </span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* BENTO CARD 6: 4-Column Approver Management */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5 }}
+            className="md:col-span-4 bg-slate-50 border border-slate-200 rounded-3xl p-6 shadow-xs hover:shadow-xl hover:bg-white hover:border-green-200 transition-all duration-300 flex flex-col justify-between"
+          >
+            <div>
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 text-green-700 border border-green-200 font-bold text-xs">
+                  <UserCheck className="w-3.5 h-3.5" /> Approver Coverage
+                </span>
+              </div>
+
+              <h3 className="text-lg font-extrabold text-slate-900 mb-2">
+                Approver Gap Matrix
+              </h3>
+              <p className="text-slate-600 text-xs font-medium leading-relaxed mb-4">
+                Visual matrix tracking role approver assignments across your entire SAP landscape.
+              </p>
+
+              <div className="bg-white border border-slate-200 rounded-xl p-3 flex items-center justify-between">
+                <span className="text-xs font-bold text-slate-700">Approver Status:</span>
+                <span className="bg-green-100 text-green-800 text-[10px] font-extrabold px-2 py-0.5 rounded">
+                  100% Assigned
+                </span>
+              </div>
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </section>
-  );
-}
-
-function SparklesIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
-    </svg>
   );
 }

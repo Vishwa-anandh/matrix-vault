@@ -5,6 +5,9 @@
 
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { GovernancePillars } from './components/GovernancePillars';
+import { EnterpriseImpact } from './components/EnterpriseImpact';
+import { Features } from './components/Features';
 import { Comparison } from './components/Comparison';
 import { RoleSimulator } from './components/RoleSimulator';
 import { RiskRuleBuilder } from './components/RiskRuleBuilder';
@@ -14,11 +17,17 @@ import { UnifiedAudit } from './components/UnifiedAudit';
 import { Integrations } from './components/Integrations';
 import { HowItWorks } from './components/HowItWorks';
 import { FAQ } from './components/FAQ';
+import { Testimonials } from './components/Testimonials';
+import { Certifications } from './components/Certifications';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Contact } from './components/Contact';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Seo } from './components/Seo';
+import { Link, Routes, Route, useLocation } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 import { useEffect } from 'react';
+
+const SITE_URL = 'https://www.matrixvault.com';
 
 function ScrollToTopOnRoute() {
   const { pathname, hash } = useLocation();
@@ -40,19 +49,144 @@ function ScrollToTopOnRoute() {
   return null;
 }
 
+/** Home landing page with Hero, GovernancePillars, EnterpriseImpact, and CTA. */
 function Home() {
   return (
     <>
+      <Seo
+        title="Matrix Vault — Modern SAP Access Governance & SoD Risk Management"
+        description="Matrix Vault is a lightweight, OData-based SAP access governance layer delivering real-time, in-flow Segregation of Duties (SoD) analysis, AI-assisted risk intelligence, and audit-ready reporting — a modern alternative to traditional SAP GRC."
+        keywords="SAP GRC alternative, SAP Access Governance, SoD Risk Management, Segregation of Duties, SAP Firefighter, SAP Compliance, AI Risk Intelligence"
+        path="/"
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            '@id': `${SITE_URL}/#organization`,
+            name: 'Matrix Vault',
+            url: `${SITE_URL}/`,
+            logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` },
+            contactPoint: {
+              '@type': 'ContactPoint',
+              email: 'contact@matrixvault.com',
+              contactType: 'customer service',
+            },
+            sameAs: ['https://twitter.com/MatrixVault', 'https://www.linkedin.com/company/matrixvault'],
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: 'Matrix Vault',
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Web, SaaS',
+            description:
+              'Matrix Vault is a lightweight, OData-based SAP access governance layer delivering real-time, in-flow Segregation of Duties (SoD) analysis, AI-assisted risk intelligence, and audit-ready reporting.',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+            publisher: { '@id': `${SITE_URL}/#organization` },
+          },
+        ]}
+      />
       <Hero />
-      <Comparison />
+      <GovernancePillars />
+      <EnterpriseImpact />
+    </>
+  );
+}
+
+/** /platform: the product deep-dive sections. */
+function PlatformPage() {
+  return (
+    <>
+      <Seo
+        title="Platform — Real-Time SAP Risk & SoD Governance | Matrix Vault"
+        description="Explore Matrix Vault's platform: instant multi-role comparison, guided role simulation, a visual risk rule builder, AI risk narratives, a unified risk dashboard, and one-screen audit trails."
+        keywords="SAP SoD conflict detection, role comparison, risk rule builder, AI risk intelligence, SAP audit trail"
+        path="/platform"
+      />
+      <div className="pt-20">
+        <Comparison />
+      </div>
       <RoleSimulator />
       <RiskRuleBuilder />
       <AIRiskSpotlight />
       <RiskIntelligenceDashboard />
       <UnifiedAudit />
+    </>
+  );
+}
+
+/** /how-it-works: rollout process + native SAP integrations. */
+function HowItWorksPage() {
+  return (
+    <>
+      <Seo
+        title="How It Works — Deploy Matrix Vault in Weeks | Matrix Vault"
+        description="See how Matrix Vault deploys into your SAP landscape in 2-4 weeks: model roles before you modify, mitigate findings instantly, and get a one-click audit trail — with native SAP ERP, S/4HANA, and GRC integrations."
+        path="/how-it-works"
+      />
+      <div className="pt-20">
+        <HowItWorks />
+      </div>
       <Integrations />
-      <HowItWorks />
-      <FAQ />
+    </>
+  );
+}
+
+/** /faq: frequently asked questions, with FAQPage structured data. */
+function FaqPage() {
+  return (
+    <>
+      <Seo
+        title="FAQ — Matrix Vault SAP Access Governance"
+        description="Answers to common questions about deploying Matrix Vault: timelines, Firefighter ID support, SOC 2 / ISO 27001 compliance, and the AI Copilot."
+        path="/faq"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How long does it take to deploy Matrix Vault into an existing SAP environment?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Most enterprise deployments are completed within 2 to 4 weeks. Our native SAP connectors and automated discovery tools significantly reduce the manual configuration usually required for identity governance tools.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Does Matrix Vault support managing Firefighter (FF) IDs?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes, Firefighter ID management is a core capability. Matrix Vault automates FF ID checkout, session monitoring, and post-session audit log reviews, ensuring full compliance without slowing down your emergency responders.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How does the AI Copilot assist administrators?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'The AI Copilot is trained on your specific access policies and SAP structures. It can instantly summarize audit logs, suggest approval routing based on historical data, and help troubleshoot access errors via a conversational interface.',
+              },
+            },
+          ],
+        }}
+      />
+      <div className="pt-20">
+        <FAQ />
+      </div>
+    </>
+  );
+}
+
+function ContactPage() {
+  return (
+    <>
+      <Seo
+        title="Contact & Request a Demo | Matrix Vault"
+        description="Get in touch with the Matrix Vault team to request a demo or ask about deploying real-time SAP access governance and SoD risk management for your organization."
+        path="/contact"
+      />
+      <Contact />
     </>
   );
 }
@@ -65,7 +199,10 @@ export default function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/platform" element={<PlatformPage />} />
+          <Route path="/how-it-works" element={<HowItWorksPage />} />
+          <Route path="/faq" element={<FaqPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
       <Footer />

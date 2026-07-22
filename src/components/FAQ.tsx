@@ -12,10 +12,6 @@ const faqs = [
     answer: "Yes, Firefighter ID management is a core capability. Matrix Vault automates FF ID checkout, session monitoring, and post-session audit log reviews, ensuring full compliance without slowing down your emergency responders."
   },
   {
-    question: "Is the platform SOC 2 and ISO 27001 compliant?",
-    answer: "Absolutely. Matrix Vault is built on a zero-trust architecture. We are fully SOC 2 Type II and ISO 27001 certified, and all data is encrypted both at rest and in transit."
-  },
-  {
     question: "How does the AI Copilot assist administrators?",
     answer: "The AI Copilot is trained on your specific access policies and SAP structures. It can instantly summarize audit logs, suggest approval routing based on historical data, and help troubleshoot access errors via a conversational interface."
   }
@@ -26,7 +22,7 @@ export function FAQ() {
 
   return (
     <section id="faq" className="py-12 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">Frequently Asked Questions</h2>
           <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium">Everything you need to know about implementing Matrix Vault.</p>

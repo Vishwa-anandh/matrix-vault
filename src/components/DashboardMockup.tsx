@@ -3,7 +3,7 @@ import { ShieldCheck, Activity, Users, AlertTriangle, CheckCircle2, ChevronRight
 
 export function DashboardMockup() {
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
+    <div className="relative w-full">
       <div className="absolute -inset-2 bg-gradient-to-r from-red-200 to-red-100 dark:from-red-950/40 dark:to-red-900/20 rounded-2xl blur-2xl opacity-60 animate-pulse"></div>
       
       <div className="relative bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col ring-1 ring-slate-900/5 text-slate-800 dark:text-slate-200 text-[10px] sm:text-xs font-sans transition-colors duration-300">
@@ -82,21 +82,21 @@ export function DashboardMockup() {
                 <div className="flex items-center gap-1.5 text-slate-400 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs tracking-wider">
                    <ShieldAlert className="w-3.5 h-3.5 text-red-400" /> Open Violations
                 </div>
-                <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">1263</div>
+                <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">1263</div>
              </motion.div>
              
              <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden">
                 <div className="flex items-center gap-1.5 text-slate-400 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs tracking-wider">
                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-500" /> Pending Approvals
                 </div>
-                <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">47</div>
+                <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">47</div>
              </motion.div>
 
              <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden hidden sm:block">
                 <div className="flex items-center gap-1.5 text-slate-400 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs tracking-wider">
                    <Shield className="w-3.5 h-3.5 text-red-500" /> Vulnerabilities Open
                 </div>
-                <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">9841</div>
+                <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">9841</div>
              </motion.div>
 
              <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden">
@@ -105,7 +105,7 @@ export function DashboardMockup() {
                    <Activity className="w-3.5 h-3.5 text-red-500" /> Active FF Sessions
                 </div>
                 <div className="flex items-end gap-2 relative">
-                  <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">3</div>
+                  <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">3</div>
                   <div className="text-[10px] font-black text-red-500 mb-1.5 flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></div> Live</div>
                 </div>
              </motion.div>

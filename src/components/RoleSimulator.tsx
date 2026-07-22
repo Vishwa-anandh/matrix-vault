@@ -77,7 +77,7 @@ export function RoleSimulator() {
       id="simulator"
       className="py-16 sm:py-20 bg-white dark:bg-slate-900 relative border-t border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-300"
     >
-      <div className="max-w-[95%] xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Left Side: Text Content */}

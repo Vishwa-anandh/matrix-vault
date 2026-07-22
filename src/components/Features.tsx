@@ -1,131 +1,236 @@
 import { motion } from 'motion/react';
-import type { Variants } from 'motion/react';
-import { ShieldCheck, Split, Target, Brain, FileText, UserCheck } from 'lucide-react';
-
-// Animation variants for card components
-const cardVariants: Variants = {
-  initial: { opacity: 0, y: 30, scale: 1 },
-  animate: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6 } },
-  hover: {
-    scale: 1.03,
-    y: -5,
-    borderColor: "#fca5a5", // Soften hover border outline (red-300)
-    boxShadow: "0 20px 25px -5px rgb(239 68 68 / 0.06), 0 8px 10px -6px rgb(239 68 68 / 0.06)",
-    transition: { duration: 0.3, ease: "easeOut" as const }
-  }
-};
+import { 
+  ShieldCheck, 
+  Split, 
+  Target, 
+  Brain, 
+  FileText, 
+  UserCheck, 
+  CheckCircle2, 
+  XCircle, 
+  Search, 
+  Sparkles,
+  ArrowRight
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Features() {
-  const features = [
-    {
-      title: "Risk-Aware by Design",
-      description: "Every access action runs SoD analysis inline. It’s a gate built into the transaction itself—not a separate report run days later.",
-      icon: ShieldCheck,
-      delay: 0,
-      comparison: { traditional: "Complex, multi-step provisioning workflows.", matrix: "Guided wizard with built-in SoD checks." }
-    },
-    {
-      title: "Instant Multi-Role Comparison",
-      description: "Select up to 100 roles and get a unified breakdown of matched vs. unmatched authorizations, T-Codes, and a live SoD conflict verdict.",
-      icon: Split,
-      delay: 0.1,
-      comparison: { traditional: "Manual data extraction and custom reporting.", matrix: "Compare up to 100 roles instantly for overlaps." }
-    },
-    {
-      title: "Universal Radar View",
-      description: "Search a Role, User, Profile, User Group, T-Code, or Finding and see everything connected to it in one single, unified place.",
-      icon: Target,
-      delay: 0.2,
-      comparison: { traditional: "Data scattered across multiple apps and modules.", matrix: "Single search bar across all security entities." }
-    },
-    {
-      title: "AI-Generated Risk Narratives",
-      description: "Firefighter sessions come with AI-written, plain-English summaries alongside a 0–100 risk score, turning raw logs into actionable insights.",
-      icon: Brain,
-      delay: 0.3,
-      comparison: { traditional: "Raw logs; no behavioral risk scoring.", matrix: "AI risk scoring (0-100) with session summaries." }
-    },
-    {
-      title: "Scheduled Compliance Reporting",
-      description: "Generate on-demand or scheduled SOX Compliance reports covering SoD Conflicts and Firefighter Evidence, delivered via PDF or XLSX.",
-      icon: FileText,
-      delay: 0.4,
-      comparison: { traditional: "Requires custom BI tools or manual building.", matrix: "Scheduled, multi-format exportable reports." }
-    },
-    {
-      title: "Approver Coverage at a Glance",
-      description: "The Approver Management screen shows exactly what percentage of roles have assigned approvers and lets you close gaps in a few clicks.",
-      icon: UserCheck,
-      delay: 0.5,
-      comparison: { traditional: "Configured manually via backend org-structure.", matrix: "Visual coverage (%) dashboard; assign in clicks." }
-    }
-  ];
-
   return (
-    <section id="features" className="py-12 bg-white relative border-t border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="features" className="py-16 sm:py-20 lg:py-24 bg-white relative border-t border-b border-slate-200 transition-colors duration-300 overflow-hidden">
+      {/* Background glow accents */}
+      <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-red-100/40 rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight leading-tight">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-red-600" />
+              <span>Full-Stack Governance</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight leading-tight">
               One Platform. <br className="md:hidden" />
               Every Layer of <span className="text-red-600">SAP Risk.</span>
             </h2>
-            <p className="text-slate-600 text-base md:text-lg font-medium leading-relaxed">
+            <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed">
               From access requests to audit reports, Matrix Vault watches, checks, and explains SAP risk in real time — so nothing reaches production unreviewed.
             </p>
           </motion.div>
         </div>
 
-        {/* Feature Grid - 3 Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {features.map((feature, i) => (
-            <motion.div
-              key={i}
-              variants={cardVariants}
-              initial="initial"
-              whileInView="animate"
-              whileHover="hover"
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: feature.delay }}
-              className="p-5 bg-white/70 backdrop-blur-md border-l-2 border-l-red-500 border-y border-r border-red-100 rounded-2xl transition-all shadow-[0_4px_20px_rgba(15,23,42,0.02)] h-full flex flex-col justify-start"
-            >
-              {/* Header: Icon container and Title side-by-side */}
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-red-50/70 border border-red-100/80 text-red-600 rounded-xl flex items-center justify-center shrink-0">
-                  <feature.icon className="w-5 h-5 stroke-[2.25]" />
-                </div>
-                <h3 className="text-base font-bold text-slate-900 leading-snug">
-                  {feature.title}
-                </h3>
+        {/* Bento Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 w-full">
+          
+          {/* Bento Card 1: Risk-Aware by Design (Featured Card - Spans 7 cols) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="md:col-span-7 bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xs hover:shadow-xl hover:bg-white hover:border-red-200 transition-all duration-300 flex flex-col justify-between group"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-600 border border-red-200 font-bold text-xs">
+                  <ShieldCheck className="w-3.5 h-3.5" /> Inline Gatekeeper
+                </span>
+                <span className="text-xs text-slate-400 font-semibold">Risk-Aware Architecture</span>
               </div>
-              
-              {/* Description */}
-              <p className="text-slate-500 leading-relaxed text-xs font-medium pl-1 mb-6">
-                {feature.description}
+
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3 tracking-tight">
+                Risk-Aware by Design
+              </h3>
+              <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed mb-6">
+                Every access action runs SoD analysis inline. It’s a gate built into the transaction itself—not a separate report run days later.
               </p>
-              
-              {/* Mini Comparison */}
-              {feature.comparison && (
-                <div className="mt-auto pt-4 border-t border-red-100/60 space-y-2.5">
-                  <div className="flex items-start gap-2">
-                    <span className="text-[9px] font-black text-slate-400 tracking-widest shrink-0 mt-0.5 w-[76px]">Legacy GRC</span>
-                    <span className="min-w-0 text-[11px] font-semibold text-slate-500 leading-snug">{feature.comparison.traditional}</span>
+
+              {/* Side-by-Side Comparison Box */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                <div className="bg-white border border-slate-200 rounded-2xl p-4">
+                  <div className="flex items-center gap-1.5 mb-2 text-slate-400 font-bold text-xs">
+                    <XCircle className="w-3.5 h-3.5 text-slate-400" /> Legacy GRC
                   </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-[9px] font-black text-red-600 tracking-widest shrink-0 mt-0.5 w-[76px]">Matrix Vault</span>
-                    <span className="min-w-0 text-[11px] font-extrabold text-slate-800 leading-snug">{feature.comparison.matrix}</span>
-                  </div>
+                  <p className="text-xs font-medium text-slate-500 leading-snug">
+                    Complex, multi-step provisioning workflows.
+                  </p>
                 </div>
-              )}
-            </motion.div>
-          ))}
+                <div className="bg-red-50/70 border border-red-200/90 rounded-2xl p-4">
+                  <div className="flex items-center gap-1.5 mb-2 text-red-600 font-bold text-xs">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-red-600" /> Matrix Vault
+                  </div>
+                  <p className="text-xs font-bold text-slate-900 leading-snug">
+                    Guided wizard with built-in inline SoD checks.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-slate-500">
+              <span>Inline Transaction Gating</span>
+              <Link to="/platform" className="text-red-600 hover:text-red-700 flex items-center gap-1">
+                Learn more <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Bento Card 2: Instant Multi-Role Comparison (Spans 5 cols) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="md:col-span-5 bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xs hover:shadow-xl hover:bg-white hover:border-blue-200 transition-all duration-300 flex flex-col justify-between group"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-bold text-xs">
+                  <Split className="w-3.5 h-3.5" /> Role Analytics
+                </span>
+                <span className="text-xs text-slate-400 font-bold">100 Roles Max</span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-3 tracking-tight">
+                Instant Multi-Role Comparison
+              </h3>
+              <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed mb-6">
+                Select up to 100 roles and get a unified breakdown of matched vs. unmatched authorizations, T-Codes, and a live SoD verdict.
+              </p>
+
+              <div className="bg-white border border-slate-200 rounded-2xl p-4 flex items-center justify-between">
+                <div>
+                  <div className="text-xs font-bold text-slate-900">Authorization Breakdown</div>
+                  <div className="text-[11px] text-slate-500 font-medium">Matched & Overlapping T-Codes</div>
+                </div>
+                <span className="bg-blue-100 text-blue-800 text-[10px] font-extrabold px-2.5 py-1 rounded-md">
+                  Instant Verdict
+                </span>
+              </div>
+            </div>
+
+            <div className="pt-4 mt-6 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-slate-500">
+              <span>Compare 100 Roles Instantly</span>
+              <Link to="/platform" className="text-red-600 hover:text-red-700 flex items-center gap-1">
+                Explore Matrix <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Bento Card 3: Universal Radar View (Spans 4 cols) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="md:col-span-4 bg-slate-50 border border-slate-200 rounded-3xl p-6 shadow-xs hover:shadow-xl hover:bg-white hover:border-purple-200 transition-all duration-300 flex flex-col justify-between"
+          >
+            <div>
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-bold text-xs">
+                  <Target className="w-3.5 h-3.5" /> Single Search Bar
+                </span>
+              </div>
+
+              <h3 className="text-lg font-extrabold text-slate-900 mb-2">
+                Universal Radar View
+              </h3>
+              <p className="text-slate-600 text-xs font-medium leading-relaxed mb-4">
+                Search a Role, User, Profile, User Group, T-Code, or Finding and see everything connected in one unified view.
+              </p>
+
+              <div className="bg-white border border-slate-200 rounded-xl p-3 flex items-center gap-2 text-xs text-slate-400">
+                <Search className="w-4 h-4 text-purple-600" />
+                <span className="font-mono text-slate-600 text-xs font-medium">Search security entities...</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Bento Card 4: AI-Generated Risk Narratives (Spans 4 cols) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="md:col-span-4 bg-slate-50 border border-slate-200 rounded-3xl p-6 shadow-xs hover:shadow-xl hover:bg-white hover:border-amber-200 transition-all duration-300 flex flex-col justify-between"
+          >
+            <div>
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 font-bold text-xs">
+                  <Brain className="w-3.5 h-3.5" /> AI Behavioral Risk
+                </span>
+              </div>
+
+              <h3 className="text-lg font-extrabold text-slate-900 mb-2">
+                AI Risk Narratives
+              </h3>
+              <p className="text-slate-600 text-xs font-medium leading-relaxed mb-4">
+                Firefighter sessions come with AI-written summaries alongside a 0–100 risk score, turning raw logs into insights.
+              </p>
+
+              <div className="bg-white border border-slate-200 rounded-xl p-3 flex items-center justify-between">
+                <span className="text-xs font-bold text-slate-700">Behavioral Score:</span>
+                <span className="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold px-2 py-0.5 rounded">
+                  12/100 (Low Risk)
+                </span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Bento Card 5: Scheduled Reporting & Approver Coverage (Spans 4 cols) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="md:col-span-4 bg-slate-50 border border-slate-200 rounded-3xl p-6 shadow-xs hover:shadow-xl hover:bg-white hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between"
+          >
+            <div>
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold text-xs">
+                  <FileText className="w-3.5 h-3.5" /> Compliance & Approvers
+                </span>
+              </div>
+
+              <h3 className="text-lg font-extrabold text-slate-900 mb-2">
+                Scheduled Audits & Approvers
+              </h3>
+              <p className="text-slate-600 text-xs font-medium leading-relaxed mb-4">
+                On-demand or scheduled SOX Compliance reports covering SoD Conflicts & Firefighter Evidence, plus visual approver coverage tracking.
+              </p>
+
+              <div className="bg-white border border-slate-200 rounded-xl p-3 flex items-center justify-between">
+                <span className="text-xs font-bold text-slate-700">Approver Coverage:</span>
+                <span className="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold px-2 py-0.5 rounded flex items-center gap-1">
+                  <UserCheck className="w-3 h-3" /> 100% Verified
+                </span>
+              </div>
+            </div>
+          </motion.div>
+
         </div>
 
       </div>
