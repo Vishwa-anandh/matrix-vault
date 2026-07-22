@@ -16,7 +16,7 @@ import { RiskIntelligenceDashboard } from './components/RiskIntelligenceDashboar
 import { UnifiedAudit } from './components/UnifiedAudit';
 import { Integrations } from './components/Integrations';
 import { HowItWorks } from './components/HowItWorks';
-import { FAQ } from './components/FAQ';
+import { FAQ, faqs } from './components/FAQ';
 import { Testimonials } from './components/Testimonials';
 import { Certifications } from './components/Certifications';
 import { Footer } from './components/Footer';
@@ -143,32 +143,14 @@ function FaqPage() {
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: [
-            {
-              '@type': 'Question',
-              name: 'How long does it take to deploy Matrix Vault into an existing SAP environment?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Most enterprise deployments are completed within 2 to 4 weeks. Our native SAP connectors and automated discovery tools significantly reduce the manual configuration usually required for identity governance tools.',
-              },
+          mainEntity: faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: f.answer,
             },
-            {
-              '@type': 'Question',
-              name: 'Does Matrix Vault support managing Firefighter (FF) IDs?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Yes, Firefighter ID management is a core capability. Matrix Vault automates FF ID checkout, session monitoring, and post-session audit log reviews, ensuring full compliance without slowing down your emergency responders.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'How does the AI Copilot assist administrators?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'The AI Copilot is trained on your specific access policies and SAP structures. It can instantly summarize audit logs, suggest approval routing based on historical data, and help troubleshoot access errors via a conversational interface.',
-              },
-            },
-          ],
+          })),
         }}
       />
       <div className="pt-20">
