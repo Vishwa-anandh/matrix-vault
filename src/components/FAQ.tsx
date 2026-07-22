@@ -25,11 +25,11 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 bg-slate-50">
+    <section id="faq" className="py-12 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Frequently Asked Questions</h2>
-          <p className="text-slate-600 text-lg font-medium">Everything you need to know about implementing Matrix Vault.</p>
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">Frequently Asked Questions</h2>
+          <p className="text-slate-600 dark:text-slate-300 text-lg font-medium">Everything you need to know about implementing Matrix Vault.</p>
         </div>
 
         <div className="space-y-4">
@@ -40,14 +40,16 @@ export function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:border-slate-300 transition-colors"
+              className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:border-slate-300 dark:hover:border-slate-700 transition-colors"
             >
               <button
                 className="w-full px-6 py-6 text-left flex items-center justify-between focus:outline-none"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                aria-expanded={openIndex === index}
+                aria-label={faq.question}
               >
-                <span className="text-lg font-bold text-slate-900">{faq.question}</span>
-                <div className={`p-2 rounded-full transition-colors ${openIndex === index ? 'bg-red-50 text-red-600' : 'bg-slate-50 text-slate-400'}`}>
+                <span className="text-lg font-bold text-slate-900 dark:text-white">{faq.question}</span>
+                <div className={`p-2 rounded-full transition-colors ${openIndex === index ? 'bg-red-50 dark:bg-red-950/50 text-red-600 dark:text-red-400' : 'bg-slate-50 dark:bg-slate-800 text-slate-400 dark:text-slate-500'}`}>
                   <ChevronDown 
                     className={`w-5 h-5 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`} 
                   />
@@ -62,7 +64,7 @@ export function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    <div className="px-6 pb-6 pt-0 text-slate-600 font-medium leading-relaxed border-t border-slate-100 mt-2">
+                    <div className="px-6 pb-6 pt-0 text-slate-600 dark:text-slate-300 font-medium leading-relaxed border-t border-slate-100 dark:border-slate-800 mt-2">
                       <div className="pt-4">
                         {faq.answer}
                       </div>

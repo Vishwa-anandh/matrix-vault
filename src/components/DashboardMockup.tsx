@@ -1,118 +1,144 @@
 import { motion } from 'motion/react';
-import { Activity, ShieldCheck, Users, AlertTriangle, FileText, CheckCircle2, ChevronRight } from 'lucide-react';
+import { ShieldCheck, Activity, Users, AlertTriangle, CheckCircle2, ChevronRight, Search, Bell, Moon, Shield, ShieldAlert, FileText } from 'lucide-react';
 
 export function DashboardMockup() {
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
-      {/* Decorative glows */}
-      <div className="absolute -inset-2 bg-gradient-to-r from-red-200 to-red-100 rounded-2xl blur-2xl opacity-60 animate-pulse"></div>
+    <div className="relative w-full max-w-6xl mx-auto">
+      <div className="absolute -inset-2 bg-gradient-to-r from-red-200 to-red-100 dark:from-red-950/40 dark:to-red-900/20 rounded-2xl blur-2xl opacity-60 animate-pulse"></div>
       
-      <div className="relative bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden flex flex-col ring-1 ring-slate-900/5">
-        {/* Mockup Header */}
-        <div className="h-14 border-b border-slate-200 bg-slate-50 flex items-center px-4 justify-between">
-          <div className="flex gap-2">
-            <div className="w-3 h-3 rounded-full bg-red-400"></div>
-            <div className="w-3 h-3 rounded-full bg-amber-400"></div>
-            <div className="w-3 h-3 rounded-full bg-green-400"></div>
-          </div>
-          <div className="flex bg-white px-4 sm:px-24 py-1.5 rounded-md border border-slate-200 shadow-sm">
-             <div className="text-xs font-mono text-slate-400 flex items-center gap-2">
-               <ShieldCheck className="w-3 h-3 text-slate-400" />
-               matrixvault.app
-             </div>
-          </div>
-          <div className="flex items-center gap-2 px-3 py-1 bg-green-50 rounded-full border border-green-200">
-            <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-            <span className="text-[10px] font-bold text-green-700 uppercase tracking-wider hidden sm:block">Secure</span>
-          </div>
-        </div>
-
-        {/* Mockup Body */}
-        <div className="p-6 bg-slate-50/50 grid gap-6">
-          {/* Top Stat Pills */}
-          <div className="grid grid-cols-3 gap-2 sm:gap-4">
-            <motion.div whileHover={{ y: -2 }} className="bg-white rounded-xl p-3 sm:p-4 border border-slate-200 shadow-sm">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-[10px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider">Pending</span>
-                <div className="p-1.5 bg-blue-50 text-blue-600 rounded-md">
-                  <Users className="w-4 h-4" />
-                </div>
-              </div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-slate-900">124</div>
-            </motion.div>
-            <motion.div whileHover={{ y: -2 }} className="bg-white rounded-xl p-3 sm:p-4 border border-red-200 shadow-sm shadow-red-100 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-red-50 rounded-full blur-xl -mr-10 -mt-10"></div>
-              <div className="flex items-center justify-between mb-3 relative">
-                <span className="text-[10px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider">Active FFs</span>
-                <div className="p-1.5 bg-red-50 text-red-600 rounded-md">
-                  <Activity className="w-4 h-4" />
-                </div>
-              </div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-red-600 relative">18</div>
-            </motion.div>
-            <motion.div whileHover={{ y: -2 }} className="bg-white rounded-xl p-3 sm:p-4 border border-slate-200 shadow-sm">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-[10px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider">Escalations</span>
-                <div className="p-1.5 bg-amber-50 text-amber-600 rounded-md">
-                  <AlertTriangle className="w-4 h-4" />
-                </div>
-              </div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-slate-900">3</div>
-            </motion.div>
-          </div>
-
-          {/* Chart Area */}
-          <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
-            <div className="flex justify-between items-center mb-6">
-              <span className="text-sm font-bold text-slate-900">Request History (7 Days)</span>
-              <button className="text-xs font-semibold text-slate-500 hover:text-slate-800 flex items-center gap-1">
-                View Report <ChevronRight className="w-3 h-3" />
-              </button>
+      <div className="relative bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col ring-1 ring-slate-900/5 text-slate-800 dark:text-slate-200 text-[10px] sm:text-xs font-sans transition-colors duration-300">
+        
+        {/* Top Navbar */}
+        <div className="h-12 bg-white dark:bg-slate-800/90 border-b border-slate-200 dark:border-slate-700 flex items-center px-4 justify-between select-none">
+          {/* Logo & Tabs */}
+          <div className="flex items-center gap-4 sm:gap-6 overflow-hidden h-full">
+            <div className="flex items-center gap-1.5 text-red-600 dark:text-red-500 font-bold shrink-0">
+              <ShieldCheck className="w-5 h-5" />
+              <span className="hidden sm:block text-xs font-extrabold tracking-tight">MatrixVault</span>
             </div>
-            <div className="flex items-end justify-between h-24 sm:h-32 gap-3 px-2">
-              {[40, 65, 45, 80, 55, 90, 70].map((height, i) => (
-                <div key={i} className="w-full bg-slate-100 rounded-t-lg relative group overflow-hidden">
-                  <motion.div 
-                    initial={{ height: 0 }}
-                    animate={{ height: `${height}%` }}
-                    transition={{ duration: 1, delay: i * 0.1, ease: "easeOut" }}
-                    className={`absolute bottom-0 w-full rounded-t-lg transition-colors ${i === 5 ? 'bg-red-500' : 'bg-slate-300 group-hover:bg-slate-400'}`}
-                  ></motion.div>
-                </div>
-              ))}
+            
+            <div className="flex items-center h-full gap-3 sm:gap-4 text-slate-500 dark:text-slate-400 font-semibold text-[11px] overflow-hidden">
+              <div className="h-full flex items-center text-red-600 dark:text-red-500 border-b-2 border-red-600 dark:border-red-500 whitespace-nowrap">
+                <Activity className="w-3.5 h-3.5 mr-1.5" /> Dashboard
+              </div>
+              <div className="h-full flex items-center hover:text-slate-700 dark:hover:text-slate-200 whitespace-nowrap">
+                <Users className="w-3.5 h-3.5 mr-1.5" /> Access Control
+              </div>
+              <div className="h-full flex items-center hover:text-slate-700 dark:hover:text-slate-200 whitespace-nowrap hidden sm:flex">
+                <Shield className="w-3.5 h-3.5 mr-1.5" /> Governance
+                <span className="ml-1.5 bg-red-500 text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold leading-none">99+</span>
+              </div>
             </div>
           </div>
           
-          {/* Recent Activity List */}
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-             <div className="px-4 py-3 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
-                <span className="text-sm font-bold text-slate-900">Recent Approvals</span>
-             </div>
-            <div className="divide-y divide-slate-100">
-              {[
-                { id: 'REQ-8902', user: 'Sarah Jenkins', role: 'SAP_ALL', status: 'Approved', color: 'text-green-700', bg: 'bg-green-50 border-green-200', icon: CheckCircle2 },
-                { id: 'REQ-8901', user: 'Alex Davis', role: 'FI_ADMIN', status: 'In Review', color: 'text-amber-700', bg: 'bg-amber-50 border-amber-200', icon: Activity },
-              ].map((item, i) => (
-                <div key={i} className="flex items-center justify-between p-4 hover:bg-slate-50 transition-colors">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-sm font-bold text-slate-600 border border-slate-200 shadow-sm">
-                      {item.user.split(' ').map(n => n[0]).join('')}
-                    </div>
-                    <div>
-                      <div className="text-sm font-bold text-slate-900">{item.user}</div>
-                      <div className="text-xs font-medium text-slate-500 mt-0.5 flex items-center gap-1.5">
-                        <FileText className="w-3 h-3" /> {item.id} <span className="text-slate-300">&bull;</span> {item.role}
-                      </div>
-                    </div>
-                  </div>
-                  <div className={`flex items-center gap-1.5 text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full border ${item.bg} ${item.color}`}>
-                    <item.icon className="w-3.5 h-3.5 hidden sm:block" />
-                    {item.status}
-                  </div>
-                </div>
-              ))}
+          {/* Right Icons */}
+          <div className="flex items-center gap-3 shrink-0">
+            <Search className="w-4 h-4 text-slate-400 hidden sm:block" />
+            <Bell className="w-4 h-4 text-slate-400" />
+            <Moon className="w-4 h-4 text-slate-400 hidden sm:block" />
+            
+            <div className="flex items-center gap-2 ml-2">
+              <div className="hidden sm:flex items-center gap-1.5 bg-red-50 dark:bg-red-950/50 text-red-600 dark:text-red-400 border border-red-100 dark:border-red-900/50 px-2 py-1 rounded-md font-bold text-[10px]">
+                <CheckCircle2 className="w-3.5 h-3.5" /> Admin
+              </div>
+              <div className="w-7 h-7 rounded-full bg-slate-200 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 flex items-center justify-center font-bold text-slate-600 dark:text-slate-200">
+                J
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Dashboard Content */}
+        <div className="p-3 sm:p-5 grid gap-3 sm:gap-4 bg-slate-50 dark:bg-slate-950">
+          
+          {/* System Health */}
+          <div className="bg-white dark:bg-slate-900 rounded-xl p-3 sm:p-4 border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center gap-2 font-bold text-slate-700 dark:text-slate-200 text-xs sm:text-sm">
+                <div className="w-3.5 h-3.5 rounded-sm bg-red-100 dark:bg-red-950/60 flex items-center justify-center">
+                   <div className="w-1.5 h-1.5 bg-red-500 rounded-full"></div>
+                </div>
+                Connected System Health
+              </div>
+              <div className="text-[10px] sm:text-xs font-semibold text-red-500 flex items-center gap-1 cursor-pointer hover:text-red-600">
+                <span className="text-green-600 dark:text-green-400">1/1 healthy</span> View all <ChevronRight className="w-3.5 h-3.5" />
+              </div>
+            </div>
+            <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-lg p-3 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                 <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                 <div>
+                   <div className="font-bold text-slate-800 dark:text-white text-xs">MSQ System</div>
+                   <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">MSQ</div>
+                 </div>
+              </div>
+              <span className="text-[10px] sm:text-xs font-bold text-green-600 dark:text-green-400">Healthy</span>
+            </div>
+          </div>
+
+          {/* Key Metrics */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+             <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden">
+                <div className="flex items-center gap-1.5 text-slate-400 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs tracking-wider">
+                   <ShieldAlert className="w-3.5 h-3.5 text-red-400" /> Open Violations
+                </div>
+                <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">1263</div>
+             </motion.div>
+             
+             <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden">
+                <div className="flex items-center gap-1.5 text-slate-400 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs tracking-wider">
+                   <CheckCircle2 className="w-3.5 h-3.5 text-amber-500" /> Pending Approvals
+                </div>
+                <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">47</div>
+             </motion.div>
+
+             <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden hidden sm:block">
+                <div className="flex items-center gap-1.5 text-slate-400 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs tracking-wider">
+                   <Shield className="w-3.5 h-3.5 text-red-500" /> Vulnerabilities Open
+                </div>
+                <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">9841</div>
+             </motion.div>
+
+             <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-red-50 dark:bg-red-950/40 rounded-full blur-xl -mr-10 -mt-10"></div>
+                <div className="flex items-center gap-1.5 text-slate-400 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs tracking-wider relative">
+                   <Activity className="w-3.5 h-3.5 text-red-500" /> Active FF Sessions
+                </div>
+                <div className="flex items-end gap-2 relative">
+                  <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">3</div>
+                  <div className="text-[10px] font-black text-red-500 mb-1.5 flex items-center gap-1"><div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></div> Live</div>
+                </div>
+             </motion.div>
+          </div>
+
+          {/* Bottom Area: Donut Charts Mockup */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 hidden sm:grid">
+            {['Remediation', 'Mitigation', 'Request Tickets'].map((title, i) => (
+              <div key={i} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm flex flex-col justify-between">
+                <div className="flex justify-between items-center mb-6">
+                  <div className="font-bold text-slate-700 dark:text-slate-200 flex items-center gap-1.5 text-xs">
+                     {i === 0 ? <Activity className="w-3.5 h-3.5 text-red-400" /> : i === 1 ? <ShieldAlert className="w-3.5 h-3.5 text-purple-400" /> : <FileText className="w-3.5 h-3.5 text-amber-400" />} {title}
+                  </div>
+                  <span className="text-red-500 font-semibold cursor-pointer text-[10px] hover:text-red-600">View all &gt;</span>
+                </div>
+                <div className="flex items-center gap-3 xl:gap-4">
+                   <div className={`relative w-20 h-20 rounded-full border-[8px] border-slate-100 dark:border-slate-800 flex items-center justify-center shrink-0`}>
+                     <div className={`absolute inset-[-8px] rounded-full border-[8px] border-transparent ${i === 0 ? 'border-t-red-500 border-r-amber-400 border-b-green-500 border-l-slate-400 transform rotate-45' : i === 1 ? 'border-t-slate-400 border-r-slate-400 border-b-green-500 border-l-amber-400 transform -rotate-12' : 'border-t-green-500 border-r-amber-400 border-b-green-500 border-l-slate-400 transform rotate-90'}`}></div>
+                     <div className="text-center bg-white dark:bg-slate-900 rounded-full w-full h-full flex flex-col items-center justify-center z-10">
+                        <div className="font-black text-slate-900 dark:text-white text-lg leading-none">{i === 0 ? '31' : i === 1 ? '24' : '152'}</div>
+                        <div className="text-[8px] text-slate-400 font-bold mt-0.5 tracking-wide">Total</div>
+                     </div>
+                   </div>
+                   <div className="space-y-2 flex-1 min-w-0">
+                      <div className="flex justify-between gap-1 text-[10px] sm:text-[11px]"><span className="flex items-center gap-1.5 text-slate-600 dark:text-slate-300"><span className="w-2 h-2 rounded-full bg-green-500 shrink-0"></span><span className="truncate">{i === 0 ? 'Resolved' : i === 1 ? 'Active' : 'Approved'}</span></span> <span className="font-bold text-slate-900 dark:text-white">8</span></div>
+                      <div className="flex justify-between gap-1 text-[10px] sm:text-[11px]"><span className="flex items-center gap-1.5 text-slate-600 dark:text-slate-300"><span className="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span><span className="truncate">{i === 0 ? 'In Progress' : 'Pending'}</span></span> <span className="font-bold text-slate-900 dark:text-white">2</span></div>
+                      <div className="flex justify-between gap-1 text-[10px] sm:text-[11px]"><span className="flex items-center gap-1.5 text-slate-600 dark:text-slate-300"><span className="w-2 h-2 rounded-full bg-red-500 shrink-0"></span><span className="truncate">{i === 0 ? 'Open' : i === 1 ? 'Expired' : 'Escalated'}</span></span> <span className="font-bold text-slate-900 dark:text-white">16</span></div>
+                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
         </div>
       </div>
     </div>

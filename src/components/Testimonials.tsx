@@ -30,15 +30,15 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-white border-b border-slate-200">
+    <section className="py-12 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">
             Trusted by Enterprise Security Teams
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
@@ -46,7 +46,7 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm relative"
+              className="bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm relative"
             >
               <div className="flex gap-1 mb-6">
                 {[1,2,3,4,5].map(star => (

@@ -25,13 +25,13 @@ const certifications = [
 
 export function Certifications() {
   return (
-    <section className="py-16 bg-white border-b border-slate-200">
+    <section className="py-12 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-sm font-extrabold text-slate-400 uppercase tracking-[0.2em]">Enterprise Compliance Standards</h2>
+        <div className="text-center mb-8">
+          <h2 className="text-sm font-extrabold text-slate-400 tracking-[0.2em]">Enterprise Compliance Standards</h2>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {certifications.map((cert, i) => (
             <motion.div 
               key={i}

@@ -30,9 +30,9 @@ export function ROICalculator() {
   }, [requests, auditHours, hourlyRate]);
 
   return (
-    <section className="py-24 bg-white border-t border-slate-200">
+    <section className="py-12 bg-white border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -51,14 +51,14 @@ export function ROICalculator() {
           </motion.div>
         </div>
 
-        <div className="lg:grid lg:grid-cols-12 gap-8 items-start max-w-5xl mx-auto">
+        <div className="lg:grid lg:grid-cols-12 gap-6 items-start max-w-5xl mx-auto">
           
           {/* Controls */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-7 bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-sm mb-8 lg:mb-0"
+            className="lg:col-span-7 bg-slate-50 border border-slate-200 rounded-3xl p-6 shadow-sm mb-8 lg:mb-0"
           >
             <h3 className="text-xl font-bold text-slate-900 mb-8">Current Resource Usage</h3>
             
@@ -127,7 +127,7 @@ export function ROICalculator() {
             className="lg:col-span-5 relative"
           >
             <div className="absolute inset-0 bg-red-600 rounded-3xl blur-2xl opacity-20 transform translate-x-4 translate-y-4"></div>
-            <div className="relative bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl overflow-hidden">
+            <div className="relative bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl overflow-hidden">
               {/* Decorative background elements */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
               
@@ -160,8 +160,8 @@ export function ROICalculator() {
                       <DollarSign className="w-6 h-6 text-red-400" />
                     </div>
                     <div>
-                      <div className="text-sm font-bold text-red-400 uppercase tracking-wider mb-1">Annual Projected Savings</div>
-                      <div className="text-4xl sm:text-5xl font-extrabold text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                      <div className="text-sm font-bold text-red-400  tracking-wider mb-1">Annual Projected Savings</div>
+                      <div className="text-4xl sm:text-5xl font-extrabold text-white bg-clip-text bg-linear-to-r from-white to-slate-400">
                         ${savings.annual.toLocaleString()}
                       </div>
                     </div>

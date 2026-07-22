@@ -1,0 +1,27 @@
+# Matrix Vault
+
+Matrix Vault is a modern SAP Access Governance and SoD (Segregation of Duties) Risk Management platform. It serves as a lightweight, real-time alternative to traditional SAP GRC solutions.
+
+## Core Value Proposition
+From access requests to audit reports, Matrix Vault watches, checks, and explains SAP risk in real-time — so nothing reaches production unreviewed.
+
+## Key Features
+- **Risk-Aware by Design**: Every access action runs SoD analysis inline. It's a gate built into the transaction itself.
+- **Instant Multi-Role Comparison**: Select up to 100 roles and get a unified breakdown of matched vs. unmatched authorizations, T-Codes, and a live SoD conflict verdict.
+- **Universal Radar View**: Search a Role, User, Profile, User Group, T-Code, or Finding and see everything connected to it in one single, unified place.
+- **AI-Generated Risk Narratives**: Firefighter sessions come with AI-written, plain-English summaries alongside a 0-100 risk score, turning raw logs into actionable insights.
+- **Scheduled Compliance Reporting**: Generate on-demand or scheduled SOX Compliance reports covering SoD Conflicts and Firefighter Evidence.
+- **Approver Coverage at a Glance**: The Approver Management screen shows exactly what percentage of roles have assigned approvers.
+
+## Integration & Compliance
+- **Deployment**: Deploys within 2 to 4 weeks using native SAP connectors and automated discovery tools.
+- **Security**: Built on a zero-trust architecture. Fully SOC 2 Type II and ISO 27001 certified. All data is encrypted at rest and in transit.
+- **Emergency Access**: Automates Firefighter (FF) ID checkout, session monitoring, and post-session audit log reviews.
+
+## Architecture
+- Lightweight OData-based SAP access governance layer.
+
+## Contact & Links
+- Website: https://www.matrixvault.com
+- Contact: contact@matrixvault.com
+- Twitter: @MatrixVault
