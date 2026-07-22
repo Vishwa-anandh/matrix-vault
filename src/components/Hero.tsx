@@ -17,22 +17,22 @@ export function Hero() {
         <div className="absolute top-0 right-1/4 w-72 h-72 md:w-[650px] md:h-[650px] bg-red-100/80 dark:bg-red-950/30 rounded-full blur-[100px] md:blur-[140px] opacity-70"></div>
         <div className="absolute bottom-0 left-1/4 w-72 h-72 md:w-[550px] md:h-[550px] bg-blue-100/60 dark:bg-blue-950/20 rounded-full blur-[80px] md:blur-[120px] opacity-60"></div>
         
-        {/* Distinctive Flowing Soft Aurora Wave Ribbons (Very Subtle Blur) */}
-        <svg className="absolute inset-0 w-full h-full opacity-60 blur-[2px]" viewBox="0 0 1440 650" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        {/* Distinctive Flowing Soft Aurora Wave Ribbons (Strong Blur Effect) */}
+        <svg className="absolute inset-0 w-full h-full opacity-70 blur-[28px]" viewBox="0 0 1440 650" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <path 
             d="M-50,220 Q350,60 750,280 T1550,180 V650 H-50 Z" 
             fill="url(#aurora-ribbon-1)" 
-            className="opacity-40"
+            className="opacity-50"
           />
           <path 
             d="M-50,380 Q400,180 850,420 T1550,260 V650 H-50 Z" 
             fill="url(#aurora-ribbon-2)" 
-            className="opacity-30"
+            className="opacity-40"
           />
         </svg>
 
-        {/* Crisp Wave Streams with Traveling Light Pulses */}
-        <svg className="absolute inset-0 w-full h-full opacity-80" viewBox="0 0 1440 650" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        {/* Blurry Wave Streams with Traveling Glowing Light Beams */}
+        <svg className="absolute inset-0 w-full h-full opacity-80 blur-[16px]" viewBox="0 0 1440 650" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           {/* Wave Path 1 */}
           <path 
             id="hero-wave-path-1"
