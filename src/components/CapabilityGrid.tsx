@@ -16,48 +16,42 @@ const capabilities = [
     title: "Live, In-Flow SoD Checks",
     description: "Risk is analyzed inside every create/assign/revoke step — not a separate batch job run after the fact.",
     icon: ShieldCheck,
-    bgColor: "bg-slate-900 text-white border-slate-800",
-    iconBg: "bg-slate-800 text-red-500",
+    badgeColor: "bg-red-50 text-red-600 border-red-200",
     badge: "Real-Time Inspection"
   },
   {
     title: "Role Simulator",
     description: "Model a user's access changes and preview new SoD violations before anything touches SAP.",
     icon: Sliders,
-    bgColor: "bg-red-600 text-white border-red-700",
-    iconBg: "bg-red-700 text-white",
+    badgeColor: "bg-red-50 text-red-600 border-red-200",
     badge: "Pre-Transport Modeling"
   },
   {
     title: "Role Lens",
     description: "Compare up to 100 roles side-by-side for T-Code, auth-object and permission overlap in seconds.",
     icon: Layers,
-    bgColor: "bg-slate-900 text-white border-slate-800",
-    iconBg: "bg-slate-800 text-red-500",
+    badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
     badge: "Role Overlap Matrix"
   },
   {
     title: "Radar View",
     description: "One search box across Roles, Users, Profiles, User Groups, T-Codes, SoD Rules and Findings.",
     icon: Search,
-    bgColor: "bg-red-600 text-white border-red-700",
-    iconBg: "bg-red-700 text-white",
+    badgeColor: "bg-purple-50 text-purple-700 border-purple-200",
     badge: "Universal Search"
   },
   {
     title: "AI Risk Intelligence",
     description: "AI-generated risk scores, session summaries and executive summaries — not just raw logs.",
     icon: BrainCircuit,
-    bgColor: "bg-slate-900 text-white border-slate-800",
-    iconBg: "bg-slate-800 text-red-500",
+    badgeColor: "bg-amber-50 text-amber-700 border-amber-200",
     badge: "Behavioral Scoring"
   },
   {
     title: "Unified Audit Workspace",
     description: "Timeline, Approval Trail, SAP Logs and Notes for every request in one screen.",
     icon: FileCheck2,
-    bgColor: "bg-red-600 text-white border-red-700",
-    iconBg: "bg-red-700 text-white",
+    badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
     badge: "One-Click Evidence"
   },
 ];
@@ -87,7 +81,7 @@ export function CapabilityGrid() {
           </motion.div>
         </div>
 
-        {/* 6-Card Grid */}
+        {/* 6-Card Light Mode Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
           {capabilities.map((item, index) => {
             const Icon = item.icon;
@@ -98,29 +92,29 @@ export function CapabilityGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className={`${item.bgColor} border rounded-3xl p-7 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group`}
+                className="bg-white border border-slate-200 rounded-3xl p-7 shadow-xs hover:shadow-xl hover:border-red-200 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className={`p-3 rounded-2xl ${item.iconBg} shadow-xs`}>
+                    <div className="p-3 rounded-2xl bg-red-50 text-red-600 border border-red-100 shadow-2xs">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-[11px] font-extrabold uppercase tracking-wider opacity-80 bg-black/10 dark:bg-white/10 px-2.5 py-1 rounded-full">
+                    <span className={`text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full border ${item.badgeColor}`}>
                       {item.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-extrabold mb-3 tracking-tight">
+                  <h3 className="text-2xl font-extrabold text-slate-900 mb-3 tracking-tight">
                     {item.title}
                   </h3>
-                  <p className="text-sm font-medium leading-relaxed opacity-90">
+                  <p className="text-sm font-medium text-slate-600 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs font-bold">
+                <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
                   <span>Matrix Vault Core</span>
-                  <Link to="/platform" className="inline-flex items-center gap-1 hover:underline">
+                  <Link to="/platform" className="inline-flex items-center gap-1 text-red-600 hover:text-red-700 font-bold">
                     Explore <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
