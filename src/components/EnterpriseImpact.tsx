@@ -17,28 +17,28 @@ export function EnterpriseImpact() {
       label: 'Reduction in Audit Prep',
       description: 'Automated evidence generation replaces weeks of manual GRC spreadsheet hunting.',
       icon: Clock,
-      badge: 'Time Savings'
+      badge: 'Time savings'
     },
     {
       stat: '< 200ms',
       label: 'Inline Risk Detection',
       description: 'OData API checks analyze Segregation of Duties conflicts before access is provisioned.',
       icon: Cpu,
-      badge: 'Real-time Gating'
+      badge: 'Real-time gating'
     },
     {
       stat: '100%',
       label: 'Firefighter Visibility',
       description: 'AI Copilot interprets raw T-Code logs into clear executive session narratives.',
       icon: ShieldCheck,
-      badge: 'Emergency Access'
+      badge: 'Emergency access'
     },
     {
       stat: '2–4 Wks',
       label: 'Turnkey Implementation',
       description: 'Native SAP connectors deploy rapidly without heavy ABAP modifications.',
       icon: BarChart3,
-      badge: 'Fast Time-to-Value'
+      badge: 'Fast time-to-value'
     }
   ];
 
@@ -81,7 +81,7 @@ export function EnterpriseImpact() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-[10px] font-extrabold lowercase tracking-wider text-red-600 bg-red-50 border border-red-100 px-2.5 py-1 rounded-full">
+                    <span className="text-[10px] font-extrabold tracking-wider text-red-600 bg-red-50 border border-red-100 px-2.5 py-1 rounded-full">
                       {m.badge}
                     </span>
                     <div className="w-9 h-9 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-600 group-hover:bg-red-600 group-hover:text-white transition-colors shadow-2xs">

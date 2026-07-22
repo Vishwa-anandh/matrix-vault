@@ -17,42 +17,42 @@ const capabilities = [
     description: "Risk is analyzed inside every create/assign/revoke step — not a separate batch job run after the fact.",
     icon: ShieldCheck,
     badgeColor: "bg-transparent text-red-600 border-red-200",
-    badge: "Real-Time Inspection"
+    badge: "Real-time inspection"
   },
   {
     title: "Role Simulator",
     description: "Model a user's access changes and preview new SoD violations before anything touches SAP.",
     icon: Sliders,
     badgeColor: "bg-transparent text-red-600 border-red-200",
-    badge: "Pre-Transport Modeling"
+    badge: "Pre-transport modeling"
   },
   {
     title: "Role Lens",
     description: "Compare up to 100 roles side-by-side for T-Code, auth-object and permission overlap in seconds.",
     icon: Layers,
     badgeColor: "bg-transparent text-blue-700 border-blue-200",
-    badge: "Role Overlap Matrix"
+    badge: "Role overlap matrix"
   },
   {
     title: "Radar View",
     description: "One search box across Roles, Users, Profiles, User Groups, T-Codes, SoD Rules and Findings.",
     icon: Search,
     badgeColor: "bg-transparent text-purple-700 border-purple-200",
-    badge: "Universal Search"
+    badge: "Universal search"
   },
   {
     title: "AI Risk Intelligence",
     description: "AI-generated risk scores, session summaries and executive summaries — not just raw logs.",
     icon: BrainCircuit,
     badgeColor: "bg-transparent text-amber-700 border-amber-200",
-    badge: "Behavioral Scoring"
+    badge: "Behavioral scoring"
   },
   {
     title: "Unified Audit Workspace",
     description: "Timeline, Approval Trail, SAP Logs and Notes for every request in one screen.",
     icon: FileCheck2,
     badgeColor: "bg-transparent text-emerald-700 border-emerald-200",
-    badge: "One-Click Evidence"
+    badge: "One-click evidence"
   },
 ];
 
@@ -70,7 +70,7 @@ export function CapabilityGrid() {
           >
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-transparent border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-red-600" />
-              <span>Core Platform Features</span>
+              <span>Core platform features</span>
             </div>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight leading-tight sm:whitespace-nowrap">
               Enterprise Access Risk <span className="text-red-600">Capabilities</span>
@@ -99,7 +99,7 @@ export function CapabilityGrid() {
                     <div className="p-3 rounded-2xl bg-transparent text-red-600 border border-slate-200 shadow-2xs">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className={`text-[11px] font-extrabold lowercase tracking-wider px-2.5 py-1 rounded-full border ${item.badgeColor}`}>
+                    <span className={`text-[11px] font-extrabold tracking-wider px-2.5 py-1 rounded-full border ${item.badgeColor}`}>
                       {item.badge}
                     </span>
                   </div>
@@ -113,7 +113,7 @@ export function CapabilityGrid() {
                 </div>
 
                 <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
-                  <span>Matrix Vault Core</span>
+                  <span>Matrix Vault core</span>
                   <Link to="/platform" className="inline-flex items-center gap-1 text-red-600 hover:text-red-700 font-bold">
                     Explore <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
