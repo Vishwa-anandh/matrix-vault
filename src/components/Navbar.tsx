@@ -17,6 +17,7 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-500 transition-colors">Home</Link>
             <a href="/#platform" className="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-500 transition-colors">Platform</a>
             <a href="/#how-it-works" className="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-500 transition-colors">How it Works</a>
             <a href="/#faq" className="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-500 transition-colors">FAQ</a>
@@ -53,8 +54,15 @@ export function Navbar() {
           className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 max-h-[calc(100vh-80px)] overflow-y-auto"
         >
           <div className="px-4 pt-2 pb-6 space-y-4 shadow-xl">
-            <a 
-              href="/#platform" 
+            <Link
+              to="/"
+              onClick={() => setIsOpen(false)}
+              className="block text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-500"
+            >
+              Home
+            </Link>
+            <a
+              href="/#platform"
               onClick={() => setIsOpen(false)}
               className="block text-base font-semibold text-slate-600 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-500"
             >
