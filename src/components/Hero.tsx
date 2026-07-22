@@ -13,38 +13,127 @@ export function Hero() {
     <section className="relative pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20 overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       {/* Background patterns */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
-        <div className="absolute top-0 right-1/4 w-64 h-64 md:w-[600px] md:h-[600px] bg-red-100 dark:bg-red-950/30 rounded-full blur-[80px] md:blur-[120px] mix-blend-multiply dark:mix-blend-normal opacity-70"></div>
-        <div className="absolute bottom-0 left-1/4 w-64 h-64 md:w-[500px] md:h-[500px] bg-blue-50 dark:bg-blue-950/20 rounded-full blur-[60px] md:blur-[100px] mix-blend-multiply dark:mix-blend-normal opacity-60"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:32px_32px] opacity-40"></div>
+        <div className="absolute top-0 right-1/4 w-72 h-72 md:w-[650px] md:h-[650px] bg-red-100/80 dark:bg-red-950/30 rounded-full blur-[100px] md:blur-[140px] opacity-70"></div>
+        <div className="absolute bottom-0 left-1/4 w-72 h-72 md:w-[550px] md:h-[550px] bg-blue-100/60 dark:bg-blue-950/20 rounded-full blur-[80px] md:blur-[120px] opacity-60"></div>
         
-        {/* Dynamic Decorative Wave Lines */}
-        <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        {/* Distinctive Flowing Soft Aurora Wave Ribbons */}
+        <svg className="absolute inset-0 w-full h-full opacity-50 blur-[10px]" viewBox="0 0 1440 650" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <path 
-            d="M-100,200 C300,100 600,350 1000,150 C1300,0 1500,250 1600,200" 
-            stroke="url(#hero-wave-1)" 
+            d="M-50,220 Q350,60 750,280 T1550,180 V650 H-50 Z" 
+            fill="url(#aurora-ribbon-1)" 
+            className="opacity-40"
+          />
+          <path 
+            d="M-50,380 Q400,180 850,420 T1550,260 V650 H-50 Z" 
+            fill="url(#aurora-ribbon-2)" 
+            className="opacity-30"
+          />
+        </svg>
+
+        {/* Crisp Wave Streams with Traveling Light Pulses */}
+        <svg className="absolute inset-0 w-full h-full opacity-80" viewBox="0 0 1440 650" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          {/* Wave Path 1 */}
+          <path 
+            id="hero-wave-path-1"
+            d="M-50,160 C300,40 650,320 1050,120 C1300,0 1450,220 1550,160" 
+            stroke="url(#line-grad-1)" 
             strokeWidth="2.5" 
-            strokeDasharray="8 6"
           />
+          {/* Wave Path 2 */}
           <path 
-            d="M-100,300 C250,160 550,420 950,220 C1250,80 1450,380 1600,280" 
-            stroke="url(#hero-wave-2)" 
-            strokeWidth="3.5" 
-          />
-          <path 
-            d="M-100,420 C350,260 700,480 1100,280 C1350,140 1500,400 1600,340" 
-            stroke="url(#hero-wave-1)" 
+            id="hero-wave-path-2"
+            d="M-50,280 C280,120 580,440 980,200 C1250,60 1420,340 1550,260" 
+            stroke="url(#line-grad-2)" 
             strokeWidth="2" 
+            strokeDasharray="6 6"
           />
+          {/* Wave Path 3 */}
+          <path 
+            id="hero-wave-path-3"
+            d="M-50,400 C380,220 720,520 1120,260 C1380,120 1500,420 1550,340" 
+            stroke="url(#line-grad-1)" 
+            strokeWidth="2.5" 
+          />
+
+          {/* Traveling Light Pulse 1 on Path 1 */}
+          <g>
+            <circle r="8" fill="#ef4444" className="opacity-40 animate-pulse">
+              <animateMotion 
+                path="M-50,160 C300,40 650,320 1050,120 C1300,0 1450,220 1550,160"
+                dur="7s"
+                repeatCount="indefinite"
+              />
+            </circle>
+            <circle r="4" fill="#dc2626">
+              <animateMotion 
+                path="M-50,160 C300,40 650,320 1050,120 C1300,0 1450,220 1550,160"
+                dur="7s"
+                repeatCount="indefinite"
+              />
+            </circle>
+          </g>
+
+          {/* Traveling Light Pulse 2 on Path 2 */}
+          <g>
+            <circle r="9" fill="#ef4444" className="opacity-30 animate-pulse">
+              <animateMotion 
+                path="M-50,280 C280,120 580,440 980,200 C1250,60 1420,340 1550,260"
+                dur="9s"
+                repeatCount="indefinite"
+                begin="1.5s"
+              />
+            </circle>
+            <circle r="4.5" fill="#ef4444">
+              <animateMotion 
+                path="M-50,280 C280,120 580,440 980,200 C1250,60 1420,340 1550,260"
+                dur="9s"
+                repeatCount="indefinite"
+                begin="1.5s"
+              />
+            </circle>
+          </g>
+
+          {/* Traveling Light Pulse 3 on Path 3 */}
+          <g>
+            <circle r="10" fill="#3b82f6" className="opacity-35 animate-pulse">
+              <animateMotion 
+                path="M-50,400 C380,220 720,520 1120,260 C1380,120 1500,420 1550,340"
+                dur="11s"
+                repeatCount="indefinite"
+                begin="0.5s"
+              />
+            </circle>
+            <circle r="5" fill="#2563eb">
+              <animateMotion 
+                path="M-50,400 C380,220 720,520 1120,260 C1380,120 1500,420 1550,340"
+                dur="11s"
+                repeatCount="indefinite"
+                begin="0.5s"
+              />
+            </circle>
+          </g>
+
           <defs>
-            <linearGradient id="hero-wave-1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#ef4444" stopOpacity="0.4" />
-              <stop offset="50%" stopColor="#f87171" stopOpacity="0.25" />
-              <stop offset="100%" stopColor="#94a3b8" stopOpacity="0.2" />
+            <linearGradient id="aurora-ribbon-1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#fca5a5" stopOpacity="0.25" />
+              <stop offset="50%" stopColor="#fee2e2" stopOpacity="0.1" />
+              <stop offset="100%" stopColor="#dbeafe" stopOpacity="0.2" />
             </linearGradient>
-            <linearGradient id="hero-wave-2" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#dc2626" stopOpacity="0.5" />
+            <linearGradient id="aurora-ribbon-2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#f87171" stopOpacity="0.2" />
+              <stop offset="60%" stopColor="#ef4444" stopOpacity="0.05" />
+              <stop offset="100%" stopColor="#bfdbfe" stopOpacity="0.15" />
+            </linearGradient>
+            <linearGradient id="line-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#dc2626" stopOpacity="0.6" />
               <stop offset="50%" stopColor="#ef4444" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#cbd5e1" stopOpacity="0.1" />
+              <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.4" />
+            </linearGradient>
+            <linearGradient id="line-grad-2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#f87171" stopOpacity="0.5" />
+              <stop offset="50%" stopColor="#fca5a5" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#93c5fd" stopOpacity="0.3" />
             </linearGradient>
           </defs>
         </svg>
