@@ -14,7 +14,7 @@ export function DashboardMockup() {
           <div className="flex items-center gap-3 sm:gap-6 overflow-hidden h-full min-w-0">
             <div className="flex items-center gap-1.5 text-red-600 dark:text-red-500 font-bold shrink-0">
               <ShieldCheck className="w-5 h-5" />
-              <span className="hidden sm:block text-xs font-extrabold tracking-tight">Matrix Vault</span>
+              <span className="hidden sm:block text-xs font-extrabold tracking-tight">Matrix vault</span>
             </div>
             
             <div className="flex items-center h-full gap-3 sm:gap-4 text-slate-500 dark:text-slate-400 font-semibold text-[11px] overflow-hidden">
@@ -22,7 +22,7 @@ export function DashboardMockup() {
                 <Activity className="w-3.5 h-3.5 mr-1.5" /> Dashboard
               </div>
               <div className="h-full flex items-center hover:text-slate-700 dark:hover:text-slate-200 whitespace-nowrap">
-                <Users className="w-3.5 h-3.5 mr-1.5" /> Access Control
+                <Users className="w-3.5 h-3.5 mr-1.5" /> Access control
               </div>
               <div className="h-full flex items-center hover:text-slate-700 dark:hover:text-slate-200 whitespace-nowrap hidden sm:flex">
                 <Shield className="w-3.5 h-3.5 mr-1.5" /> Governance
@@ -58,17 +58,17 @@ export function DashboardMockup() {
                 <div className="w-3.5 h-3.5 rounded-sm bg-red-100 dark:bg-red-950/60 flex items-center justify-center shrink-0">
                    <div className="w-1.5 h-1.5 bg-red-500 rounded-full"></div>
                 </div>
-                Connected System Health
+                Connected system health
               </div>
               <div className="text-[10px] sm:text-xs font-semibold text-red-500 flex items-center gap-1 cursor-pointer hover:text-red-600 shrink-0">
-                <span className="text-green-600 dark:text-green-400">1/1 Healthy</span> View All <ChevronRight className="w-3.5 h-3.5" />
+                <span className="text-green-600 dark:text-green-400">1/1 healthy</span> View all <ChevronRight className="w-3.5 h-3.5" />
               </div>
             </div>
             <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-lg p-3 flex items-center justify-between">
               <div className="flex items-center gap-3 min-w-0">
                  <div className="w-2.5 h-2.5 rounded-full bg-green-500 shrink-0"></div>
                  <div className="min-w-0">
-                   <div className="font-bold text-slate-800 dark:text-white text-xs truncate">MSQ System</div>
+                   <div className="font-bold text-slate-800 dark:text-white text-xs truncate">MSQ system</div>
                    <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium truncate">MSQ</div>
                  </div>
               </div>
@@ -80,21 +80,21 @@ export function DashboardMockup() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
              <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden">
                 <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs">
-                   <ShieldAlert className="w-3.5 h-3.5 text-red-400" /> Open Violations
+                   <ShieldAlert className="w-3.5 h-3.5 text-red-400" /> Open violations
                 </div>
                 <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">24</div>
              </motion.div>
              
              <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden">
                 <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs">
-                   <CheckCircle2 className="w-3.5 h-3.5 text-amber-500" /> Pending Approvals
+                   <CheckCircle2 className="w-3.5 h-3.5 text-amber-500" /> Pending approvals
                 </div>
                 <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">18</div>
              </motion.div>
 
              <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden hidden sm:block">
                 <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs">
-                   <Shield className="w-3.5 h-3.5 text-red-500" /> Vulnerabilities Open
+                   <Shield className="w-3.5 h-3.5 text-red-500" /> Vulnerabilities open
                 </div>
                 <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">12</div>
              </motion.div>
@@ -102,7 +102,7 @@ export function DashboardMockup() {
              <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-red-50 dark:bg-red-950/40 rounded-full blur-xl -mr-10 -mt-10"></div>
                 <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 font-bold mb-3 text-[10px] sm:text-xs relative">
-                   <Activity className="w-3.5 h-3.5 text-red-500" /> Active FF Sessions
+                   <Activity className="w-3.5 h-3.5 text-red-500" /> Active ff sessions
                 </div>
                 <div className="flex items-end gap-2 relative">
                   <div className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">3</div>
@@ -113,13 +113,13 @@ export function DashboardMockup() {
 
           {/* Bottom Area: Donut Charts Mockup */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 hidden sm:grid">
-            {['Remediation', 'Mitigation', 'Request Tickets'].map((title, i) => (
+            {['Remediation', 'Mitigation', 'Request tickets'].map((title, i) => (
               <div key={i} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shadow-sm flex flex-col justify-between">
                 <div className="flex justify-between items-center mb-6">
                   <div className="font-bold text-slate-700 dark:text-slate-200 flex items-center gap-1.5 text-xs">
                      {i === 0 ? <Activity className="w-3.5 h-3.5 text-red-400" /> : i === 1 ? <ShieldAlert className="w-3.5 h-3.5 text-purple-400" /> : <FileText className="w-3.5 h-3.5 text-amber-400" />} {title}
                   </div>
-                  <span className="text-red-500 font-semibold cursor-pointer text-[10px] hover:text-red-600">View All &gt;</span>
+                  <span className="text-red-500 font-semibold cursor-pointer text-[10px] hover:text-red-600">View all &gt;</span>
                 </div>
                 <div className="flex items-center gap-3 xl:gap-4">
                    <div className={`relative w-20 h-20 rounded-full border-[8px] border-slate-100 dark:border-slate-800 flex items-center justify-center shrink-0`}>
@@ -131,7 +131,7 @@ export function DashboardMockup() {
                    </div>
                    <div className="space-y-2 flex-1 min-w-0">
                       <div className="flex justify-between gap-1 text-[10px] sm:text-[11px]"><span className="flex items-center gap-1.5 text-slate-600 dark:text-slate-300"><span className="w-2 h-2 rounded-full bg-green-500 shrink-0"></span><span className="truncate">{i === 0 ? 'Resolved' : i === 1 ? 'Active' : 'Approved'}</span></span> <span className="font-bold text-slate-900 dark:text-white">8</span></div>
-                      <div className="flex justify-between gap-1 text-[10px] sm:text-[11px]"><span className="flex items-center gap-1.5 text-slate-600 dark:text-slate-300"><span className="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span><span className="truncate">{i === 0 ? 'In Progress' : 'Pending'}</span></span> <span className="font-bold text-slate-900 dark:text-white">2</span></div>
+                      <div className="flex justify-between gap-1 text-[10px] sm:text-[11px]"><span className="flex items-center gap-1.5 text-slate-600 dark:text-slate-300"><span className="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span><span className="truncate">{i === 0 ? 'In progress' : 'Pending'}</span></span> <span className="font-bold text-slate-900 dark:text-white">2</span></div>
                       <div className="flex justify-between gap-1 text-[10px] sm:text-[11px]"><span className="flex items-center gap-1.5 text-slate-600 dark:text-slate-300"><span className="w-2 h-2 rounded-full bg-red-500 shrink-0"></span><span className="truncate">{i === 0 ? 'Open' : i === 1 ? 'Expired' : 'Escalated'}</span></span> <span className="font-bold text-slate-900 dark:text-white">16</span></div>
                    </div>
                 </div>
