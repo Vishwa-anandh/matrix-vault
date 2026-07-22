@@ -1,0 +1,135 @@
+import { motion } from 'motion/react';
+import { 
+  ShieldCheck, 
+  Sliders, 
+  Layers, 
+  Search, 
+  BrainCircuit, 
+  FileCheck2,
+  Sparkles,
+  ArrowRight
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const capabilities = [
+  {
+    title: "Live, In-Flow SoD Checks",
+    description: "Risk is analyzed inside every create/assign/revoke step — not a separate batch job run after the fact.",
+    icon: ShieldCheck,
+    bgColor: "bg-slate-900 text-white border-slate-800",
+    iconBg: "bg-slate-800 text-red-500",
+    badge: "Real-Time Inspection"
+  },
+  {
+    title: "Role Simulator",
+    description: "Model a user's access changes and preview new SoD violations before anything touches SAP.",
+    icon: Sliders,
+    bgColor: "bg-red-600 text-white border-red-700",
+    iconBg: "bg-red-700 text-white",
+    badge: "Pre-Transport Modeling"
+  },
+  {
+    title: "Role Lens",
+    description: "Compare up to 100 roles side-by-side for T-Code, auth-object and permission overlap in seconds.",
+    icon: Layers,
+    bgColor: "bg-slate-900 text-white border-slate-800",
+    iconBg: "bg-slate-800 text-red-500",
+    badge: "Role Overlap Matrix"
+  },
+  {
+    title: "Radar View",
+    description: "One search box across Roles, Users, Profiles, User Groups, T-Codes, SoD Rules and Findings.",
+    icon: Search,
+    bgColor: "bg-red-600 text-white border-red-700",
+    iconBg: "bg-red-700 text-white",
+    badge: "Universal Search"
+  },
+  {
+    title: "AI Risk Intelligence",
+    description: "AI-generated risk scores, session summaries and executive summaries — not just raw logs.",
+    icon: BrainCircuit,
+    bgColor: "bg-slate-900 text-white border-slate-800",
+    iconBg: "bg-slate-800 text-red-500",
+    badge: "Behavioral Scoring"
+  },
+  {
+    title: "Unified Audit Workspace",
+    description: "Timeline, Approval Trail, SAP Logs and Notes for every request in one screen.",
+    icon: FileCheck2,
+    bgColor: "bg-red-600 text-white border-red-700",
+    iconBg: "bg-red-700 text-white",
+    badge: "One-Click Evidence"
+  },
+];
+
+export function CapabilityGrid() {
+  return (
+    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative border-t border-b border-slate-200 transition-colors duration-300 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-red-600" />
+              <span>Core Platform Features</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight leading-tight">
+              Enterprise Access Risk <span className="text-red-600">Capabilities</span>
+            </h2>
+            <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed">
+              Powerful, real-time tools designed to streamline SAP access governance and simplify audit compliance.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* 6-Card Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
+          {capabilities.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                className={`${item.bgColor} border rounded-3xl p-7 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group`}
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className={`p-3 rounded-2xl ${item.iconBg} shadow-xs`}>
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider opacity-80 bg-black/10 dark:bg-white/10 px-2.5 py-1 rounded-full">
+                      {item.badge}
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl font-extrabold mb-3 tracking-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm font-medium leading-relaxed opacity-90">
+                    {item.description}
+                  </p>
+                </div>
+
+                <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs font-bold">
+                  <span>Matrix Vault Core</span>
+                  <Link to="/platform" className="inline-flex items-center gap-1 hover:underline">
+                    Explore <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+      </div>
+    </section>
+  );
+}

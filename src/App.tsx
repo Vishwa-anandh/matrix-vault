@@ -5,9 +5,9 @@
 
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { CapabilityGrid } from './components/CapabilityGrid';
 import { GovernancePillars } from './components/GovernancePillars';
 import { EnterpriseImpact } from './components/EnterpriseImpact';
-import { Features } from './components/Features';
 import { Comparison } from './components/Comparison';
 import { RoleSimulator } from './components/RoleSimulator';
 import { RiskRuleBuilder } from './components/RiskRuleBuilder';
@@ -49,7 +49,7 @@ function ScrollToTopOnRoute() {
   return null;
 }
 
-/** Home landing page with Hero, GovernancePillars, EnterpriseImpact, and CTA. */
+/** Home landing page: Hero, feature overview, and a CTA banner. */
 function Home() {
   return (
     <>
@@ -87,6 +87,7 @@ function Home() {
         ]}
       />
       <Hero />
+      <CapabilityGrid />
       <GovernancePillars />
       <EnterpriseImpact />
     </>
