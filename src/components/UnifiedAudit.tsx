@@ -3,12 +3,12 @@ import { Database, FileText, CheckSquare, Clock } from 'lucide-react';
 
 export function UnifiedAudit() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-slate-900 relative border-t border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white overflow-hidden transition-colors duration-300">
+    <section className="py-8 sm:py-10 lg:py-12 bg-white dark:bg-slate-900 relative border-t border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white overflow-hidden transition-colors duration-300">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/10 rounded-full blur-[120px]"></div>
       
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
-        <div className="text-center max-w-3xl mx-auto mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <motion.div
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}

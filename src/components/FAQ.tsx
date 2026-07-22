@@ -41,11 +41,11 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative transition-colors duration-300 overflow-hidden">
+    <section id="faq" className="py-8 sm:py-10 lg:py-12 bg-slate-50 relative transition-colors duration-300 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-xs font-bold mb-4 shadow-xs">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>Enterprise Knowledge Base</span>

@@ -10,7 +10,7 @@ import { DashboardMockup } from "./DashboardMockup";
 
 export function Hero() {
   return (
-    <section className="relative pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20 overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+    <section className="relative pt-24 pb-6 sm:pt-28 sm:pb-8 lg:pt-32 lg:pb-10 overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       {/* Background patterns */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:32px_32px] opacity-40"></div>

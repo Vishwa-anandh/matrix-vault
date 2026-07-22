@@ -30,9 +30,9 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-12 bg-white border-b border-slate-200">
+    <section className="py-8 sm:py-10 lg:py-12 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
             Trusted by Enterprise Security Teams
           </h2>

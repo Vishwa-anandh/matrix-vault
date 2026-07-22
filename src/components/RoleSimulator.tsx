@@ -75,7 +75,7 @@ export function RoleSimulator() {
   return (
     <section
       id="simulator"
-      className="py-16 sm:py-20 bg-white dark:bg-slate-900 relative border-t border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-300"
+      className="py-8 sm:py-10 lg:py-12 bg-white dark:bg-slate-900 relative border-t border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-300"
     >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">

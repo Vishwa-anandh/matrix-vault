@@ -17,7 +17,7 @@ const ruleTypes = [
 
 export function RiskRuleBuilder() {
   return (
-    <section className="py-16 sm:py-20 bg-slate-50 dark:bg-slate-950 relative border-t border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-300">
+    <section className="py-8 sm:py-10 lg:py-12 bg-slate-50 dark:bg-slate-950 relative border-t border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-300">
       <div className="max-w-[95%] xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           {/* Visual Mockup */}

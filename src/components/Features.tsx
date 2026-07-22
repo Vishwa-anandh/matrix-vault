@@ -16,14 +16,14 @@ import { Link } from 'react-router-dom';
 
 export function Features() {
   return (
-    <section id="features" className="py-16 sm:py-20 lg:py-24 bg-white relative border-t border-b border-slate-200 transition-colors duration-300 overflow-hidden">
+    <section id="features" className="py-8 sm:py-10 lg:py-12 bg-white relative border-t border-b border-slate-200 transition-colors duration-300 overflow-hidden">
       {/* Background glow accents */}
       <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-red-100/40 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
