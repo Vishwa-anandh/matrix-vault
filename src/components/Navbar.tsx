@@ -32,7 +32,7 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center space-x-8">
             <NavLink to="/" end className={navLinkClass}>Home</NavLink>
-            <NavLink to="/platform" className={navLinkClass}>Platform</NavLink>
+            <NavLink to="/platform" className={navLinkClass}>Features</NavLink>
             <NavLink to="/how-it-works" className={navLinkClass}>How it Works</NavLink>
             <NavLink to="/faq" className={navLinkClass}>FAQ</NavLink>
 
@@ -75,7 +75,7 @@ export function Navbar() {
               onClick={() => setIsOpen(false)}
               className={mobileNavLinkClass}
             >
-              Platform
+              Features
             </NavLink>
             <NavLink
               to="/how-it-works"
