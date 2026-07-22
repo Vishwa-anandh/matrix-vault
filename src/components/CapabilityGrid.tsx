@@ -62,7 +62,7 @@ export function CapabilityGrid() {
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-5xl mx-auto mb-12 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export function CapabilityGrid() {
               <Sparkles className="w-3.5 h-3.5 text-red-600" />
               <span>Core Platform Features</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight leading-tight sm:whitespace-nowrap">
               Enterprise Access Risk <span className="text-red-600">Capabilities</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed">

@@ -12,10 +12,42 @@ export function Hero() {
   return (
     <section className="relative pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20 overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       {/* Background patterns */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-50"></div>
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
         <div className="absolute top-0 right-1/4 w-64 h-64 md:w-[600px] md:h-[600px] bg-red-100 dark:bg-red-950/30 rounded-full blur-[80px] md:blur-[120px] mix-blend-multiply dark:mix-blend-normal opacity-70"></div>
         <div className="absolute bottom-0 left-1/4 w-64 h-64 md:w-[500px] md:h-[500px] bg-blue-50 dark:bg-blue-950/20 rounded-full blur-[60px] md:blur-[100px] mix-blend-multiply dark:mix-blend-normal opacity-60"></div>
+        
+        {/* Dynamic Decorative Wave Lines */}
+        <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path 
+            d="M-100,200 C300,100 600,350 1000,150 C1300,0 1500,250 1600,200" 
+            stroke="url(#hero-wave-1)" 
+            strokeWidth="2.5" 
+            strokeDasharray="8 6"
+          />
+          <path 
+            d="M-100,300 C250,160 550,420 950,220 C1250,80 1450,380 1600,280" 
+            stroke="url(#hero-wave-2)" 
+            strokeWidth="3.5" 
+          />
+          <path 
+            d="M-100,420 C350,260 700,480 1100,280 C1350,140 1500,400 1600,340" 
+            stroke="url(#hero-wave-1)" 
+            strokeWidth="2" 
+          />
+          <defs>
+            <linearGradient id="hero-wave-1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#ef4444" stopOpacity="0.4" />
+              <stop offset="50%" stopColor="#f87171" stopOpacity="0.25" />
+              <stop offset="100%" stopColor="#94a3b8" stopOpacity="0.2" />
+            </linearGradient>
+            <linearGradient id="hero-wave-2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#dc2626" stopOpacity="0.5" />
+              <stop offset="50%" stopColor="#ef4444" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#cbd5e1" stopOpacity="0.1" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
