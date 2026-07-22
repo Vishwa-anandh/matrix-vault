@@ -63,7 +63,7 @@ export function Features() {
 
   return (
     <section id="features" className="py-12 bg-white relative border-t border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8">
@@ -73,7 +73,7 @@ export function Features() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight leading-tight">
               One Platform. <br className="md:hidden" />
               Every Layer of <span className="text-red-600">SAP Risk.</span>
             </h2>
@@ -84,7 +84,7 @@ export function Features() {
         </div>
 
         {/* Feature Grid - 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {features.map((feature, i) => (
             <motion.div
               key={i}
@@ -116,11 +116,11 @@ export function Features() {
                 <div className="mt-auto pt-4 border-t border-red-100/60 space-y-2.5">
                   <div className="flex items-start gap-2">
                     <span className="text-[9px] font-black text-slate-400 tracking-widest shrink-0 mt-0.5 w-[76px]">Legacy GRC</span>
-                    <span className="text-[11px] font-semibold text-slate-500 leading-snug">{feature.comparison.traditional}</span>
+                    <span className="min-w-0 text-[11px] font-semibold text-slate-500 leading-snug">{feature.comparison.traditional}</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <span className="text-[9px] font-black text-red-600 tracking-widest shrink-0 mt-0.5 w-[76px]">Matrix Vault</span>
-                    <span className="text-[11px] font-extrabold text-slate-800 leading-snug">{feature.comparison.matrix}</span>
+                    <span className="min-w-0 text-[11px] font-extrabold text-slate-800 leading-snug">{feature.comparison.matrix}</span>
                   </div>
                 </div>
               )}

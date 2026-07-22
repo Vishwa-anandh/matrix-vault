@@ -40,7 +40,7 @@ export function AIRiskSpotlight() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex-1 bg-slate-900 p-4 sm:p-5 rounded-2xl shadow-xl font-mono text-xs text-slate-400 overflow-hidden relative flex flex-col justify-between"
+            className="flex-1 min-w-0 bg-slate-900 p-4 sm:p-5 rounded-2xl shadow-xl font-mono text-xs text-slate-400 overflow-hidden relative flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center gap-2 mb-4 text-slate-500 border-b border-slate-800 pb-3 font-sans font-bold tracking-wider text-[11px]">
@@ -72,7 +72,7 @@ export function AIRiskSpotlight() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex-1 bg-gradient-to-b from-red-50/40 to-white dark:from-red-950/20 dark:to-slate-900 p-4 sm:p-5 rounded-2xl shadow-xl border border-red-100 dark:border-slate-800 flex flex-col justify-between"
+            className="flex-1 min-w-0 bg-gradient-to-b from-red-50/40 to-white dark:from-red-950/20 dark:to-slate-900 p-4 sm:p-5 rounded-2xl shadow-xl border border-red-100 dark:border-slate-800 flex flex-col justify-between"
           >
             <div>
               {/* Card Header */}

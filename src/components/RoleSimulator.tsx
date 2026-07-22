@@ -75,9 +75,9 @@ export function RoleSimulator() {
   return (
     <section
       id="simulator"
-      className="py-16 bg-white dark:bg-slate-900 relative border-t border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-300"
+      className="py-16 sm:py-20 bg-white dark:bg-slate-900 relative border-t border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-300"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[95%] xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Left Side: Text Content */}
@@ -230,15 +230,15 @@ export function RoleSimulator() {
 
                 {/* Risk Banner & Stat Tiles */}
                 <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-3 shadow-sm flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2.5">
+                  <div className="flex items-center gap-2.5 min-w-0">
                     <div className="w-9 h-9 rounded-full border-2 border-red-500 flex items-center justify-center shrink-0 bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 font-black text-xs">
                       100
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <div className="flex items-center gap-1 text-red-600 dark:text-red-400 font-extrabold text-xs">
-                        <Shield className="w-3.5 h-3.5" /> Critical Risk
+                        <Shield className="w-3.5 h-3.5 shrink-0" /> Critical Risk
                       </div>
-                      <div className="text-[9px] text-slate-500 dark:text-slate-400">
+                      <div className="text-[9px] text-slate-500 dark:text-slate-400 truncate">
                         54 violations would be created
                       </div>
                     </div>
@@ -258,9 +258,9 @@ export function RoleSimulator() {
 
                 {/* Action Bar */}
                 <div className="bg-slate-900 dark:bg-slate-950 rounded-xl p-2.5 border border-slate-800 text-white flex items-center justify-between gap-2 shadow-md">
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 min-w-0">
                     <Zap className="w-3.5 h-3.5 text-red-400 shrink-0" />
-                    <div className="text-[9px] font-medium text-slate-300">
+                    <div className="text-[9px] font-medium text-slate-300 min-w-0">
                       Apply staged changes to <span className="font-mono text-red-300 font-bold">TEST9100</span>
                     </div>
                   </div>

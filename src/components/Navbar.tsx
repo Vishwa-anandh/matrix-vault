@@ -1,36 +1,14 @@
 import { motion } from 'motion/react';
-import { Shield, Menu, X, ChevronRight, Sun, Moon } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { Menu, X, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return (
-        document.documentElement.classList.contains('dark') ||
-        localStorage.getItem('theme') === 'dark' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      );
-    }
-    return false;
-  });
-
-  useEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [isDark]);
-
-  const toggleTheme = () => setIsDark((prev) => !prev);
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[95%] xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center gap-3">
             <Link to="/" className="flex items-center gap-2">
@@ -56,24 +34,10 @@ export function Navbar() {
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
-              {/* <button
-                onClick={toggleTheme}
-                className="p-2 text-slate-600 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-500 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                aria-label="Toggle theme"
-              >
-                {isDark ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5" />}
-              </button> */}
             </div>
           </div>
 
           <div className="md:hidden flex items-center gap-2">
-            {/* <button
-              onClick={toggleTheme}
-              className="p-2 text-slate-600 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-500 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5" />}
-            </button> */}
             <button onClick={() => setIsOpen(!isOpen)} className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white p-2">
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

@@ -31,7 +31,7 @@ export function Hero() {
                 <ShieldCheck className="w-4 h-4" />
                 <span>Next-Gen SAP Governance</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.1] mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.1] mb-6">
                 Secure Your <br className="hidden lg:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-500 relative inline-block">
                   SAP Ecosystem
@@ -50,7 +50,7 @@ export function Hero() {
                 </span>
                 <br className="hidden lg:block" /> with Precision.
               </h1>
-              <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+              <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
                 Matrix Vault streamlines access requests, monitors system health
                 in real-time, and automates Firefighter ID management with
                 AI-powered insights.

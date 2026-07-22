@@ -31,7 +31,7 @@ export function Certifications() {
           <h2 className="text-sm font-extrabold text-slate-400 tracking-[0.2em]">Enterprise Compliance Standards</h2>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert, i) => (
             <motion.div 
               key={i}
@@ -45,7 +45,7 @@ export function Certifications() {
                 <img 
                   src={cert.logo} 
                   alt={cert.name} 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full max-w-full object-contain"
                 />
               </div>
               <h3 className="font-bold text-slate-900 mb-2">{cert.name}</h3>

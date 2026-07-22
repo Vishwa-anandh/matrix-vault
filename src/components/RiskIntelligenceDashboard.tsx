@@ -75,7 +75,7 @@ function scoreColor(score: number) {
 export function RiskIntelligenceDashboard() {
   return (
     <section className="py-12 bg-slate-50 dark:bg-slate-950 relative border-t border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[95%] xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <motion.div
@@ -113,9 +113,9 @@ export function RiskIntelligenceDashboard() {
             </span>
           </div>
 
-          <div className="p-6 grid gap-6">
+          <div className="p-4 sm:p-6 grid gap-4 sm:gap-6">
             {/* Stat tiles */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               {stats.map((s, i) => {
                 const a = accentMap[s.accent];
                 return (
@@ -124,11 +124,11 @@ export function RiskIntelligenceDashboard() {
                     whileHover={{ y: -2 }}
                     className={`bg-white dark:bg-slate-900/90 rounded-xl p-4 border border-slate-200 dark:border-slate-800 shadow-sm ${a.tile}`}
                   >
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-semibold tracking-wider">
+                    <div className="flex items-center justify-between mb-3 gap-2">
+                      <span className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-semibold tracking-wider truncate min-w-0">
                         {s.label}
                       </span>
-                      <div className={`p-1.5 rounded-md ${a.icon}`}>
+                      <div className={`p-1.5 rounded-md shrink-0 ${a.icon}`}>
                         <s.icon className="w-4 h-4" />
                       </div>
                     </div>
@@ -168,29 +168,29 @@ export function RiskIntelligenceDashboard() {
                   {topRiskUsers.map((u, i) => (
                     <div
                       key={i}
-                      className="flex items-center justify-between px-4 py-3"
+                      className="flex items-center justify-between px-4 py-3 gap-2"
                     >
-                      <div className="flex items-center gap-3">
-                        <span className="text-xs font-black text-slate-300 dark:text-slate-600 w-4">
+                      <div className="flex items-center gap-3 min-w-0">
+                        <span className="text-xs font-black text-slate-300 dark:text-slate-600 w-4 shrink-0">
                           {i + 1}
                         </span>
-                        <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-xs font-bold text-slate-600 dark:text-slate-300">
+                        <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center justify-center text-xs font-bold text-slate-600 dark:text-slate-300 shrink-0">
                           {u.name
                             .split(" ")
                             .map((n) => n[0])
                             .join("")}
                         </div>
-                        <div>
-                          <div className="text-sm font-bold text-slate-900 dark:text-white">
+                        <div className="min-w-0">
+                          <div className="text-sm font-bold text-slate-900 dark:text-white truncate">
                             {u.name}
                           </div>
-                          <div className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                          <div className="text-xs font-medium text-slate-500 dark:text-slate-400 truncate">
                             {u.dept}
                           </div>
                         </div>
                       </div>
                       <div
-                        className={`text-xs font-bold px-2.5 py-1 rounded-full border ${scoreColor(
+                        className={`text-xs font-bold px-2.5 py-1 rounded-full border shrink-0 ${scoreColor(
                           u.score
                         )}`}
                       >
@@ -203,7 +203,7 @@ export function RiskIntelligenceDashboard() {
 
               {/* AI Executive Summary + trend */}
               <div className="lg:col-span-3 flex flex-col gap-4">
-                <div className="bg-slate-900 dark:bg-slate-950 rounded-xl p-5 text-white relative overflow-hidden flex-1 border border-slate-800">
+                <div className="bg-slate-900 dark:bg-slate-950 rounded-xl p-4 sm:p-5 text-white relative overflow-hidden flex-1 border border-slate-800">
                   <div className="absolute top-0 right-0 w-40 h-40 bg-red-500/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
                   <div className="flex items-center gap-2 mb-3 relative">
                     <div className="p-1.5 bg-red-500/20 rounded-md">

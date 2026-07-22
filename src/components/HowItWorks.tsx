@@ -21,24 +21,24 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-12 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="how-it-works" className="py-12 sm:py-16 lg:py-20 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-300">
+      <div className="max-w-[95%] xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <motion.div
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
           >
-             <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
+             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
                How Matrix Vault Works
              </h2>
-             <p className="text-slate-600 dark:text-slate-300 text-lg font-medium leading-relaxed">
+             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed">
                A streamlined, three-step process that eliminates bottlenecks without compromising on enterprise security.
              </p>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {steps.map((step, i) => (
             <motion.div
               key={i}
@@ -56,8 +56,8 @@ export function HowItWorks() {
               <div className="relative z-10 w-20 h-20 mx-auto bg-white dark:bg-slate-900 border-2 border-red-100 dark:border-red-900/50 shadow-md rounded-2xl flex items-center justify-center mb-6">
                 <step.icon className="w-8 h-8 text-red-600 dark:text-red-500" />
               </div>
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{step.title}</h3>
-              <p className="text-slate-600 dark:text-slate-300 text-sm font-medium">{step.description}</p>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 break-words">{step.title}</h3>
+              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base font-medium">{step.description}</p>
             </motion.div>
           ))}
         </div>

@@ -3,7 +3,7 @@ import { Shield } from 'lucide-react';
 export function Footer() {
   return (
     <footer className="bg-slate-900 dark:bg-slate-950 pt-12 pb-6 border-t border-slate-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[95%] xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 mb-10">
 
           <div className="md:col-span-5">
@@ -34,7 +34,7 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-3 text-slate-900 dark:text-white bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-red-500 placeholder-slate-400 dark:placeholder-slate-500 transition-colors"
+                className="w-full min-w-0 px-4 py-3 text-slate-900 dark:text-white bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-red-500 placeholder-slate-400 dark:placeholder-slate-500 transition-colors"
                 required
               />
               <button

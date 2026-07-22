@@ -18,7 +18,7 @@ const ruleTypes = [
 export function RiskRuleBuilder() {
   return (
     <section className="py-16 sm:py-20 bg-slate-50 dark:bg-slate-950 relative border-t border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[95%] xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           {/* Visual Mockup */}
           <motion.div
@@ -58,7 +58,7 @@ export function RiskRuleBuilder() {
 
               {/* Rule Definition */}
               <div className="bg-slate-900 rounded-xl p-4 font-mono text-xs text-slate-300 space-y-2 mb-4">
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <span className="text-slate-500">IF</span>
                   <span className="bg-slate-800 px-2 py-0.5 rounded text-red-300">
                     TCD = SU01
@@ -68,7 +68,7 @@ export function RiskRuleBuilder() {
                     TCD = F110
                   </span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <span className="text-slate-500">THEN</span>
                   <span className="text-amber-300">SoD Conflict</span>
                   <span className="bg-slate-800 px-2 py-0.5 rounded text-amber-200">
@@ -85,11 +85,11 @@ export function RiskRuleBuilder() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3 }}
-                className="flex items-center justify-between p-4 bg-red-50 border border-red-200 rounded-xl"
+                className="flex items-center justify-between gap-3 p-4 bg-red-50 border border-red-200 rounded-xl"
               >
-                <div className="flex items-center gap-2.5">
+                <div className="flex items-center gap-2.5 min-w-0">
                   <Eye className="w-5 h-5 text-red-600 shrink-0" />
-                  <div>
+                  <div className="min-w-0">
                     <div className="text-sm font-bold text-red-900">
                       Live Preview
                     </div>
@@ -98,7 +98,7 @@ export function RiskRuleBuilder() {
                     </div>
                   </div>
                 </div>
-                <button className="flex items-center gap-1.5 bg-red-600 text-white text-xs font-bold px-3 py-2 rounded-lg shadow-sm">
+                <button className="flex items-center gap-1.5 bg-red-600 text-white text-xs font-bold px-3 py-2 rounded-lg shadow-sm shrink-0">
                   <ScanLine className="w-3.5 h-3.5" /> Scan
                 </button>
               </motion.div>

@@ -69,7 +69,7 @@ export function Comparison() {
         <div className="absolute bottom-[10%] -left-[10%] w-[50%] h-[50%] bg-blue-100/40 dark:bg-blue-950/20 rounded-full blur-[100px]"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[95%] xl:max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-10">
           <motion.div
@@ -81,7 +81,7 @@ export function Comparison() {
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-slate-900 dark:text-white">
               One Platform. <span className="text-red-600 dark:text-red-500">Every Layer of SAP Risk.</span>
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-lg font-medium leading-relaxed max-w-3xl mx-auto">
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed max-w-3xl mx-auto">
               From access requests to audit reports, Matrix Vault watches, checks, and explains SAP risk in real time — so nothing reaches production unreviewed.
             </p>
           </motion.div>
@@ -132,7 +132,7 @@ export function Comparison() {
                   }`}>
                     <feature.icon className="w-5 h-5" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className={`font-bold text-lg transition-colors duration-300 ${
                       isActive 
                         ? "text-red-600 dark:text-red-500" 
@@ -191,9 +191,9 @@ export function Comparison() {
                       </p>
                     </div>
 
-                    <div className="bg-red-50 dark:bg-red-950/40 rounded-2xl p-6 border border-red-100 dark:border-red-900/50 relative overflow-hidden shadow-sm">
+                    <div className="bg-red-50 dark:bg-red-950/40 rounded-2xl p-4 sm:p-6 border border-red-100 dark:border-red-900/50 relative overflow-hidden shadow-sm">
                       <div className="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
-                      <div className="flex items-center gap-2 mb-3">
+                      <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <CheckCircle2 className="w-4 h-4 text-red-600 dark:text-red-400" />
                         <span className="text-xs font-bold text-red-600 dark:text-red-400 tracking-wider">Matrix Vault</span>
                       </div>

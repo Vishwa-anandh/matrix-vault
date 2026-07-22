@@ -9,9 +9,9 @@ export function DashboardMockup() {
       <div className="relative bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col ring-1 ring-slate-900/5 text-slate-800 dark:text-slate-200 text-[10px] sm:text-xs font-sans transition-colors duration-300">
         
         {/* Top Navbar */}
-        <div className="h-12 bg-white dark:bg-slate-800/90 border-b border-slate-200 dark:border-slate-700 flex items-center px-4 justify-between select-none">
+        <div className="h-12 bg-white dark:bg-slate-800/90 border-b border-slate-200 dark:border-slate-700 flex items-center px-3 sm:px-4 justify-between select-none gap-2">
           {/* Logo & Tabs */}
-          <div className="flex items-center gap-4 sm:gap-6 overflow-hidden h-full">
+          <div className="flex items-center gap-3 sm:gap-6 overflow-hidden h-full min-w-0">
             <div className="flex items-center gap-1.5 text-red-600 dark:text-red-500 font-bold shrink-0">
               <ShieldCheck className="w-5 h-5" />
               <span className="hidden sm:block text-xs font-extrabold tracking-tight">MatrixVault</span>
@@ -53,26 +53,26 @@ export function DashboardMockup() {
           
           {/* System Health */}
           <div className="bg-white dark:bg-slate-900 rounded-xl p-3 sm:p-4 border border-slate-200 dark:border-slate-800 shadow-sm">
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center gap-2 font-bold text-slate-700 dark:text-slate-200 text-xs sm:text-sm">
-                <div className="w-3.5 h-3.5 rounded-sm bg-red-100 dark:bg-red-950/60 flex items-center justify-center">
+            <div className="flex items-center justify-between mb-3 gap-2 flex-wrap">
+              <div className="flex items-center gap-2 font-bold text-slate-700 dark:text-slate-200 text-xs sm:text-sm min-w-0">
+                <div className="w-3.5 h-3.5 rounded-sm bg-red-100 dark:bg-red-950/60 flex items-center justify-center shrink-0">
                    <div className="w-1.5 h-1.5 bg-red-500 rounded-full"></div>
                 </div>
                 Connected System Health
               </div>
-              <div className="text-[10px] sm:text-xs font-semibold text-red-500 flex items-center gap-1 cursor-pointer hover:text-red-600">
+              <div className="text-[10px] sm:text-xs font-semibold text-red-500 flex items-center gap-1 cursor-pointer hover:text-red-600 shrink-0">
                 <span className="text-green-600 dark:text-green-400">1/1 healthy</span> View all <ChevronRight className="w-3.5 h-3.5" />
               </div>
             </div>
             <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-lg p-3 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                 <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
-                 <div>
-                   <div className="font-bold text-slate-800 dark:text-white text-xs">MSQ System</div>
-                   <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">MSQ</div>
+              <div className="flex items-center gap-3 min-w-0">
+                 <div className="w-2.5 h-2.5 rounded-full bg-green-500 shrink-0"></div>
+                 <div className="min-w-0">
+                   <div className="font-bold text-slate-800 dark:text-white text-xs truncate">MSQ System</div>
+                   <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium truncate">MSQ</div>
                  </div>
               </div>
-              <span className="text-[10px] sm:text-xs font-bold text-green-600 dark:text-green-400">Healthy</span>
+              <span className="text-[10px] sm:text-xs font-bold text-green-600 dark:text-green-400 shrink-0 ml-2">Healthy</span>
             </div>
           </div>
 

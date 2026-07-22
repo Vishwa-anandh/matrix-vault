@@ -33,12 +33,12 @@ export function Testimonials() {
     <section className="py-12 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
             Trusted by Enterprise Security Teams
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
@@ -53,12 +53,12 @@ export function Testimonials() {
                   <Star key={star} className="w-5 h-5 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <p className="text-slate-700 font-medium mb-8 leading-relaxed text-lg">
+              <p className="text-slate-700 font-medium mb-8 leading-relaxed text-base sm:text-lg">
                 "{t.quote}"
               </p>
               <div className="flex items-center gap-4">
-                <img src={t.image} alt={t.author} className="w-12 h-12 rounded-full object-cover shadow-sm border-2 border-white" />
-                <div>
+                <img src={t.image} alt={t.author} className="w-12 h-12 rounded-full object-cover shadow-sm border-2 border-white flex-shrink-0" />
+                <div className="min-w-0">
                   <div className="font-bold text-slate-900">{t.author}</div>
                   <div className="text-sm font-semibold text-slate-500">{t.role} &bull; {t.company}</div>
                 </div>
