@@ -6,6 +6,7 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { CapabilityGrid } from './components/CapabilityGrid';
+import { GrcComparisonBento } from './components/GrcComparisonBento';
 import { GovernancePillars } from './components/GovernancePillars';
 import { EnterpriseImpact } from './components/EnterpriseImpact';
 import { Comparison } from './components/Comparison';
@@ -88,8 +89,29 @@ function Home() {
       />
       <Hero />
       <CapabilityGrid />
-      <GovernancePillars />
-      <EnterpriseImpact />
+      <GrcComparisonBento />
+
+      {/* Bottom CTA Banner */}
+      <section className="py-16 sm:py-20 bg-slate-50 border-t border-slate-200 transition-colors duration-300">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="w-full bg-gradient-to-r from-red-50 to-slate-50 border border-red-200 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+            <div className="space-y-1 text-center sm:text-left">
+              <h4 className="text-lg sm:text-xl font-bold text-slate-900">
+                Ready to modernize your SAP access risk management?
+              </h4>
+              <p className="text-xs sm:text-sm text-slate-600 font-medium">
+                Schedule a personalized walkthrough with our SAP security engineers.
+              </p>
+            </div>
+            <Link to="/contact">
+              <button className="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold text-white bg-red-600 rounded-full hover:bg-red-700 transition-colors shadow-md shadow-red-600/20 cursor-pointer">
+                <span>Book Call</span>
+                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
