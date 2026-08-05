@@ -1,14 +1,14 @@
 import { motion } from 'motion/react';
-import { 
-  ShieldCheck, 
-  Split, 
-  Target, 
-  Brain, 
-  FileText, 
-  UserCheck, 
-  CheckCircle2, 
-  XCircle, 
-  Search, 
+import {
+  ShieldCheck,
+  Split,
+  Target,
+  Brain,
+  FileText,
+  UserCheck,
+  CheckCircle2,
+  XCircle,
+  Search,
   Sparkles,
   ArrowRight
 } from 'lucide-react';
@@ -21,7 +21,7 @@ export function Features() {
       <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-red-100/40 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <motion.div
@@ -46,7 +46,7 @@ export function Features() {
 
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 w-full">
-          
+
           {/* Bento Card 1: Risk-Aware by Design (Featured Card - Spans 7 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -49,7 +49,7 @@ export function AIRiskSpotlight() {
           >
             <div>
               <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
-                <div className="flex items-center gap-2 text-slate-700 font-extrabold text-xs tracking-wider uppercase">
+                <div className="flex items-center gap-2 text-slate-700 font-extrabold text-xs tracking-wider">
                   <FileText className="w-4 h-4 text-slate-500" /> Raw SAP Log Stream
                 </div>
                 <span className="text-[10px] font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded">

@@ -1,11 +1,126 @@
-import { useEffect } from "react";
+import { useState, useEffect, FormEvent, ChangeEvent } from "react";
 import { motion } from "motion/react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import { z } from "zod";
+import { ADMIN_API_BASE_URL } from "../config/api";
+
+const contactSchema = z.object({
+  firstName: z
+    .string()
+    .trim()
+    .min(1, { message: "First name is required" })
+    .max(50, { message: "First name must not exceed 50 characters" }),
+  lastName: z
+    .string()
+    .trim()
+    .min(1, { message: "Last name is required" })
+    .max(50, { message: "Last name must not exceed 50 characters" }),
+  workEmail: z
+    .string()
+    .trim()
+    .min(1, { message: "Work email is required" })
+    .email({ message: "Please enter a valid email address" })
+    .max(100, { message: "Email address must not exceed 100 characters" }),
+  message: z
+    .string()
+    .trim()
+    .min(1, { message: "Message is required" }),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
+
+interface FormErrors {
+  firstName?: string;
+  lastName?: string;
+  workEmail?: string;
+  message?: string;
+}
 
 export function Contact() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [formData, setFormData] = useState<ContactFormData>({
+    firstName: "",
+    lastName: "",
+    workEmail: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [serverMessage, setServerMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (status === "success" || status === "error") {
+      const timer = setTimeout(() => {
+        setStatus("idle");
+        setServerMessage(null);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+    if (errors[id as keyof FormErrors]) {
+      setErrors((prev) => ({ ...prev, [id]: undefined }));
+    }
+    if (status !== "idle") {
+      setStatus("idle");
+    }
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setErrors({});
+    setServerMessage(null);
+
+    const validation = contactSchema.safeParse(formData);
+    if (!validation.success) {
+      const fieldErrors: FormErrors = {};
+      validation.error.issues.forEach((err) => {
+        const field = err.path[0] as keyof FormErrors;
+        if (field && !fieldErrors[field]) {
+          fieldErrors[field] = err.message;
+        }
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setStatus("loading");
+    try {
+      const response = await fetch(`${ADMIN_API_BASE_URL}/contact-us/submit`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(validation.data),
+      });
+
+      const data = await response.json().catch(() => null);
+
+      if (response.ok) {
+        setStatus("success");
+        setServerMessage(data?.message || "Thank you! Your message has been sent successfully.");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          workEmail: "",
+          message: "",
+        });
+      } else {
+        setStatus("error");
+        setServerMessage(data?.message || "Failed to send message. Please try again later.");
+      }
+    } catch (err) {
+      setStatus("error");
+      setServerMessage("Network error. Please check your connection and try again.");
+    }
+  };
 
   return (
     <div className="pt-24 pb-20 bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors duration-300">
@@ -42,7 +157,6 @@ export function Contact() {
                 <div className="min-w-0">
                   <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Email Us</h3>
                   <p className="text-slate-600 dark:text-slate-400 break-words">contact@maitsys.com</p>
-                  <p className="text-slate-500 dark:text-slate-500 text-sm mt-1">We aim to respond within 24 hours.</p>
                 </div>
               </div>
 
@@ -77,54 +191,116 @@ export function Contact() {
           >
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-8">Send a Message</h2>
 
-            <form className="space-y-6">
+            {status === "success" && (
+              <div className="mb-6 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 flex items-center gap-3">
+                <CheckCircle2 className="w-5 h-5 shrink-0 text-emerald-600 dark:text-emerald-400" />
+                <span className="text-sm font-medium">{serverMessage}</span>
+              </div>
+            )}
+
+            {status === "error" && (
+              <div className="mb-6 p-4 rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 text-red-800 dark:text-red-300 flex items-center gap-3">
+                <AlertCircle className="w-5 h-5 shrink-0 text-red-600 dark:text-red-400" />
+                <span className="text-sm font-medium">{serverMessage}</span>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-6" noValidate>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="firstName" className="text-sm font-semibold text-slate-700 dark:text-slate-300">First Name</label>
+                  <label htmlFor="firstName" className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                    First Name <span className="text-red-500">*</span>
+                  </label>
                   <input
                     type="text"
                     id="firstName"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-red-500 focus:ring-2 focus:ring-red-200 dark:focus:ring-red-900/50 transition-all outline-none placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                    maxLength={50}
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-3 rounded-xl border ${
+                      errors.firstName
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-200 dark:focus:ring-red-900/50"
+                        : "border-slate-200 dark:border-slate-700 focus:border-red-500 focus:ring-red-200 dark:focus:ring-red-900/50"
+                    } bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 transition-all outline-none placeholder:text-slate-400 dark:placeholder:text-slate-500`}
                     placeholder="John"
                   />
+                  {errors.firstName && <p className="text-red-500 text-xs font-medium">{errors.firstName}</p>}
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="lastName" className="text-sm font-semibold text-slate-700 dark:text-slate-300">Last Name</label>
+                  <label htmlFor="lastName" className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                    Last Name <span className="text-red-500">*</span>
+                  </label>
                   <input
                     type="text"
                     id="lastName"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-red-500 focus:ring-2 focus:ring-red-200 dark:focus:ring-red-900/50 transition-all outline-none placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                    maxLength={50}
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-3 rounded-xl border ${
+                      errors.lastName
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-200 dark:focus:ring-red-900/50"
+                        : "border-slate-200 dark:border-slate-700 focus:border-red-500 focus:ring-red-200 dark:focus:ring-red-900/50"
+                    } bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 transition-all outline-none placeholder:text-slate-400 dark:placeholder:text-slate-500`}
                     placeholder="Doe"
                   />
+                  {errors.lastName && <p className="text-red-500 text-xs font-medium">{errors.lastName}</p>}
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-semibold text-slate-700 dark:text-slate-300">Work Email</label>
+                <label htmlFor="workEmail" className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                  Work Email <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="email"
-                  id="email"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-red-500 focus:ring-2 focus:ring-red-200 dark:focus:ring-red-900/50 transition-all outline-none placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                  id="workEmail"
+                  maxLength={100}
+                  value={formData.workEmail}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-3 rounded-xl border ${
+                    errors.workEmail
+                      ? "border-red-500 focus:border-red-500 focus:ring-red-200 dark:focus:ring-red-900/50"
+                      : "border-slate-200 dark:border-slate-700 focus:border-red-500 focus:ring-red-200 dark:focus:ring-red-900/50"
+                  } bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 transition-all outline-none placeholder:text-slate-400 dark:placeholder:text-slate-500`}
                   placeholder="john@company.com"
                 />
+                {errors.workEmail && <p className="text-red-500 text-xs font-medium">{errors.workEmail}</p>}
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-semibold text-slate-700 dark:text-slate-300">How can we help?</label>
+                <label htmlFor="message" className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                  How can we help? <span className="text-red-500">*</span>
+                </label>
                 <textarea
                   id="message"
                   rows={4}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:border-red-500 focus:ring-2 focus:ring-red-200 dark:focus:ring-red-900/50 transition-all outline-none resize-none placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-3 rounded-xl border ${
+                    errors.message
+                      ? "border-red-500 focus:border-red-500 focus:ring-red-200 dark:focus:ring-red-900/50"
+                      : "border-slate-200 dark:border-slate-700 focus:border-red-500 focus:ring-red-200 dark:focus:ring-red-900/50"
+                  } bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 transition-all outline-none resize-none placeholder:text-slate-400 dark:placeholder:text-slate-500`}
                   placeholder="Tell us about your SAP governance needs..."
                 ></textarea>
+                {errors.message && <p className="text-red-500 text-xs font-medium">{errors.message}</p>}
               </div>
 
               <button
-                type="button"
-                className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white bg-red-600 rounded-xl overflow-hidden transition-all hover:bg-red-700 shadow-lg shadow-red-600/30"
+                type="submit"
+                disabled={status === "loading"}
+                className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white bg-red-600 rounded-xl overflow-hidden transition-all hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-red-600/30"
               >
-                <span>Send Message</span>
-                {/* <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /> */}
+                {status === "loading" ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    <span>Sending...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Send Message</span>
+                  </>
+                )}
               </button>
             </form>
           </motion.div>
@@ -133,3 +309,4 @@ export function Contact() {
     </div>
   );
 }
+

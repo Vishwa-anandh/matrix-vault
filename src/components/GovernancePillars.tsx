@@ -75,7 +75,7 @@ export function GovernancePillars() {
               <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-4 sm:p-5">
                 <div className="flex items-center justify-between text-xs mb-2">
                   <span className="text-slate-500 font-semibold">Access Request:</span>
-                  <span className="font-bold text-slate-900">User Anbarasu</span>
+                  <span className="font-bold text-slate-900">User Carlos Silva</span>
                 </div>
                 <div className="flex items-center justify-between text-xs mb-3">
                   <span className="text-slate-500 font-semibold">Target Role:</span>
@@ -246,7 +246,7 @@ export function GovernancePillars() {
 
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 flex items-center gap-2 text-xs text-slate-400">
                 <Search className="w-4 h-4 text-purple-600" />
-                <span className="font-mono text-slate-600 text-xs font-medium">Search "Anbarasu"...</span>
+                <span className="font-mono text-slate-600 text-xs font-medium">Search "Carlos Silva"...</span>
               </div>
             </div>
 

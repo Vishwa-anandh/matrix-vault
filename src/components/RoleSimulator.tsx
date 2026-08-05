@@ -186,7 +186,7 @@ export function RoleSimulator() {
                       TE
                     </div>
                     <div>
-                      <div className="font-extrabold text-slate-900 dark:text-white text-xs">SampleGK GK</div>
+                      <div className="font-extrabold text-slate-900 dark:text-white text-xs">Carlos Silva</div>
                       <div className="text-[9px] font-mono text-slate-400">TEST9100</div>
                     </div>
                   </div>

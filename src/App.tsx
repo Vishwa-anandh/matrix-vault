@@ -17,6 +17,9 @@ import { RiskIntelligenceDashboard } from './components/RiskIntelligenceDashboar
 import { UnifiedAudit } from './components/UnifiedAudit';
 import { Integrations } from './components/Integrations';
 import { HowItWorks } from './components/HowItWorks';
+import { Modules } from './components/Modules';
+import { TermsAndConditions } from './components/TermsAndConditions';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { FAQ, faqs } from './components/FAQ';
 import { Testimonials } from './components/Testimonials';
 import { Certifications } from './components/Certifications';
@@ -24,24 +27,32 @@ import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Contact } from './components/Contact';
 import { Seo } from './components/Seo';
-import { Link, Routes, Route, useLocation } from 'react-router-dom';
+import { Link, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { useEffect } from 'react';
+import { SITE_URL } from './config/site';
 
-const SITE_URL = 'https://www.matrixvault.com';
 
 function ScrollToTopOnRoute() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
     if (!hash) {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
     } else {
       setTimeout(() => {
         const id = hash.replace('#', '');
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
         }
       }, 50);
     }
@@ -116,15 +127,15 @@ function Home() {
   );
 }
 
-/** /platform: the product deep-dive sections. */
-function PlatformPage() {
+/** /features: the product deep-dive features sections. */
+function FeaturesPage() {
   return (
     <>
       <Seo
-        title="Platform — Real-Time SAP Risk & SoD Governance | Matrix Vault"
-        description="Explore Matrix Vault's platform: instant multi-role comparison, guided role simulation, a visual risk rule builder, AI risk narratives, a unified risk dashboard, and one-screen audit trails."
+        title="Features — Real-Time SAP Risk & SoD Governance | Matrix Vault"
+        description="Explore Matrix Vault's features: instant multi-role comparison, guided role simulation, a visual risk rule builder, AI risk narratives, a unified risk dashboard, and one-screen audit trails."
         keywords="SAP SoD conflict detection, role comparison, risk rule builder, AI risk intelligence, SAP audit trail"
-        path="/platform"
+        path="/features"
       />
       <div className="pt-20">
         <Comparison />
@@ -151,6 +162,22 @@ function HowItWorksPage() {
         <HowItWorks />
       </div>
       <Integrations />
+    </>
+  );
+}
+
+/** /modules: the deep-dive modules page showing Role Radar, Firefighter, etc. */
+function ModulesPage() {
+  return (
+    <>
+      <Seo
+        title="Modules — Matrix Vault Platform Capabilities"
+        description="Deep dive into Matrix Vault's core modules: Role Radar for risk visibility, Firefighter for governed elevated access, and Vulnerabilities for continuous posture management."
+        path="/modules"
+      />
+      <div className="pt-20">
+        <Modules />
+      </div>
     </>
   );
 }
@@ -196,6 +223,30 @@ function ContactPage() {
   );
 }
 
+function NotFoundPage() {
+  return (
+    <>
+      <Seo
+        title="404 - Page Not Found | Matrix Vault"
+        description="The page you are looking for does not exist."
+        noindex
+      />
+      <div className="pt-32 pb-20 px-6 text-center max-w-xl mx-auto">
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-4">404 - Page Not Found</h1>
+        <p className="text-slate-600 mb-8">
+          The page you are looking for might have been removed or is temporarily unavailable.
+        </p>
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white bg-red-600 rounded-full hover:bg-red-700 transition-colors shadow-md shadow-red-600/20"
+        >
+          Return to Home
+        </Link>
+      </div>
+    </>
+  );
+}
+
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans selection:bg-red-500/20 selection:text-red-900 flex flex-col transition-colors duration-300">
@@ -204,10 +255,16 @@ export default function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/platform" element={<PlatformPage />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/modules" element={<ModulesPage />} />
+          <Route path="/platform" element={<Navigate to="/features" replace />} />
           <Route path="/how-it-works" element={<HowItWorksPage />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/contact-us" element={<Navigate to="/contact" replace />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
@@ -215,3 +272,4 @@ export default function App() {
     </div>
   );
 }
+

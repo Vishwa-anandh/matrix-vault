@@ -138,24 +138,26 @@ export function Comparison() {
               </p>
 
               {/* Role Matrix Table Mockup */}
-              <div className="bg-white border border-slate-200 rounded-2xl p-4 space-y-2 text-xs font-mono">
-                <div className="grid grid-cols-4 font-bold text-slate-500 pb-2 border-b border-slate-100 text-[11px]">
-                  <span>SAP ROLE</span>
-                  <span>T-CODES</span>
-                  <span>OVERLAP</span>
-                  <span>STATUS</span>
-                </div>
-                <div className="grid grid-cols-4 items-center text-[11px] text-slate-700 font-semibold py-1">
-                  <span>Z_FI_ACCT</span>
-                  <span className="text-slate-500">FB01, FB02</span>
-                  <span className="text-emerald-600 font-bold">0%</span>
-                  <span className="bg-emerald-100 text-emerald-800 text-[9px] font-bold px-1.5 py-0.5 rounded w-fit">Clean</span>
-                </div>
-                <div className="grid grid-cols-4 items-center text-[11px] text-slate-700 font-semibold py-1">
-                  <span>Z_P2P_MGR</span>
-                  <span className="text-slate-500">ME21N, MIRO</span>
-                  <span className="text-red-600 font-bold">14%</span>
-                  <span className="bg-red-100 text-red-800 text-[9px] font-bold px-1.5 py-0.5 rounded w-fit">Flagged</span>
+              <div className="bg-white border border-slate-200 rounded-2xl p-3 sm:p-4 text-xs font-mono overflow-x-auto">
+                <div className="min-w-[280px] space-y-2">
+                  <div className="grid grid-cols-4 gap-2 font-bold text-slate-500 pb-2 border-b border-slate-100 text-[10px] sm:text-[11px]">
+                    <span className="truncate">SAP ROLE</span>
+                    <span className="truncate">T-CODES</span>
+                    <span className="truncate">OVERLAP</span>
+                    <span className="truncate">STATUS</span>
+                  </div>
+                  <div className="grid grid-cols-4 gap-2 items-center text-[10px] sm:text-[11px] text-slate-700 font-semibold py-1">
+                    <span className="truncate">Z_FI_ACCT</span>
+                    <span className="text-slate-500 truncate">FB01, FB02</span>
+                    <span className="text-emerald-600 font-bold truncate">0%</span>
+                    <span className="bg-emerald-100 text-emerald-800 text-[9px] font-bold px-1.5 py-0.5 rounded w-fit">Clean</span>
+                  </div>
+                  <div className="grid grid-cols-4 gap-2 items-center text-[10px] sm:text-[11px] text-slate-700 font-semibold py-1">
+                    <span className="truncate">Z_P2P_MGR</span>
+                    <span className="text-slate-500 truncate">ME21N, MIRO</span>
+                    <span className="text-red-600 font-bold truncate">14%</span>
+                    <span className="bg-red-100 text-red-800 text-[9px] font-bold px-1.5 py-0.5 rounded w-fit">Flagged</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -235,7 +237,7 @@ export function Comparison() {
 
               <div className="bg-white border border-slate-200 rounded-xl p-3 flex items-center gap-2 text-xs text-slate-400">
                 <Search className="w-4 h-4 text-purple-600" />
-                <span className="font-mono text-slate-600 text-xs font-medium">Search "Anbarasu" or "SE38"...</span>
+                <span className="font-mono text-slate-600 text-xs font-medium">Search "Carlos Silva" or "SE38"...</span>
               </div>
             </div>
           </motion.div>

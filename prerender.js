@@ -12,7 +12,7 @@ const DIST_DIR = path.resolve(__dirname, 'dist');
 const HTML_FILE = path.resolve(DIST_DIR, 'index.html');
 
 // Every client-side route that should get its own prerendered HTML file.
-const ROUTES = ['/', '/platform', '/how-it-works', '/faq', '/contact'];
+const ROUTES = ['/', '/features', '/how-it-works', '/faq', '/contact'];
 
 // Maps a route to its output file inside dist/.
 function outputPathFor(route) {
@@ -48,8 +48,9 @@ async function prerender() {
     res.send(originalHtml);
   });
 
-  const server = app.listen(PORT, async () => {
-    console.log(`Local server started on http://localhost:${PORT}`);
+  const server = app.listen(0, async () => {
+    const port = server.address().port;
+    // console.log(`Local server started on http://localhost:${port}`);
 
     try {
       // 2. Launch Puppeteer
@@ -59,7 +60,7 @@ async function prerender() {
       for (const route of ROUTES) {
         // 3. Navigate and wait for React to mount
         console.log(`Navigating to ${route}...`);
-        await page.goto(`http://localhost:${PORT}${route}`, { waitUntil: 'networkidle0' });
+        await page.goto(`http://localhost:${port}${route}`, { waitUntil: 'networkidle0' });
 
         // Give React an extra second to finish any animations/effects
         await new Promise(r => setTimeout(r, 1000));

@@ -4,7 +4,7 @@ import { Star } from 'lucide-react';
 const testimonials = [
   {
     quote: "Matrix Vault cut our SAP audit preparation time by over 80%. What used to take our compliance team three weeks is now a one-click report.",
-    author: "Elena Rodriguez",
+    author: "Fernanda Santos",
     role: "CISO",
     company: "Global Logistics Inc.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     quote: "The AI Copilot is a game changer. It answers complex SoD conflict questions instantly, empowering our junior admins to work faster.",
-    author: "Sarah O'Connor",
+    author: "Sarah Miller",
     role: "SAP Security Lead",
     company: "TechManufacturing",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80",

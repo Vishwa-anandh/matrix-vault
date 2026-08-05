@@ -148,10 +148,6 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-red-50 dark:bg-red-950/40 border border-red-100 dark:border-red-900/50 text-red-600 dark:text-red-400 text-sm font-semibold mb-8 shadow-sm">
-                <ShieldCheck className="w-4 h-4" />
-                <span>Next-Gen SAP Governance</span>
-              </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.1] mb-6">
                 Secure Your <br className="hidden lg:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-500 relative inline-block">
@@ -184,51 +180,12 @@ export function Hero() {
                     whileTap={{ scale: 0.98 }}
                     className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-6 py-3 text-sm md:text-base font-bold text-white bg-red-600 rounded-full overflow-hidden transition-all hover:bg-red-700 shadow-lg shadow-red-600/30"
                   >
-                    <span>Start Free Trial</span>
+                    <span>Request Demo</span>
                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </motion.button>
                 </Link>
-                {/* <Link to="/contact">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm md:text-base font-bold text-slate-700 bg-white border-2 border-slate-200 rounded-full transition-all hover:border-slate-300 hover:bg-slate-50 shadow-sm"
-                  >
-                    <span>Watch Platform Tour</span>
-                  </motion.button>
-                </Link> */}
               </div>
 
-              <div className="mt-10 flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-6 text-sm font-semibold text-slate-500">
-                <div className="flex items-center gap-3">
-                  <div className="flex -space-x-3">
-                    <img
-                      className="w-10 h-10 rounded-full border-2 border-slate-50 object-cover relative transition-all duration-300 hover:scale-115 hover:z-20 cursor-pointer shadow-sm"
-                      src="/user1.png"
-                      alt="SAP Security Administrator"
-                    />
-                    <img
-                      className="w-10 h-10 rounded-full border-2 border-slate-50 object-cover relative transition-all duration-300 hover:scale-115 hover:z-20 cursor-pointer shadow-sm"
-                      src="/user2.png"
-                      alt="GRC Compliance Manager"
-                    />
-                    <img
-                      className="w-10 h-10 rounded-full border-2 border-slate-50 object-cover relative transition-all duration-300 hover:scale-115 hover:z-20 cursor-pointer shadow-sm"
-                      src="/user3.png"
-                      alt="SAP Basis Consultant"
-                    />
-                    <img
-                      className="w-10 h-10 rounded-full border-2 border-slate-50 object-cover relative transition-all duration-300 hover:scale-115 hover:z-20 cursor-pointer shadow-sm"
-                      src="/user4.png"
-                      alt="Internal Auditor"
-                    />
-                  </div>
-                  <div className="text-slate-600">
-                    Trusted by{" "}
-                    <span className="text-slate-900 font-bold">500+</span> teams
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </div>
 

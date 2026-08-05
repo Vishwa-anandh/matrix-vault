@@ -46,10 +46,10 @@ const stats = [
 ];
 
 const topRiskUsers = [
-  { name: "F. Keller", dept: "Finance", score: 92 },
-  { name: "R. Osei", dept: "Procurement", score: 78 },
-  { name: "M. Tan", dept: "IT Basis", score: 64 },
-  { name: "L. García", dept: "Payroll", score: 51 },
+  { name: "Franklin Keller", dept: "Finance", score: 92 },
+  { name: "Fernanda Santos", dept: "Procurement", score: 78 },
+  { name: "Michael Davis", dept: "IT Basis", score: 64 },
+  { name: "Lucas Ferreira", dept: "Payroll", score: 51 },
 ];
 
 const trend = [45, 60, 40, 72, 55, 48, 38];
@@ -218,7 +218,7 @@ export function RiskIntelligenceDashboard() {
                     <strong className="text-white">12%</strong> this quarter,
                     driven by 9 auto-remediated Finance conflicts. Fraud-risk
                     signals rose slightly in Procurement —{" "}
-                    <strong className="text-white">F. Keller</strong> is the top
+                    <strong className="text-white">Franklin Keller</strong> is the top
                     risk user (92/100) after extensive activity in{" "}
                     <span className="font-mono text-red-300">SU01</span> and{" "}
                     <span className="font-mono text-red-300">F110</span>.

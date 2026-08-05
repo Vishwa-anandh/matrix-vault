@@ -38,7 +38,6 @@ export function Integrations() {
             
             <button className="group relative inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold text-white bg-slate-900 dark:bg-slate-800 rounded-full overflow-hidden transition-all hover:bg-slate-800 dark:hover:bg-slate-700 shadow-md">
               <span>View Supported Integrations</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.div>
 
@@ -53,12 +52,12 @@ export function Integrations() {
               src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
               alt="Team collaborating on software integration"
               loading="lazy"
-              className="relative rounded-3xl shadow-2xl border-4 border-white dark:border-slate-800 object-cover object-center h-[320px] sm:h-[420px] lg:h-[500px] w-full max-w-full"
+              className="relative rounded-3xl shadow-2xl border-4 border-white dark:border-slate-800 object-cover object-center h-[260px] sm:h-[420px] lg:h-[500px] w-full max-w-full"
             />
             {/* Floating badge */}
-            <div className="absolute -bottom-5 left-4 sm:-left-6 max-w-[calc(100%-2rem)] sm:max-w-none bg-white dark:bg-slate-900 p-3.5 sm:p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 flex items-center gap-3 sm:gap-4">
+            <div className="absolute -bottom-5 left-2 sm:-left-6 max-w-[calc(100%-1rem)] sm:max-w-none bg-white dark:bg-slate-900 p-3 sm:p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 flex items-center gap-2.5 sm:gap-4">
                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-50 dark:bg-blue-950/40 rounded-xl flex items-center justify-center shrink-0">
-                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" alt="SAP" loading="lazy" className="w-7 sm:w-8" />
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" alt="SAP" loading="lazy" className="w-7 sm:w-8 max-w-full h-auto object-contain shrink-0" />
                </div>
                <div className="min-w-0">
                  <div className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white truncate">SAP Integration</div>

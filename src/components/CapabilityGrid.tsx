@@ -114,7 +114,7 @@ export function CapabilityGrid() {
 
                 <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
                   <span>Matrix Vault core</span>
-                  <Link to="/platform" className="inline-flex items-center gap-1 text-red-600 hover:text-red-700 font-bold">
+                  <Link to="/features" className="inline-flex items-center gap-1 text-red-600 hover:text-red-700 font-bold">
                     Explore <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
