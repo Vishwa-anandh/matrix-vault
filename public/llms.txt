@@ -22,6 +22,6 @@ From access requests to audit reports, Matrix Vault watches, checks, and explain
 - Lightweight OData-based SAP access governance layer.
 
 ## Contact & Links
-- Website: https://www.matrixvault.com
+- Website: https://www.matrixvault.ai
 - Contact: contact@matrixvault.com
 - Twitter: @MatrixVault

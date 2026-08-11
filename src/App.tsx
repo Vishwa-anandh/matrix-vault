@@ -6,6 +6,7 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { CapabilityGrid } from './components/CapabilityGrid';
+
 import { GrcComparisonBento } from './components/GrcComparisonBento';
 import { GovernancePillars } from './components/GovernancePillars';
 import { EnterpriseImpact } from './components/EnterpriseImpact';
@@ -15,6 +16,7 @@ import { RiskRuleBuilder } from './components/RiskRuleBuilder';
 import { AIRiskSpotlight } from './components/AIRiskSpotlight';
 import { RiskIntelligenceDashboard } from './components/RiskIntelligenceDashboard';
 import { UnifiedAudit } from './components/UnifiedAudit';
+import { ArchitectureSection } from './components/ArchitectureSection';
 import { Integrations } from './components/Integrations';
 import { HowItWorks } from './components/HowItWorks';
 import { Modules } from './components/Modules';
@@ -100,7 +102,15 @@ function Home() {
       />
       <Hero />
       <CapabilityGrid />
-      <GrcComparisonBento />
+      <RoleSimulator />
+      <RiskRuleBuilder />
+      <AIRiskSpotlight />
+      <RiskIntelligenceDashboard />
+      <UnifiedAudit />
+      <ArchitectureSection />
+      {/* <GrcComparisonBento /> */}
+      {/* <div id="explore-features" className="scroll-mt-24"></div> */}
+      {/* <Comparison /> */}
 
       {/* Bottom CTA Banner */}
       <section className="py-16 sm:py-20 bg-slate-50 border-t border-slate-200 transition-colors duration-300">
@@ -138,13 +148,8 @@ function FeaturesPage() {
         path="/features"
       />
       <div className="pt-20">
-        <Comparison />
+        <Modules />
       </div>
-      <RoleSimulator />
-      <RiskRuleBuilder />
-      <AIRiskSpotlight />
-      <RiskIntelligenceDashboard />
-      <UnifiedAudit />
     </>
   );
 }

@@ -12,15 +12,14 @@ const DIST_DIR = path.resolve(__dirname, 'dist');
 const HTML_FILE = path.resolve(DIST_DIR, 'index.html');
 
 // Every client-side route that should get its own prerendered HTML file.
-const ROUTES = ['/', '/features', '/how-it-works', '/faq', '/contact'];
+const ROUTES = ['/', '/features', '/modules', '/how-it-works', '/faq', '/contact', '/privacy-policy', '/terms-and-conditions'];
 
 // Maps a route to its output file inside dist/.
 function outputPathFor(route) {
   if (route === '/') {
     return HTML_FILE;
   }
-  const routeDir = path.join(DIST_DIR, route.replace(/^\//, ''));
-  return path.join(routeDir, 'index.html');
+  return path.join(DIST_DIR, `${route.replace(/^\//, '')}.html`);
 }
 
 async function prerender() {
@@ -38,6 +37,9 @@ async function prerender() {
   // already-prerendered page instead of the original template, baking in
   // duplicate <title>/<link rel="canonical"> tags.)
   const originalHtml = fs.readFileSync(HTML_FILE, 'utf-8');
+  
+  // Save pristine HTML as 200.html for the SPA fallback
+  fs.writeFileSync(path.resolve(DIST_DIR, '200.html'), originalHtml, 'utf-8');
 
   // 1. Start a local server for the dist folder
   const app = express();

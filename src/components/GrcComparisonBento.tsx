@@ -153,7 +153,7 @@ export function GrcComparisonBento() {
               >
                 <div>
                   {/* Card Header */}
-                  <div className="flex items-center justify-between gap-4 pb-4 mb-5 border-b border-slate-100">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mb-5 border-b border-slate-100">
                     <div className="flex items-center gap-3">
                       <div className="p-2.5 bg-red-50 text-red-600 border border-red-100 rounded-2xl shrink-0 group-hover:scale-105 transition-transform">
                         <Icon className="w-5 h-5" />
@@ -223,8 +223,8 @@ export function GrcComparisonBento() {
                 {/* Footer link */}
                 <div className="pt-3 mt-auto border-t border-slate-100 flex items-center justify-between text-xs">
                   <span className="text-slate-400 font-medium">{item.domain}</span>
-                  <Link to="/features" className="text-red-600 hover:text-red-700 font-bold flex items-center gap-1">
-                    <span>Learn more</span>
+                  <Link to="/features" className="text-red-600 hover:text-red-700 font-bold flex items-center gap-1 before:absolute before:inset-0">
+                    <span>Explore feature</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>

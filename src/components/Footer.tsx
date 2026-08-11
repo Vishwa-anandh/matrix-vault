@@ -93,9 +93,9 @@ export function Footer() {
           <div className="md:col-span-3">
             <h3 className="text-sm font-bold text-white tracking-wider mb-6">Features</h3>
             <ul className="space-y-4">
-              <li><span className="text-slate-400 font-medium cursor-default">Firefighter</span></li>
-              <li><span className="text-slate-400 font-medium cursor-default">Role Radar</span></li>
-              <li><span className="text-slate-400 font-medium cursor-default">Vulnerability</span></li>
+              <li><Link to="/features#firefighter" className="text-slate-400 font-medium hover:text-white transition-colors cursor-pointer">Firefighter</Link></li>
+              <li><Link to="/features#role-radar" className="text-slate-400 font-medium hover:text-white transition-colors cursor-pointer">Role Radar</Link></li>
+              <li><Link to="/features#vulnerabilities" className="text-slate-400 font-medium hover:text-white transition-colors cursor-pointer">Vulnerability</Link></li>
               {/* <li><span className="text-slate-400 font-medium cursor-default">AI Copilot</span></li> */}
             </ul>
           </div>

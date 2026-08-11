@@ -17,42 +17,48 @@ const capabilities = [
     description: "Risk is analyzed inside every create/assign/revoke step — not a separate batch job run after the fact.",
     icon: ShieldCheck,
     badgeColor: "bg-transparent text-red-600 border-red-200",
-    badge: "Real-time inspection"
+    badge: "Real-time inspection",
+    hash: "#role-radar"
   },
   {
     title: "Role Simulator",
     description: "Model a user's access changes and preview new SoD violations before anything touches SAP.",
     icon: Sliders,
     badgeColor: "bg-transparent text-red-600 border-red-200",
-    badge: "Pre-transport modeling"
+    badge: "Pre-transport modeling",
+    hash: "#role-radar"
   },
   {
     title: "Role Lens",
     description: "Compare up to 100 roles side-by-side for T-Code, auth-object and permission overlap in seconds.",
     icon: Layers,
     badgeColor: "bg-transparent text-blue-700 border-blue-200",
-    badge: "Role overlap matrix"
+    badge: "Role overlap matrix",
+    hash: "#role-radar"
   },
   {
     title: "Radar View",
     description: "One search box across Roles, Users, Profiles, User Groups, T-Codes, SoD Rules and Findings.",
     icon: Search,
     badgeColor: "bg-transparent text-purple-700 border-purple-200",
-    badge: "Universal search"
+    badge: "Universal search",
+    hash: "#role-radar"
   },
   {
     title: "AI Risk Intelligence",
     description: "AI-generated risk scores, session summaries and executive summaries — not just raw logs.",
     icon: BrainCircuit,
     badgeColor: "bg-transparent text-amber-700 border-amber-200",
-    badge: "Behavioral scoring"
+    badge: "Behavioral scoring",
+    hash: "#firefighter"
   },
   {
     title: "Unified Audit Workspace",
     description: "Timeline, Approval Trail, SAP Logs and Notes for every request in one screen.",
     icon: FileCheck2,
     badgeColor: "bg-transparent text-emerald-700 border-emerald-200",
-    badge: "One-click evidence"
+    badge: "One-click evidence",
+    hash: "#firefighter"
   },
 ];
 
@@ -92,7 +98,7 @@ export function CapabilityGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className="bg-white border border-slate-200 rounded-3xl p-7 shadow-xs hover:shadow-xl hover:border-red-200 transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white border border-slate-200 rounded-3xl p-7 shadow-xs hover:shadow-xl hover:border-red-200 transition-all duration-300 flex flex-col justify-between group relative cursor-pointer"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
@@ -114,9 +120,9 @@ export function CapabilityGrid() {
 
                 <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
                   <span>Matrix Vault core</span>
-                  <Link to="/features" className="inline-flex items-center gap-1 text-red-600 hover:text-red-700 font-bold">
+                  <a href={`/features${item.hash}`} className="inline-flex items-center gap-1 text-red-600 hover:text-red-700 font-bold before:absolute before:inset-0">
                     Explore <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             );

@@ -36,9 +36,9 @@ export function Integrations() {
               ))}
             </div>
             
-            <button className="group relative inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold text-white bg-slate-900 dark:bg-slate-800 rounded-full overflow-hidden transition-all hover:bg-slate-800 dark:hover:bg-slate-700 shadow-md">
+            {/* <button className="group relative inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold text-white bg-slate-900 dark:bg-slate-800 rounded-full overflow-hidden transition-all hover:bg-slate-800 dark:hover:bg-slate-700 shadow-md">
               <span>View Supported Integrations</span>
-            </button>
+            </button> */}
           </motion.div>
 
           <motion.div

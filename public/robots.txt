@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.matrixvault.com/sitemap.xml
+Sitemap: https://www.matrixvault.ai/sitemap.xml

@@ -137,9 +137,8 @@ export function RiskIntelligenceDashboard() {
                         {s.value}
                       </div>
                       <div
-                        className={`flex items-center gap-0.5 text-xs font-bold ${
-                          s.down ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"
-                        }`}
+                        className={`flex items-center gap-0.5 text-xs font-bold ${s.down ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"
+                          }`}
                       >
                         {s.down ? (
                           <ArrowDown className="w-3 h-3" />
@@ -245,9 +244,8 @@ export function RiskIntelligenceDashboard() {
                           whileInView={{ height: `${h}%` }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.8, delay: i * 0.08 }}
-                          className={`absolute bottom-0 w-full rounded-t ${
-                            i === 3 ? "bg-red-500" : "bg-slate-300 dark:bg-slate-600"
-                          }`}
+                          className={`absolute bottom-0 w-full rounded-t ${i === 3 ? "bg-red-500" : "bg-slate-300 dark:bg-slate-600"
+                            }`}
                         ></motion.div>
                       </div>
                     ))}

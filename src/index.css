@@ -11,7 +11,7 @@
 html, body {
   font-size: 15px; /* Slightly reduced base font size */
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Prevent browser autocomplete/autofill from altering input background colors */
@@ -48,5 +48,17 @@ textarea:-webkit-autofill:focus {
 .dark textarea.bg-slate-800:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #1e293b inset !important;
   -webkit-text-fill-color: #ffffff !important;
+}
+
+
+@media (max-width: 639px) {
+  .mobile-zoom-mockup {
+    zoom: 0.75;
+  }
+}
+@media (max-width: 380px) {
+  .mobile-zoom-mockup {
+    zoom: 0.65;
+  }
 }
 

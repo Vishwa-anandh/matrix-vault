@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { SITE_URL, DEFAULT_OG_IMAGE } from '../config/site';
 
 interface SeoProps {
@@ -27,7 +28,7 @@ export function Seo({ title, description, path, canonicalUrl, keywords, noindex,
 
 
   return (
-    <>
+    <Helmet>
       <title>{title}</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
@@ -55,12 +56,11 @@ export function Seo({ title, description, path, canonicalUrl, keywords, noindex,
       <meta name="twitter:creator" content="@MatrixVault" />
 
       {jsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
       )}
-    </>
+    </Helmet>
   );
 }
 
