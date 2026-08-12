@@ -33,7 +33,7 @@ import {
   RefreshCw,
 } from "lucide-react";
 export const DirectoryCatalogMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
     {" "}
     {/* Header */}{" "}
     <div className="bg-white border-b border-slate-200 px-5 sm:px-2.5 py-3 sm:py-1.5 flex max-sm:flex-wrap items-center justify-between">
@@ -120,7 +120,6 @@ export const DirectoryCatalogMiniMockup = () => (
     </div>{" "}
     {/* Filter tabs */}{" "}
     <div className="bg-white border-b border-slate-200 px-5 sm:px-2.5 py-2 sm:py-1 flex items-center gap-3 sm:gap-1.5 overflow-hidden">
-      {" "}
       {[
         { label: "All 151", active: true },
         { label: "Matched 0", active: false },
@@ -130,16 +129,15 @@ export const DirectoryCatalogMiniMockup = () => (
       ].map((t, i) => (
         <span
           key={i}
-          className={`shrink-0 text-[13.75px] sm:text-[5.5px] font-bold px-3 sm:px-1.5 py-1 sm:py-0.5 rounded border ${t.active ? "bg-slate-800 border-slate-700 text-white" : "bg-white border-slate-200 text-slate-600"}`}
+          className={`flex-1 text-center shrink-0 text-[13.75px] sm:text-[5.5px] font-bold px-3 sm:px-1.5 py-1 sm:py-0.5 rounded border ${t.active
+              ? "bg-slate-800 border-slate-700 text-white"
+              : "bg-white border-slate-200 text-slate-600"
+            }`}
         >
           {t.label}
         </span>
-      ))}{" "}
-      <div className="ml-auto shrink-0 flex items-center gap-2 sm:gap-1 bg-slate-50 border border-slate-200 rounded px-2 sm:px-1 py-1 sm:py-0.5 text-[13.75px] sm:text-[5.5px] text-slate-400">
-        {" "}
-        <Search className="w-3 sm:w-1.5 h-3 sm:h-1.5" /> Search object, field, value...{" "}
-      </div>{" "}
-    </div>{" "}
+      ))}
+    </div>
     {/* Table header */}{" "}
     <div className="grid grid-cols-12 gap-1 sm:gap-0.5 px-5 sm:px-2.5 py-1 sm:py-0.5 bg-slate-50 border-b border-slate-200 text-[13.75px] sm:text-[5.5px] font-bold text-slate-500 tracking-wider">
       {" "}
@@ -283,7 +281,7 @@ export const DirectoryCatalogMiniMockup = () => (
   </div>
 );
 export const CertificationsMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
     {" "}
     {/* Header */}{" "}
     <div className="bg-white border-b border-slate-200 px-5 sm:px-2.5 py-4 sm:py-2 flex max-sm:flex-wrap items-center justify-between">
@@ -407,7 +405,7 @@ export const CertificationsMiniMockup = () => (
   </div>
 );
 export const SimulationMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
     {" "}
     {/* Top header bar */}{" "}
     <div className="bg-white border-b border-slate-200 px-5 sm:px-2.5 py-3 sm:py-1.5 flex max-sm:flex-wrap items-center justify-between">
@@ -500,7 +498,7 @@ export const SimulationMiniMockup = () => (
           {" "}
           <Activity className="w-5 sm:w-2.5 h-5 sm:h-2.5" /> Critical Risk{" "}
         </div>{" "}
-        <div className="text-[18.75px] sm:text-[7.5px] text-slate-600">
+        <div className="hidden sm:block text-[18.75px] sm:text-[7.5px] text-slate-600">
           8 violations would be created. Review below before applying.
         </div>{" "}
       </div>{" "}
@@ -597,27 +595,11 @@ export const SimulationMiniMockup = () => (
         ))}{" "}
       </div>{" "}
     </div>{" "}
-    {/* Action bar */}{" "}
-    <div className="px-6 sm:px-3 py-3 sm:py-1.5 bg-slate-50 border-t border-slate-200 flex max-sm:flex-wrap items-center justify-between mt-auto">
-      {" "}
-      <div className="flex items-center gap-3 sm:gap-1.5 text-[18.75px] sm:text-[7.5px]">
-        {" "}
-        <span className="font-bold text-slate-700">⚡ Apply to SAP</span>{" "}
-        <span className="text-slate-500">
-          Execute staged changes on{" "}
-          <strong className="text-slate-700">ABAP_TEST03</strong>
-        </span>{" "}
-        <span className="font-bold text-emerald-600">+3 to assign</span>{" "}
-      </div>{" "}
-      <button className="bg-emerald-500 text-white font-bold text-[15.0px] sm:text-[6.0px] px-4 sm:px-2 py-2 sm:py-1 rounded flex items-center gap-2 sm:gap-1 shadow-sm">
-        {" "}
-        <CheckCircle2 className="w-3 sm:w-1.5 h-3 sm:h-1.5" /> Assign 3 Roles{" "}
-      </button>{" "}
-    </div>{" "}
+
   </div>
 );
 export const RemediationMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
     {" "}
     {/* Header */}{" "}
     <div className="bg-white border-b border-slate-200 px-5 sm:px-2.5 py-3 sm:py-1.5 flex max-sm:flex-wrap items-center justify-between">
@@ -818,7 +800,7 @@ export const RemediationMiniMockup = () => (
   </div>
 );
 export const RiskIntelMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
     {" "}
     {/* Header */}{" "}
     <div className="bg-white border-b border-slate-200 px-5 sm:px-2.5 py-3 sm:py-1.5 flex max-sm:flex-wrap items-center justify-between gap-4 sm:gap-2">
@@ -1053,7 +1035,7 @@ export const RiskIntelMiniMockup = () => (
   </div>
 );
 export const AccessTrackingMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] overflow-hidden custom-scrollbar rounded-xl border border-slate-200 shadow-sm bg-[#f8f9fa] flex flex-col font-sans">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] overflow-hidden custom-scrollbar rounded-xl border border-slate-200 shadow-sm bg-[#f8f9fa] flex flex-col font-sans">
     {" "}
     {/* Top Navbar */}{" "}
     <div className="bg-white border-b border-slate-100 flex max-sm:flex-wrap items-center justify-between px-6 sm:px-3 py-4 sm:py-2 shrink-0">
@@ -1272,24 +1254,6 @@ export const AccessTrackingMiniMockup = () => (
               </div>{" "}
             </div>{" "}
           </div>{" "}
-          <div className="flex flex-col gap-2 sm:gap-1">
-            {" "}
-            <div className="flex justify-between items-center">
-              {" "}
-              <label className="text-[11.25px] sm:text-[4.5px] font-bold text-slate-600">
-                Business Justification
-              </label>{" "}
-              <span className="text-[10.0px] sm:text-[4.0px] font-medium text-slate-400">
-                0/500 words
-              </span>{" "}
-            </div>{" "}
-            <div className="bg-slate-50 border border-slate-200 rounded px-4 sm:px-2 py-4 sm:py-2 h-24 sm:h-12 flex items-start">
-              {" "}
-              <span className="text-[12.5px] sm:text-[5.0px] font-semibold text-slate-400">
-                Explain why this access is required...
-              </span>{" "}
-            </div>{" "}
-          </div>{" "}
         </div>{" "}
       </div>{" "}
       {/* Right Column (Request Summary) */}{" "}
@@ -1377,7 +1341,7 @@ export const AccessTrackingMiniMockup = () => (
   </div>
 );
 export const WorkspaceReportingMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] overflow-hidden custom-scrollbar rounded-xl border border-slate-200 shadow-sm bg-white flex flex-col font-sans">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] overflow-hidden custom-scrollbar rounded-xl border border-slate-200 shadow-sm bg-white flex flex-col font-sans">
     {" "}
     {/* Top Navbar */}{" "}
     <div className="bg-white border-b border-slate-100 flex max-sm:flex-wrap items-center justify-between px-6 sm:px-3 py-4 sm:py-2 shrink-0">
@@ -1520,29 +1484,7 @@ export const WorkspaceReportingMiniMockup = () => (
             pill2: "Security",
             pill3: "ADMIN_FF_01",
             active: true,
-          },
-          {
-            id: "#REQ202608110002",
-            status: "Expired",
-            badge: "CDHDR",
-            name: "Alice Johnson",
-            time: "11 Aug 2026 | 01:06 pm",
-            score: "85",
-            pill1: "EMP",
-            pill2: "Security",
-            pill3: "ADMIN_FF_01",
-          },
-          {
-            id: "#REQ202608110001",
-            status: "Expired",
-            badge: "CDHDR",
-            name: "Alice Johnson",
-            time: "11 Aug 2026 | 12:43 pm",
-            score: "85",
-            pill1: "EMP",
-            pill2: "Security",
-            pill3: "ADMIN_FF_01",
-          },
+          }
         ].map((req, i) => (
           <div
             key={i}
@@ -1679,10 +1621,10 @@ export const WorkspaceReportingMiniMockup = () => (
           </div>{" "}
         </div>{" "}
         {/* Content Body */}{" "}
-        <div className="flex flex-1 p-8 sm:p-4 gap-8 sm:gap-4 shrink-0">
+        <div className="flex flex-col sm:flex-row flex-1 p-8 sm:p-4 gap-8 sm:gap-4 shrink-0">
           {" "}
           {/* Left Data Column */}{" "}
-          <div className="w-[55%] flex flex-col gap-8 sm:gap-4">
+          <div className="w-full sm:w-[55%] flex flex-col gap-8 sm:gap-4">
             {" "}
             <div>
               {" "}
@@ -1692,36 +1634,36 @@ export const WorkspaceReportingMiniMockup = () => (
               <div className="flex flex-col gap-4 sm:gap-2 text-[12.5px] sm:text-[5.0px]">
                 {" "}
                 <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
+                  <span className="w-1/3 font-semibold text-slate-500 truncate">
                     System
                   </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800">
+                  <span className="w-2/3 font-bold text-slate-800 truncate">
                     PRD_ERP{" "}
                     <span className="text-slate-400 font-medium">(PRD)</span>
                   </span>
                 </div>{" "}
                 <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
+                  <span className="w-1/3 font-semibold text-slate-500 truncate">
                     Module
                   </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800">
+                  <span className="w-2/3 font-bold text-slate-800 truncate">
                     Security{" "}
                     <span className="text-slate-400 font-medium">(SEC)</span>
                   </span>
                 </div>{" "}
                 <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
+                  <span className="w-1/3 font-semibold text-slate-500 truncate">
                     Firefighter ID
                   </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800 font-mono">
+                  <span className="w-2/3 font-bold text-slate-800 font-mono truncate">
                     ADMIN_FF_01
                   </span>
                 </div>{" "}
                 <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
+                  <span className="w-1/3 font-semibold text-slate-500 truncate">
                     System TZ
                   </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800">
+                  <span className="w-2/3 font-bold text-slate-800 truncate">
                     America/New_York
                   </span>
                 </div>{" "}
@@ -1735,67 +1677,60 @@ export const WorkspaceReportingMiniMockup = () => (
               <div className="flex flex-col gap-4 sm:gap-2 text-[12.5px] sm:text-[5.0px]">
                 {" "}
                 <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
+                  <span className="w-1/3 font-semibold text-slate-500 truncate">
                     Request ID
                   </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800">
+                  <span className="w-2/3 font-bold text-slate-800 truncate">
                     #REQ202608110003
                   </span>
                 </div>{" "}
                 <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
+                  <span className="w-1/3 font-semibold text-slate-500 truncate">
                     Status
                   </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800">
+                  <span className="w-2/3 font-bold text-slate-800 truncate">
                     Expired
                   </span>
                 </div>{" "}
                 <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
+                  <span className="w-1/3 font-semibold text-slate-500 truncate">
                     Emergency
                   </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800">No</span>
+                  <span className="w-2/3 font-bold text-slate-800 truncate">No</span>
                 </div>{" "}
                 <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
+                  <span className="w-1/3 font-semibold text-slate-500 truncate">
                     Incident ID
                   </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800">
+                  <span className="w-2/3 font-bold text-slate-800 truncate">
                     INC-456
                   </span>
                 </div>{" "}
                 <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
+                  <span className="w-1/3 font-semibold text-slate-500 truncate">
                     Submitted By
                   </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800">
+                  <span className="w-2/3 font-bold text-slate-800 truncate">
                     Alice Johnson
                   </span>
                 </div>{" "}
                 <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
+                  <span className="w-1/3 font-semibold text-slate-500 truncate">
                     Submitted At
                   </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800">
+                  <span className="w-2/3 font-bold text-slate-800 truncate">
                     11 Aug 2026 | 01:25 pm
                   </span>
                 </div>{" "}
                 <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
+                  <span className="w-1/3 font-semibold text-slate-500 truncate">
                     Access Window
                   </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800">
+                  <span className="w-2/3 font-bold text-slate-800 truncate">
                     11 Aug 2026 | 01:25 pm → 11 Aug 2026 | 01:40 pm
                   </span>
                 </div>{" "}
-                <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
-                    Request TZ
-                  </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800">
-                    Asia/Calcutta
-                  </span>
-                </div>{" "}
+
               </div>{" "}
             </div>{" "}
             <div>
@@ -1806,10 +1741,10 @@ export const WorkspaceReportingMiniMockup = () => (
               <div className="flex flex-col gap-4 sm:gap-2 text-[12.5px] sm:text-[5.0px]">
                 {" "}
                 <div className="flex">
-                  <span className="w-2 sm:w-1/3 font-semibold text-slate-500">
+                  <span className="w-1/3 font-semibold text-slate-500 truncate">
                     Business Justification
                   </span>
-                  <span className="w-4 sm:w-2/3 font-bold text-slate-800">
+                  <span className="w-2/3 font-bold text-slate-800 truncate">
                     SYSTEM PATCH
                   </span>
                 </div>{" "}
@@ -1817,7 +1752,7 @@ export const WorkspaceReportingMiniMockup = () => (
             </div>{" "}
           </div>{" "}
           {/* Right Data Column */}{" "}
-          <div className="w-[45%] flex flex-col gap-8 sm:gap-4 border-l border-slate-100 pl-8 sm:pl-4">
+          <div className="w-full sm:w-[45%] flex flex-col gap-8 sm:gap-4 sm:border-l border-slate-100 sm:pl-4">
             {" "}
             {/* Approval Chain Box */}{" "}
             <div className="border border-slate-200 rounded-lg overflow-hidden bg-white shadow-sm">
@@ -1905,7 +1840,7 @@ export const WorkspaceReportingMiniMockup = () => (
                     </span>
                   </span>{" "}
                 </div>{" "}
-                <div className="flex flex-col gap-2 sm:gap-1 mt-2">
+                {/* <div className="flex flex-col gap-2 sm:gap-1 mt-2">
                   {" "}
                   <span className="text-[11.25px] sm:text-[4.5px] font-extrabold text-slate-500 tracking-wider">
                     SUMMARY
@@ -1914,7 +1849,7 @@ export const WorkspaceReportingMiniMockup = () => (
                     The user performed two high-risk SU01 transactions,
                     modifying fields in tables USR21 and SUSR_USTO4.
                   </p>{" "}
-                </div>{" "}
+                </div>{" "} */}
                 <div className="flex flex-col gap-2 sm:gap-1 mt-2">
                   {" "}
                   <span className="text-[11.25px] sm:text-[4.5px] font-extrabold text-slate-500 tracking-wider">
@@ -1945,7 +1880,7 @@ export const WorkspaceReportingMiniMockup = () => (
   </div>
 );
 export const SessionMonitoringMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
     {" "}
     {/* Header */}{" "}
     <div className="bg-white border-b border-slate-200 px-6 sm:px-3 py-4 sm:py-2 flex max-sm:flex-wrap items-center justify-between">
@@ -2094,7 +2029,7 @@ export const SessionMonitoringMiniMockup = () => (
             </button>{" "}
           </div>{" "}
           {/* Card 3 */}{" "}
-          <div className="border border-slate-200 rounded p-3 sm:p-1.5 shadow-sm bg-slate-50">
+          <div className="hidden sm:block border border-slate-200 rounded p-3 sm:p-1.5 shadow-sm bg-slate-50">
             {" "}
             <div className="flex justify-between items-start mb-1.5">
               {" "}
@@ -2132,7 +2067,7 @@ export const SessionMonitoringMiniMockup = () => (
             </button>{" "}
           </div>{" "}
           {/* Card 4 */}{" "}
-          <div className="border border-slate-200 rounded p-3 sm:p-1.5 shadow-sm bg-slate-50 opacity-60">
+          <div className="hidden sm:block border border-slate-200 rounded p-3 sm:p-1.5 shadow-sm bg-slate-50 opacity-60">
             {" "}
             <div className="flex justify-between items-start mb-1.5">
               {" "}
@@ -2178,7 +2113,7 @@ export const SessionMonitoringMiniMockup = () => (
   </div>
 );
 export const SafeguardsAuditMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] overflow-hidden custom-scrollbar rounded-xl border border-slate-200 shadow-sm bg-white flex flex-col font-sans">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] overflow-hidden custom-scrollbar rounded-xl border border-slate-200 shadow-sm bg-white flex flex-col font-sans">
     {" "}
     {/* Top Navbar */}{" "}
     <div className="bg-white border-b border-slate-100 flex max-sm:flex-wrap items-center justify-between px-6 sm:px-3 py-4 sm:py-2 shrink-0">
@@ -2434,7 +2369,7 @@ export const SafeguardsAuditMiniMockup = () => (
   </div>
 );
 export const ApprovalsRoutingMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col font-sans overflow-hidden custom-scrollbar">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col font-sans overflow-hidden custom-scrollbar">
     {" "}
     {/* Top Navbar */}{" "}
     <div className="bg-white border-b border-slate-100 flex max-sm:flex-wrap items-center justify-between px-6 sm:px-3 py-4 sm:py-2 shrink-0">
@@ -2690,7 +2625,7 @@ export const ApprovalsRoutingMiniMockup = () => (
   </div>
 );
 export const VulnDashboardMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden custom-scrollbar shadow-sm">
     {" "}
     <div className="bg-white border-b border-slate-200 px-6 sm:px-3 py-4 sm:py-2 flex max-sm:flex-wrap items-center justify-between">
       {" "}
@@ -2870,7 +2805,7 @@ export const VulnDashboardMiniMockup = () => (
   </div>
 );
 export const PatchingMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm">
     {" "}
     <div className="bg-white border-b border-slate-200 px-6 sm:px-3 py-4 sm:py-2 flex max-sm:flex-wrap items-center justify-between">
       {" "}
@@ -3104,7 +3039,7 @@ export const PatchingMiniMockup = () => (
   </div>
 );
 export const ExpiryMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm">
     {" "}
     <div className="bg-white border-b border-slate-200 px-6 sm:px-3 py-4 sm:py-2 flex max-sm:flex-wrap items-center justify-between">
       {" "}
@@ -3299,7 +3234,7 @@ export const ExpiryMiniMockup = () => (
   </div>
 );
 export const ConfigDriftMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm">
     {" "}
     <div className="bg-white border-b border-slate-200 px-5 sm:px-2.5 py-3 sm:py-1.5 flex max-sm:flex-wrap items-center justify-between">
       {" "}
@@ -3355,7 +3290,7 @@ export const ConfigDriftMiniMockup = () => (
             User Creation
           </div>{" "}
           <span className="text-[13.75px] sm:text-[5.5px] font-bold text-emerald-600 bg-emerald-50 px-2 sm:px-1 rounded">
-            ACTIVE
+            Active
           </span>{" "}
         </div>{" "}
         <div className="bg-red-50 border border-red-100 rounded px-3 sm:px-1.5 py-2 sm:py-1 mb-2">
@@ -3384,7 +3319,7 @@ export const ConfigDriftMiniMockup = () => (
                 SOLMAN_ADMIN
               </span>{" "}
               <span className="text-[12.5px] sm:text-[5.0px] font-bold text-white bg-red-600 px-1 sm:px-0.5 rounded">
-                LATEST
+                Latest
               </span>{" "}
             </div>{" "}
             <div className="text-[15.0px] sm:text-[6.0px] text-slate-700">
@@ -3403,7 +3338,7 @@ export const ConfigDriftMiniMockup = () => (
   </div>
 );
 export const LiveThreatsMiniMockup = () => (
-  <div className="w-full h-auto max-sm:aspect-[4/3] sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm">
+  <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm">
     {" "}
     <div className="bg-white border-b border-slate-200 px-6 sm:px-3 py-4 sm:py-2 flex max-sm:flex-wrap items-center justify-between">
       {" "}

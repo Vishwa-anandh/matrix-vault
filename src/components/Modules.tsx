@@ -522,20 +522,20 @@ export function Modules() {
                 { title: 'ICF Service Status', val: '1878', stroke: '#94a3b8', dash: '95' },
                 { title: 'Security Notes', val: '82', stroke: '#94a3b8', dash: '65' },
               ].map((chart, i) => (
-                <div key={i} className="bg-white border border-slate-200 rounded-lg p-4 sm:p-2 flex items-center gap-4 sm:p-2.5 hover:bg-slate-50 transition-colors shadow-sm">
-                  <div className="relative w-9 h-9 sm:w-10 sm:h-10 shrink-0">
+                <div key={i} className="bg-white border border-slate-200 rounded-lg p-2 sm:p-2.5 flex items-center gap-1.5 sm:gap-4 hover:bg-slate-50 transition-colors shadow-sm">
+                  <div className="relative w-12 h-12 sm:w-12 sm:h-12 shrink-0">
                     <svg viewBox="0 0 36 36" className="w-full h-full transform -rotate-90">
-                      <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#e2e8f0" strokeWidth="5.5"></circle>
-                      <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke={chart.stroke} strokeWidth="5.5" strokeDasharray={`${chart.dash} 100`} strokeLinecap="round"></circle>
+                      <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#e2e8f0" strokeWidth="4.5"></circle>
+                      <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke={chart.stroke} strokeWidth="4.5" strokeDasharray={`${chart.dash} 100`} strokeLinecap="round"></circle>
                     </svg>
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
-                      <span className="text-[8px] sm:text-[9px] font-black text-slate-900 leading-none">{chart.val}</span>
-                      <span className="text-[11px] sm:text-[4px] text-slate-500">total</span>
+                      <span className="text-[10px] sm:text-[11px] font-black text-slate-900 leading-tight">{chart.val}</span>
+                      <span className="text-[7px] sm:text-[7px] text-slate-500 leading-tight">total</span>
                     </div>
                   </div>
                   <div className="flex flex-col flex-1">
                     <span className="text-[6.5px] sm:text-[7px] font-bold text-slate-500 mb-0.5">{chart.title}</span>
-                    <div className="text-[12px] sm:text-[5px] sm:text-[6px] text-red-600 font-bold mt-0.5 cursor-pointer">Click to view details ›</div>
+                    <div className="text-[5.5px] sm:text-[6px] text-red-600 font-bold mt-0.5 cursor-pointer">Click to view details ›</div>
                   </div>
                 </div>
               ))}
@@ -625,7 +625,7 @@ export function Modules() {
       <div className="absolute top-1/4 right-1/4 w-[800px] h-[800px] bg-red-50/60 dark:bg-red-900/10 rounded-full blur-[140px] pointer-events-none"></div>
       <div className="absolute bottom-1/4 left-1/4 w-[800px] h-[800px] bg-slate-100/60 dark:bg-slate-900/20 rounded-full blur-[140px] pointer-events-none"></div>
 
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-5 lg:px-6 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 relative z-10">
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">

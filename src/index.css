@@ -8,8 +8,10 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
-html, body {
-  font-size: 15px; /* Slightly reduced base font size */
+html,
+body {
+  font-size: 15px;
+  /* Slightly reduced base font size */
   scroll-behavior: smooth;
   overflow-x: clip;
 }
@@ -51,6 +53,7 @@ textarea:-webkit-autofill:focus {
 }
 
 @media (min-width: 640px) {
+
   .mobile-scaled-mockup-frame [class*="text-["],
   .mockup-readable-text [class*="text-["] {
     font-size: clamp(0.65rem, 0.75vw, 0.8rem);
@@ -67,7 +70,7 @@ textarea:-webkit-autofill:focus {
     aspect-ratio: 4 / 3;
   }
 
-  .mobile-scaled-mockup-frame > :first-child {
+  .mobile-scaled-mockup-frame> :first-child {
     width: 200%;
     height: 200%;
     max-width: none;
@@ -91,7 +94,7 @@ textarea:-webkit-autofill:focus {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .mobile-scaled-mockup-frame .grid-cols-12 > * {
+  .mobile-scaled-mockup-frame .grid-cols-12>* {
     grid-column: span 1 / span 1 !important;
     min-width: 0;
     overflow: hidden;
@@ -99,19 +102,19 @@ textarea:-webkit-autofill:focus {
     white-space: nowrap;
   }
 
-  .mobile-scaled-mockup-frame .grid-cols-12 > :nth-child(n + 5) {
+  .mobile-scaled-mockup-frame .grid-cols-12> :nth-child(n + 5) {
     display: none;
   }
 }
+
 @media (max-width: 380px) {
   .mobile-zoom-mockup {
     zoom: 0.65;
   }
 
-  .mobile-scaled-mockup-frame > :first-child {
+  .mobile-scaled-mockup-frame> :first-child {
     width: 222.222%;
     height: 222.222%;
     transform: scale(0.45);
   }
 }
-
