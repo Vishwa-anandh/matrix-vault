@@ -50,15 +50,68 @@ textarea:-webkit-autofill:focus {
   -webkit-text-fill-color: #ffffff !important;
 }
 
+@media (min-width: 640px) {
+  .mobile-scaled-mockup-frame [class*="text-["],
+  .mockup-readable-text [class*="text-["] {
+    font-size: clamp(0.65rem, 0.75vw, 0.8rem);
+  }
+}
+
 
 @media (max-width: 639px) {
   .mobile-zoom-mockup {
     zoom: 0.75;
   }
+
+  .mobile-scaled-mockup-frame {
+    aspect-ratio: 4 / 3;
+  }
+
+  .mobile-scaled-mockup-frame > :first-child {
+    width: 200%;
+    height: 200%;
+    max-width: none;
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+
+  .mobile-scaled-mockup-frame .max-sm\:flex-wrap {
+    flex-wrap: nowrap;
+  }
+
+  .mobile-scaled-mockup-frame .max-sm\:flex-col {
+    flex-direction: row;
+  }
+
+  .mobile-scaled-mockup-frame .max-sm\:items-start {
+    align-items: center;
+  }
+
+  .mobile-scaled-mockup-frame .grid-cols-12 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .mobile-scaled-mockup-frame .grid-cols-12 > * {
+    grid-column: span 1 / span 1 !important;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mobile-scaled-mockup-frame .grid-cols-12 > :nth-child(n + 5) {
+    display: none;
+  }
 }
 @media (max-width: 380px) {
   .mobile-zoom-mockup {
     zoom: 0.65;
+  }
+
+  .mobile-scaled-mockup-frame > :first-child {
+    width: 222.222%;
+    height: 222.222%;
+    transform: scale(0.45);
   }
 }
 
