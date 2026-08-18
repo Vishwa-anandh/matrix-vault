@@ -139,7 +139,7 @@ export function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 lg:items-stretch">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

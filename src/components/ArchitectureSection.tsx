@@ -81,24 +81,24 @@ export function ArchitectureSection() {
   const [activeNode, setActiveNode] = useState<{ layerIndex: number; nodeIndex: number } | null>({ layerIndex: 0, nodeIndex: 0 });
 
   return (
-    <section className="py-20 bg-slate-950 relative overflow-clip border-t border-slate-900">
+    <section className="py-20 bg-slate-50 dark:bg-slate-950 relative overflow-clip border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
       {/* Background gradients */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-red-500/5 rounded-full blur-[140px] pointer-events-none"></div>
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:50px_50px] opacity-[0.02]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:50px_50px] opacity-[0.5] dark:opacity-[0.02]"></div>
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-xs font-semibold mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-xs font-semibold mb-4 transition-colors">
               <GitBranch className="w-3.5 h-3.5 text-red-500" />
               <span>Platform Pipeline Map</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-5 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-5 tracking-tight transition-colors">
               Platform Architecture <span className="text-red-500">Pipeline</span>
             </h2>
-            <p className="text-slate-400 text-base sm:text-lg font-medium leading-relaxed max-w-2xl mx-auto">
+            <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg font-medium leading-relaxed max-w-2xl mx-auto transition-colors">
               How requests, authorization policies, and database actions flow through our system infrastructure.
             </p>
           </motion.div>
@@ -110,7 +110,7 @@ export function ArchitectureSection() {
           {/* Left/Main Column: Connected Architecture Layers */}
           <div className="lg:col-span-9 space-y-6 relative flex flex-col justify-between">
             {/* Connecting Vertical Line (visible on desktop) */}
-            <div className="absolute left-[29.5px] top-6 bottom-6 w-[2px] bg-slate-855 hidden md:block overflow-hidden">
+            <div className="absolute left-[29.5px] top-6 bottom-6 w-[2px] bg-slate-200 dark:bg-slate-800 hidden md:block overflow-hidden transition-colors">
               <motion.div
                 animate={{ top: ['-20%', '120%'] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
@@ -128,15 +128,15 @@ export function ArchitectureSection() {
                 className={`relative bg-gradient-to-br ${layer.color} border rounded-2xl p-5 md:pl-16 transition-all duration-300`}
               >
                 {/* Icon badge acting as layer node */}
-                <div className={`md:absolute left-4 top-5 w-8 h-8 rounded-full ${layer.iconBg} border border-slate-850 flex items-center justify-center z-10 mb-4 md:mb-0 shadow-sm`}>
+                <div className={`md:absolute left-4 top-5 w-8 h-8 rounded-full ${layer.iconBg} border border-slate-200 dark:border-slate-800 flex items-center justify-center z-10 mb-4 md:mb-0 shadow-sm transition-colors`}>
                   <layer.icon className={`w-4 h-4 ${layer.iconColor}`} />
                 </div>
 
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div className="space-y-1 max-w-md">
-                    <h3 className="text-sm font-bold text-white tracking-wide">{layer.name}</h3>
+                    <h3 className="text-sm font-bold text-slate-900 dark:text-white tracking-wide transition-colors">{layer.name}</h3>
                     <p className="text-[10px] text-slate-500 font-bold tracking-wider">{layer.subtitle}</p>
-                    <p className="text-xs text-slate-400 leading-relaxed font-medium mt-1">{layer.description}</p>
+                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-medium mt-1 transition-colors">{layer.description}</p>
                   </div>
 
                   {/* Connected Sub-nodes */}
@@ -148,8 +148,8 @@ export function ArchitectureSection() {
                           key={nodeIndex}
                           onClick={() => setActiveNode({ layerIndex, nodeIndex })}
                           className={`px-3 py-2 rounded-lg text-[10px] font-bold border transition-all duration-200 cursor-pointer ${isActive
-                              ? 'bg-slate-900 border-red-500/50 text-white shadow-[0_0_12px_rgba(239,68,68,0.15)] scale-[1.02]'
-                              : 'bg-slate-900/50 border-slate-805 text-slate-400 hover:border-slate-700 hover:text-slate-200'
+                            ? 'bg-white dark:bg-slate-900 border-red-500/50 text-slate-900 dark:text-white shadow-[0_0_12px_rgba(239,68,68,0.15)] scale-[1.02]'
+                            : 'bg-slate-100/50 dark:bg-slate-900/50 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-slate-300 dark:hover:border-slate-700 hover:text-slate-900 dark:hover:text-slate-200'
                             }`}
                         >
                           {node.name}
@@ -164,7 +164,7 @@ export function ArchitectureSection() {
 
           {/* Right Column: Node Details Panel */}
           <div className="lg:col-span-3 relative">
-            <div className="bg-slate-900/60 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between lg:sticky lg:top-24 h-auto">
+            <div className="bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between lg:sticky lg:top-24 h-auto transition-colors">
               <AnimatePresence mode="wait">
                 {activeNode ? (
                   <motion.div
@@ -181,23 +181,23 @@ export function ArchitectureSection() {
                     </div>
 
                     <div>
-                      <h4 className="text-base font-bold text-white tracking-tight">
+                      <h4 className="text-base font-bold text-slate-900 dark:text-white tracking-tight transition-colors">
                         {archLayers[activeNode.layerIndex].nodes[activeNode.nodeIndex].name}
                       </h4>
-                      <p className="text-xs text-slate-400 font-semibold tracking-wider mt-0.5">
+                      <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold tracking-wider mt-0.5 transition-colors">
                         {archLayers[activeNode.layerIndex].name.split('. ')[1]}
                       </p>
                     </div>
 
-                    <p className="text-xs text-slate-300 leading-relaxed font-medium">
+                    <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-medium transition-colors">
                       {archLayers[activeNode.layerIndex].nodes[activeNode.nodeIndex].detail}.
                     </p>
 
                     <div className="pt-2">
-                      <div className="bg-slate-950/80 rounded-lg p-3 border border-slate-850 font-mono text-[9px] text-slate-400 space-y-1">
-                        <div className="flex justify-between"><span className="text-slate-600">Status:</span> <span className="text-emerald-400 font-bold">{archLayers[activeNode.layerIndex].nodes[activeNode.nodeIndex].status}</span></div>
-                        <div className="flex justify-between"><span className="text-slate-650">Isolation:</span> <span className="text-slate-300">{archLayers[activeNode.layerIndex].nodes[activeNode.nodeIndex].isolation}</span></div>
-                        <div className="flex justify-between"><span className="text-slate-650">Latency:</span> <span className="text-blue-400">{archLayers[activeNode.layerIndex].nodes[activeNode.nodeIndex].latency}</span></div>
+                      <div className="bg-slate-50/80 dark:bg-slate-950/80 rounded-lg p-3 border border-slate-200 dark:border-slate-800 font-mono text-[9px] text-slate-600 dark:text-slate-400 space-y-1 transition-colors">
+                        <div className="flex justify-between"><span className="text-slate-700">Status:</span> <span className="text-emerald-600 font-bold">{archLayers[activeNode.layerIndex].nodes[activeNode.nodeIndex].status}</span></div>
+                        <div className="flex justify-between"><span className="text-slate-700">Isolation:</span> <span className="text-slate-600">{archLayers[activeNode.layerIndex].nodes[activeNode.nodeIndex].isolation}</span></div>
+                        <div className="flex justify-between"><span className="text-slate-700">Latency:</span> <span className="text-blue-600">{archLayers[activeNode.layerIndex].nodes[activeNode.nodeIndex].latency}</span></div>
                       </div>
                     </div>
                   </motion.div>
@@ -229,7 +229,7 @@ export function ArchitectureSection() {
             { label: 'Modular Styles & Layouts', icon: Layers },
             { label: 'Enterprise Data Mapping', icon: Database },
           ].map((badge, i) => (
-            <div key={i} className="flex items-center gap-2 px-4.5 py-2 rounded-full bg-slate-900/50 border border-slate-850 text-slate-400 text-xs font-semibold hover:border-slate-700 hover:text-slate-300 transition-colors duration-250">
+            <div key={i} className="flex items-center gap-2 px-4.5 py-2 rounded-full border border-slate-400 text-slate-900 text-xs font-semibold ">
               <badge.icon className="w-3.5 h-3.5 text-slate-500" />
               {badge.label}
             </div>

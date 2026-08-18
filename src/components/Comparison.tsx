@@ -63,7 +63,7 @@ export function Comparison() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="md:col-span-12 bg-gradient-to-br from-slate-50 via-white to-red-50/30 border border-slate-200 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col lg:flex-row items-center justify-between gap-8 group"
+            className="md:col-span-12 bg-gradient-to-br from-slate-50 via-white to-red-50/30 border border-slate-200 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col lg:flex-row lg:items-stretch items-center justify-between gap-8 group"
           >
             <div className="lg:w-1/2 space-y-4">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600 text-white font-bold text-xs shadow-xs">

@@ -22,10 +22,10 @@ export function RiskRuleBuilder() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           {/* Visual Mockup */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative order-2 lg:order-1"
+            className="relative order-2"
           >
             <div className="absolute inset-0 bg-red-100 dark:bg-red-950/40 rounded-3xl transform -rotate-2 scale-102 -z-10"></div>
             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-3xl shadow-xl">
@@ -107,10 +107,10 @@ export function RiskRuleBuilder() {
 
           {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="order-1 lg:order-2"
+            className="order-1"
           >
             <div className="inline-flex items-center gap-2 bg-red-50 dark:bg-red-950/40 border border-red-100 dark:border-red-900/50 text-red-600 dark:text-red-400 text-xs font-bold tracking-wider px-3 py-1.5 rounded-full mb-5">
               <SlidersHorizontal className="w-3.5 h-3.5" /> Risk Rule Builder

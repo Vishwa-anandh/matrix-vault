@@ -1,17 +1,18 @@
 import { motion } from 'motion/react';
-import { 
-  CheckCircle2, 
-  XCircle, 
-  Sparkles, 
-  Zap, 
-  ShieldCheck, 
-  Flame, 
-  Search, 
-  Layers, 
-  Cpu, 
+import {
+  CheckCircle2,
+  XCircle,
+  Sparkles,
+  Zap,
+  ShieldCheck,
+  Flame,
+  Search,
+  Layers,
+  Cpu,
   FileSpreadsheet,
   ArrowRight,
-  Shield
+  Shield,
+  UserCheck
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -19,93 +20,119 @@ const bentoItems = [
   {
     id: 'firefighter',
     domain: 'Emergency Access',
-    title: 'Firefighter Emergency Access & AI',
-    badge: '0–100 AI score',
+    title: 'Firefighter Emergency Access',
+    badge: 'AI Risk Score 0–100',
     icon: Flame,
-    gridSpan: 'lg:col-span-12',
-    matrixVaultTitle: 'AI session scoring & revoke',
-    matrixVaultDesc: 'AI rates firefighter sessions 0–100 with executive summaries and instant one-click session termination.',
-    matrixPoints: ['Behavioral risk scoring', 'One-click session kill switch', 'Executive session summary'],
-    legacyTitle: 'Basic access logs',
-    legacyDesc: 'Raw log tables without AI anomaly detection or instant session revocation.'
+    matrixVaultTitle: 'AI-scored sessions with live revoke',
+    matrixVaultDesc: 'Firefighter requests carry an AI Risk Assessment score (0–100) per session with a plain-language summary of what the user actually did, plus live session revoke.',
+    matrixPoints: ['Behavioral risk scoring', 'Live session kill switch', 'AI executive summaries'],
+    legacyTitle: 'Standard emergency logs',
+    legacyDesc: 'Emergency Access Management logs are available, but AI-generated behavioral risk scoring of sessions is not a standard capability.',
+    legacyPoints: ['Standard access logs only', 'No live session termination', 'Manual review required']
   },
   {
     id: 'sod',
     domain: 'Risk Management',
-    title: 'SoD Risk Analysis & Live Gating',
-    badge: 'Sub-200ms speed',
+    title: 'SoD Risk Analysis',
+    badge: 'Live & Inline',
     icon: ShieldCheck,
-    gridSpan: 'lg:col-span-6',
-    matrixVaultTitle: 'Live inline prevention',
-    matrixVaultDesc: 'Automatically intercepts role assignments, profile changes, and user creation before transport; blocks conflicts in real-time.',
-    matrixPoints: ['Sub-200ms OData evaluation', 'Zero post-audit backlog'],
-    legacyTitle: 'Background batch runs',
-    legacyDesc: 'Scheduled risk analysis runs hours or days after changes occur, leaving compliance gaps.'
+    matrixVaultTitle: 'Real-time inline prevention',
+    matrixVaultDesc: 'Runs automatically at role/profile assignment, revocation, and user creation; blocks progress until conflicts are reviewed and acknowledged.',
+    matrixPoints: ['Automatic execution at assignment', 'Blocks progress until reviewed'],
+    legacyTitle: 'Background batch jobs',
+    legacyDesc: 'Commonly scheduled as background batch risk analysis jobs; real-time checks depend on additional configuration.',
+    legacyPoints: ['Scheduled batch execution', 'No default inline blocking']
   },
   {
     id: 'provisioning',
     domain: 'Access Provisioning',
-    title: 'User & Role Provisioning Wizard',
-    badge: '6-Step flow',
+    title: 'User & Role Provisioning',
+    badge: '6-7 Step Wizard',
     icon: Zap,
-    gridSpan: 'lg:col-span-6',
-    matrixVaultTitle: 'Guided conflict-free wizard',
-    matrixVaultDesc: 'Step-by-step flow with real-time SoD conflict checks and inline approver verification.',
-    matrixPoints: ['Guided 6-step workflow', 'Instant risk warnings'],
-    legacyTitle: 'Complex MSMP / BRF+',
-    legacyDesc: 'Multi-step configuration requiring separate risk checks.'
+    matrixVaultTitle: 'Guided wizard with inline SoD',
+    matrixVaultDesc: 'Guided 6–7 step wizard with SoD acknowledgement built directly into the flow.',
+    matrixPoints: ['Guided 6-7 step workflow', 'Inline SoD acknowledgement'],
+    legacyTitle: 'Complex workflow routing',
+    legacyDesc: 'Access requests typically routed through configurable workflows (MSMP/BRF+); risk analysis is often a separate step.',
+    legacyPoints: ['Complex workflow routing', 'Separated risk analysis']
   },
   {
     id: 'radar',
     domain: 'Security Intelligence',
-    title: 'Universal Security Radar View',
-    badge: '1 Unified bar',
+    title: 'Universal Search Radar View',
+    badge: '1 Unified Search',
     icon: Search,
-    gridSpan: 'lg:col-span-6',
     matrixVaultTitle: 'Single search discovery',
-    matrixVaultDesc: 'Instantly surfaces Roles, Users, Profiles, SoD Rules, and T-Codes across all SAP instances.',
-    matrixPoints: ['Cross-module search', 'Connected object graph'],
-    legacyTitle: 'Siloed GRC apps',
-    legacyDesc: 'Data fragmented across separate ARA and ARM reporting screens.'
+    matrixVaultDesc: 'A single search bar surfaces Roles, Users, Profiles, User Groups, Findings, SoD Rules, and T-Codes with relationships in one place.',
+    matrixPoints: ['Cross-module search', 'Connected object relationships'],
+    legacyTitle: 'Siloed GRC applications',
+    legacyDesc: 'Data is generally spread across separate GRC apps/reports (Access Risk Analysis, Role Management), requiring multiple navigations.',
+    legacyPoints: ['Siloed applications', 'Disconnected data views']
   },
   {
     id: 'analytics',
     domain: 'Role Analytics',
-    title: '100-Role Comparison & Change Lens',
-    badge: '100 Roles',
+    title: 'Role Comparison & Analysis',
+    badge: '100 Role Lens',
     icon: Layers,
-    gridSpan: 'lg:col-span-6',
-    matrixVaultTitle: 'Side-by-side simulation',
-    matrixVaultDesc: 'Compare up to 100 roles simultaneously for T-Code and auth-object collisions prior to transport.',
-    matrixPoints: ['Pre-transport impact check', 'Collision matrix'],
-    legacyTitle: 'Manual export & compare',
-    legacyDesc: 'Role comparisons require manual table exports and spreadsheet analysis.'
+    matrixVaultTitle: 'Instant role collision matrix',
+    matrixVaultDesc: 'Role Lens lets you select up to 100 roles and instantly see matched/unmatched T-Codes, auth-objects, and SoD conflicts.',
+    matrixPoints: ['Compare up to 100 roles', 'Instant SoD conflict visibility'],
+    legacyTitle: 'Manual export workflows',
+    legacyDesc: 'Cross-role comparison generally requires manual extraction/reporting rather than an interactive, self-service screen.',
+    legacyPoints: ['Manual data extraction', 'Delayed conflict visibility']
   },
   {
-    id: 'odata',
+    id: 'dashboard',
+    domain: 'Risk Intelligence',
+    title: 'Risk Intelligence Dashboard',
+    badge: 'AI Summaries',
+    icon: Sparkles,
+    matrixVaultTitle: 'Unified dashboard with AI',
+    matrixVaultDesc: 'Combines SoD Violations, Critical Access, Fraud Risk, and Vulnerabilities with detection trends and a Top Risk Users leaderboard, plus AI-written summaries.',
+    matrixPoints: ['Unified risk & vulnerability view', 'AI-written executive summaries'],
+    legacyTitle: 'Fragmented reporting',
+    legacyDesc: 'Access Risk Analysis and Fraud Management are typically separate modules; consolidated AI-written summaries are not standard.',
+    legacyPoints: ['Fragmented reporting views', 'No AI executive summaries']
+  },
+  {
+    id: 'setup',
     domain: 'Architecture',
-    title: 'OData Native Architecture',
-    badge: '2–4 Wks rollout',
+    title: 'Setup & Integration',
+    badge: 'Lightweight OData',
     icon: Cpu,
-    gridSpan: 'lg:col-span-6',
     matrixVaultTitle: 'Lightweight OData connector',
-    matrixVaultDesc: 'Zero heavy ABAP add-on stack. Deploys natively on S/4HANA & ECC with live health telemetry.',
-    matrixPoints: ['No heavy ABAP package', 'Turnkey 2-4 week setup'],
+    matrixVaultDesc: 'Lightweight OData-based connector with a Health Check and visible SAP call history for fast, transparent onboarding.',
+    matrixPoints: ['No heavy ABAP package', 'Visible SAP call history'],
     legacyTitle: 'Heavy ABAP stack',
-    legacyDesc: 'Requires NetWeaver add-ons, RFC links, and long deployment cycles.'
+    legacyDesc: 'Typically requires a NetWeaver ABAP add-on stack, RFC connectivity, and a longer implementation cycle.',
+    legacyPoints: ['Requires ABAP add-on', 'Longer implementation cycle']
   },
   {
-    id: 'audit',
-    domain: 'Audit & Compliance',
-    title: 'One-Click Audit Evidence Vault',
-    badge: '1-Click export',
+    id: 'evidence',
+    domain: 'Compliance & Audit',
+    title: 'Evidence Vault & Export',
+    badge: 'Automated Export',
     icon: FileSpreadsheet,
-    gridSpan: 'lg:col-span-6',
-    matrixVaultTitle: 'Consolidated evidence vault',
-    matrixVaultDesc: 'Single-pane view combining approval trails, change logs, and notes with scheduled PDF/XLSX exports.',
-    matrixPoints: ['Single-pane audit trail', 'Scheduled PDF/XLSX export'],
-    legacyTitle: 'Fragmented audit logs',
-    legacyDesc: 'Audit evidence spread across disparate logs requiring manual compilation.'
+    matrixVaultTitle: 'Scheduled Audit Export',
+    matrixVaultDesc: 'Automated compliance packages with log timestamps for internal audit preparation in PDF and XLSX formats.',
+    matrixPoints: ['Automated compliance packages', 'One-click evidence export'],
+    legacyTitle: 'Manual audit compilation',
+    legacyDesc: 'Audit evidence is typically gathered manually through disjointed screenshots and exports across multiple SAP modules.',
+    legacyPoints: ['Manual evidence gathering', 'Fragmented audit trails']
+  },
+  {
+    id: 'approver',
+    domain: 'Governance',
+    title: 'Approver Gap Matrix',
+    badge: '100% Coverage',
+    icon: UserCheck,
+    matrixVaultTitle: 'Visual approver tracking',
+    matrixVaultDesc: 'Visual matrix tracking role approver assignments across your entire SAP landscape to ensure 100% coverage.',
+    matrixPoints: ['Global approver visibility', 'Instant gap identification'],
+    legacyTitle: 'Spreadsheet tracking',
+    legacyDesc: 'Approver coverage is often tracked in external spreadsheets or requires custom ABAP reports to identify missing owners.',
+    legacyPoints: ['External spreadsheet tracking', 'Custom reporting required']
   }
 ];
 
@@ -116,7 +143,7 @@ export function GrcComparisonBento() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-red-100/40 rounded-full blur-[200px] pointer-events-none"></div>
 
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <motion.div
@@ -137,100 +164,95 @@ export function GrcComparisonBento() {
           </motion.div>
         </div>
 
-        {/* Bento Grid: 1 Full Card in Row 1 + 2 Cards per Row in remaining 3 Rows */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {bentoItems.map((item, idx) => {
-            const Icon = item.icon;
+        {/* Unified Comparison Table Layout */}
+        <div className="bg-white border border-slate-200 rounded-3xl shadow-xl overflow-hidden relative">
+          
+          {/* Desktop Table Header */}
+          <div className="hidden lg:grid grid-cols-12 bg-slate-50 border-b border-slate-200">
+            <div className="col-span-4 p-6 lg:p-8 flex items-end">
+              <h3 className="text-sm font-extrabold text-slate-400 tracking-wider">Feature & Capability</h3>
+            </div>
+            <div className="col-span-4 p-6 lg:p-8 bg-red-50/50 border-x border-red-100/50 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-red-100 rounded-full blur-[40px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+              <div className="relative z-10">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-red-200 text-red-600 text-[10px] font-bold mb-3 shadow-sm">
+                  <Shield className="w-3.5 h-3.5" /> Modern OData
+                </div>
+                <h3 className="text-xl font-extrabold text-red-600 tracking-tight">Matrix Vault</h3>
+                <p className="text-xs text-red-700/70 font-semibold mt-1">Real-time inline prevention</p>
+              </div>
+            </div>
+            <div className="col-span-4 p-6 lg:p-8 bg-slate-50/50 border-r border-slate-200/50">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-500 text-[10px] font-bold mb-3 shadow-sm">
+                <XCircle className="w-3.5 h-3.5" /> Legacy ABAP
+              </div>
+              <h3 className="text-xl font-extrabold text-slate-900 tracking-tight">Traditional SAP GRC</h3>
+              <p className="text-xs text-slate-500 font-semibold mt-1">Batch-based detection</p>
+            </div>
+          </div>
 
-            return (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: idx * 0.05 }}
-                className={`${item.gridSpan} bg-white border border-slate-200 rounded-3xl p-6 sm:p-7 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between overflow-hidden group`}
-              >
-                <div>
-                  {/* Card Header */}
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mb-5 border-b border-slate-100">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2.5 bg-red-50 text-red-600 border border-red-100 rounded-2xl shrink-0 group-hover:scale-105 transition-transform">
+          {/* Table Body */}
+          <div className="flex flex-col">
+            {bentoItems.map((item, idx) => {
+              const Icon = item.icon;
+              const isLast = idx === bentoItems.length - 1;
+
+              return (
+                <div 
+                  key={item.id} 
+                  className={`grid grid-cols-1 lg:grid-cols-12 transition-colors duration-300 hover:bg-slate-50/50 group ${!isLast ? 'border-b border-slate-100' : ''}`}
+                >
+                  {/* Feature Cell */}
+                  <div className="col-span-1 lg:col-span-4 p-6 lg:p-8 flex flex-col justify-center border-b lg:border-b-0 border-slate-100">
+                    <div className="flex items-center gap-3 mb-3 lg:mb-4">
+                      <div className="p-2.5 bg-slate-100 text-slate-600 rounded-xl shrink-0 group-hover:scale-105 group-hover:bg-red-50 group-hover:text-red-600 transition-all">
                         <Icon className="w-5 h-5" />
                       </div>
-                      <div>
-                        <span className="text-[11px] font-bold text-slate-400 block">{item.domain}</span>
-                        <h3 className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight">
-                          {item.title}
-                        </h3>
-                      </div>
+                      <span className="text-[11px] font-extrabold text-slate-400 tracking-wide">{item.domain}</span>
                     </div>
-
-                    <span className="bg-red-50 text-red-600 border border-red-200 text-xs font-bold px-3 py-1 rounded-full shrink-0 shadow-2xs">
-                      {item.badge}
-                    </span>
+                    <h4 className="text-lg font-extrabold text-slate-900 leading-tight mb-2">{item.title}</h4>
+                    <Link to="/features" className="inline-flex items-center gap-1 text-xs font-bold text-red-600 hover:text-red-700 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                      Explore <ArrowRight className="w-3 h-3" />
+                    </Link>
                   </div>
 
-                  {/* Comparison Side-by-Side */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                    {/* Matrix Vault Highlight Box */}
-                    <div className="bg-red-50/60 border border-red-200/80 rounded-2xl p-4 flex flex-col justify-between">
-                      <div>
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-xs font-extrabold text-red-600 flex items-center gap-1.5">
-                            <Shield className="w-3.5 h-3.5 text-red-600" /> Matrix Vault
-                          </span>
-                          <span className="text-[10px] font-bold text-red-600 bg-white px-2 py-0.5 rounded-md border border-red-200">
-                            Modern OData
-                          </span>
-                        </div>
-                        <h4 className="text-xs font-bold text-slate-900 mb-1">{item.matrixVaultTitle}</h4>
-                        <p className="text-xs text-slate-600 leading-relaxed mb-3">{item.matrixVaultDesc}</p>
-                      </div>
-
-                      <div className="space-y-1.5 pt-2 border-t border-red-200/60">
-                        {item.matrixPoints.map((point, pIdx) => (
-                          <div key={pIdx} className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-800">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-red-600 shrink-0" />
-                            <span>{point}</span>
-                          </div>
-                        ))}
-                      </div>
+                  {/* Matrix Vault Cell */}
+                  <div className="col-span-1 lg:col-span-4 p-6 lg:p-8 bg-red-50/30 lg:border-x lg:border-red-100/50 border-b lg:border-b-0 border-red-100/50 flex flex-col justify-center">
+                    <div className="lg:hidden inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-600 text-[10px] font-bold mb-3 shadow-xs w-fit">
+                      <Shield className="w-3.5 h-3.5" /> Matrix Vault
                     </div>
-
-                    {/* Legacy GRC Box */}
-                    <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 flex flex-col justify-between">
-                      <div>
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-xs font-bold text-slate-500 flex items-center gap-1.5">
-                            <XCircle className="w-3.5 h-3.5 text-slate-400" /> Traditional SAP GRC
-                          </span>
-                          <span className="text-[10px] font-bold text-slate-500 bg-white px-2 py-0.5 rounded-md border border-slate-200">
-                            Legacy ABAP
-                          </span>
+                    <h5 className="text-sm font-extrabold text-slate-900 mb-2">{item.matrixVaultTitle}</h5>
+                    <p className="text-xs text-slate-600 leading-relaxed mb-4">{item.matrixVaultDesc}</p>
+                    <div className="space-y-1.5 mt-auto">
+                      {item.matrixPoints.map((point, pIdx) => (
+                        <div key={pIdx} className="flex items-start gap-2 text-xs font-semibold text-slate-700">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-red-600 shrink-0 mt-0.5" />
+                          <span>{point}</span>
                         </div>
-                        <h4 className="text-xs font-bold text-slate-700 mb-1">{item.legacyTitle}</h4>
-                        <p className="text-xs text-slate-500 leading-relaxed mb-3">{item.legacyDesc}</p>
-                      </div>
+                      ))}
+                    </div>
+                  </div>
 
-                      <div className="pt-2 border-t border-slate-200/60 text-[10px] text-slate-400 font-semibold">
-                        Constraint: Manual batch runs & technical overhead
-                      </div>
+                  {/* Legacy GRC Cell */}
+                  <div className="col-span-1 lg:col-span-4 p-6 lg:p-8 flex flex-col justify-center bg-slate-50/30 lg:border-r lg:border-slate-100">
+                    <div className="lg:hidden inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-[10px] font-bold mb-3 shadow-xs w-fit">
+                      <XCircle className="w-3.5 h-3.5" /> Traditional SAP GRC
+                    </div>
+                    <h5 className="text-sm font-extrabold text-slate-700 mb-2">{item.legacyTitle}</h5>
+                    <p className="text-xs text-slate-500 leading-relaxed mb-4">{item.legacyDesc}</p>
+                    <div className="space-y-1.5 mt-auto">
+                      {item.legacyPoints.map((point, pIdx) => (
+                        <div key={pIdx} className="flex items-start gap-2 text-xs font-semibold text-slate-500">
+                          <XCircle className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                          <span>{point}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
-
-                {/* Footer link */}
-                <div className="pt-3 mt-auto border-t border-slate-100 flex items-center justify-between text-xs">
-                  <span className="text-slate-400 font-medium">{item.domain}</span>
-                  <Link to="/features" className="text-red-600 hover:text-red-700 font-bold flex items-center gap-1 before:absolute before:inset-0">
-                    <span>Explore feature</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </motion.div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
 
       </div>

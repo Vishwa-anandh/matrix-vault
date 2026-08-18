@@ -81,7 +81,7 @@ export function Footer() {
               <div className="h-7 w-px bg-slate-700 hidden sm:block"></div>
 
               <div className="flex items-center gap-2">
-                <img src="/sap_Partnerr.png" alt="SAP Partner Logo" loading="lazy" className="h-10 sm:h-12 w-auto object-contain" />
+                <img src="/SAP global partner logo.png" alt="SAP Global Partner Logo" loading="lazy" className="h-10 sm:h-12 w-auto object-contain" />
               </div>
             </div>
 

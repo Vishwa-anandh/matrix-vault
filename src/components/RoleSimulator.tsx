@@ -82,10 +82,10 @@ export function RoleSimulator() {
           
           {/* Left Side: Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-5"
+            className="lg:col-span-5 order-1 lg:order-2"
           >
             <div className="inline-flex items-center gap-2 bg-red-50 dark:bg-red-950/40 border border-red-100 dark:border-red-900/50 text-red-600 dark:text-red-400 text-xs font-bold tracking-wider px-3.5 py-1.5 rounded-full mb-4">
               <PlayCircle className="w-4 h-4" /> SAP Role Simulator
@@ -120,10 +120,10 @@ export function RoleSimulator() {
 
           {/* Right Side: Compact Role Simulator Mockup Card */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-7 relative"
+            className="lg:col-span-7 relative order-2 lg:order-1"
           >
             <div className="absolute inset-0 bg-red-100 dark:bg-red-950/40 rounded-3xl transform rotate-2 scale-102 -z-10"></div>
             

@@ -10,7 +10,6 @@ import { CapabilityGrid } from './components/CapabilityGrid';
 import { GrcComparisonBento } from './components/GrcComparisonBento';
 import { GovernancePillars } from './components/GovernancePillars';
 import { EnterpriseImpact } from './components/EnterpriseImpact';
-import { Comparison } from './components/Comparison';
 import { RoleSimulator } from './components/RoleSimulator';
 import { RiskRuleBuilder } from './components/RiskRuleBuilder';
 import { AIRiskSpotlight } from './components/AIRiskSpotlight';
@@ -100,17 +99,16 @@ function Home() {
           },
         ]}
       />
-      <Hero />
-      <CapabilityGrid />
-      <RoleSimulator />
-      <RiskRuleBuilder />
-      <AIRiskSpotlight />
-      <RiskIntelligenceDashboard />
-      <UnifiedAudit />
-      <ArchitectureSection />
-      {/* <GrcComparisonBento /> */}
-      {/* <div id="explore-features" className="scroll-mt-24"></div> */}
-      {/* <Comparison /> */}
+      <section><Hero /></section>
+      <section><RoleSimulator /></section>
+      <section><RiskRuleBuilder /></section>
+      <section><AIRiskSpotlight /></section>
+      <section><RiskIntelligenceDashboard /></section>
+      <section><UnifiedAudit /></section>
+      <section><CapabilityGrid /></section>
+      <section><GrcComparisonBento /></section>
+      <div id="explore-features" className="scroll-mt-24"></div>
+      <section><ArchitectureSection /></section>
 
       {/* Bottom CTA Banner */}
       <section className="py-16 sm:py-20 bg-slate-50 border-t border-slate-200 transition-colors duration-300">
