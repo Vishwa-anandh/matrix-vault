@@ -48,16 +48,18 @@ import {
 } from "lucide-react";
 export const DirectoryCatalogMiniMockup = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (isHovered) {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(0);
+    }
+  }, [isHovered]);
 
   return (
-    <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
       {/* Title Bar */}
       <div className="bg-white border-b border-slate-200 px-6 sm:px-3 py-4 sm:py-2 flex items-center justify-between shrink-0 z-10 relative shadow-sm">
         <div className="flex items-center gap-3 sm:gap-1.5">
@@ -204,16 +206,18 @@ export const DirectoryCatalogMiniMockup = () => {
 };
 export const CertificationsMiniMockup = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (isHovered) {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(0);
+    }
+  }, [isHovered]);
 
   return (
-    <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
       <div
         className="flex h-full w-[200%] transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${activeIndex * 50}%)` }}
@@ -410,16 +414,18 @@ export const CertificationsMiniMockup = () => {
 };
 export const SimulationMiniMockup = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (isHovered) {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(0);
+    }
+  }, [isHovered]);
 
   return (
-    <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
       {/* Title Bar */}
       <div className="bg-white border-b border-slate-200 px-6 sm:px-3 py-4 sm:py-2 flex items-center justify-between shrink-0 z-10 relative shadow-sm">
         <div className="flex items-center gap-2 sm:gap-1.5">
@@ -620,16 +626,18 @@ export const SimulationMiniMockup = () => {
 };
 export const RemediationMiniMockup = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (isHovered) {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(0);
+    }
+  }, [isHovered]);
 
   return (
-    <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
       <div
         className="flex h-full w-[200%] transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${activeIndex * 50}%)` }}
@@ -865,16 +873,18 @@ export const RemediationMiniMockup = () => {
 
 export const RiskIntelMiniMockup = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (isHovered) {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(0);
+    }
+  }, [isHovered]);
 
   return (
-    <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
       <div
         className="flex h-full w-[200%] transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${activeIndex * 50}%)` }}
@@ -1159,16 +1169,18 @@ export const RiskIntelMiniMockup = () => {
 
 export const AccessTrackingMiniMockup = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (isHovered) {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(0);
+    }
+  }, [isHovered]);
 
   return (
-    <div className="w-full aspect-[16/10]  aspect-[16/10] bg-[#f8f9fa] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full aspect-[16/10]  aspect-[16/10] bg-[#f8f9fa] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
       <div
         className="flex h-full w-[200%] transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${activeIndex * 50}%)` }}
@@ -1806,16 +1818,18 @@ export const SafeguardsAuditMiniMockup = () => (
 
 export const ApprovalsRoutingMiniMockup = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (isHovered) {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(0);
+    }
+  }, [isHovered]);
 
   return (
-    <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-slate-50 rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-slate-50 rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
       <div
         className="flex h-full w-[200%] transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${activeIndex * 50}%)` }}
@@ -1932,8 +1946,8 @@ export const ApprovalsRoutingMiniMockup = () => {
                 <span className="text-[9.2px] sm:text-[6px] text-slate-500 leading-tight mb-auto">No activity found for this request.</span>
 
                 <div className="flex gap-2 mt-2">
-                  <button className="flex-1 bg-white border border-slate-200 text-slate-600 rounded py-1 flex items-center justify-center gap-1 text-[13.3px] sm:text-[6.8px] font-bold"><FileText className="w-2.5 h-2.5" /> Logs</button>
-                  <button className="flex-1 bg-blue-50 text-blue-600 rounded py-1 flex items-center justify-center gap-1 text-[13.3px] sm:text-[6.8px] font-bold"><Eye className="w-2.5 h-2.5" /> View Details</button>
+                  <button className="flex-1 text-slate-600 rounded py-1 flex items-center justify-center gap-1 text-[13.3px] sm:text-[6.8px] font-bold"> Logs</button>
+                  <button className="flex-1 text-blue-600  py-1 flex items-center justify-center gap-1 text-[13.3px] sm:text-[6.8px] font-bold">View Details</button>
                 </div>
               </div>
             </div>
@@ -1998,8 +2012,8 @@ export const ApprovalsRoutingMiniMockup = () => {
                   <span className="text-[12.7px] sm:text-[11px] font-bold text-slate-800">Configured Approvers</span>
                   <span className="text-[10.4px] sm:text-[7.7px] text-slate-500">Manage users who can approve requests on behalf of others.</span>
                 </div>
-                <button className="bg-indigo-600 text-white px-3 py-1.5 rounded flex items-center gap-1 text-[13.9px] sm:text-[7.7px] font-bold shadow-sm hover:bg-indigo-700">
-                  <Plus className="w-2.5 h-2.5" /> Add Approver
+                <button className="flex items-center gap-1 text-[13.9px] sm:text-[7.7px] font-bold">
+                  Add Approver
                 </button>
               </div>
 
@@ -2247,16 +2261,18 @@ export const VulnDashboardMiniMockup = () => (
 );
 export const PatchingMiniMockup = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (isHovered) {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(0);
+    }
+  }, [isHovered]);
 
   return (
-    <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
       <div
         className="flex h-full w-[200%] transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${activeIndex * 50}%)` }}
@@ -2437,16 +2453,18 @@ export const PatchingMiniMockup = () => {
 };
 export const ThreatDetectionMiniMockup = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (isHovered) {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(0);
+    }
+  }, [isHovered]);
 
   return (
-    <div className="w-full h-auto aspect-[16/10] bg-white rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-auto aspect-[16/10] bg-white rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
       <div
         className="flex h-full w-[200%] transition-transform duration-700 ease-in-out"
         style={{ transform: 'translateX(-' + (activeIndex * 50) + '%)' }}
@@ -2748,16 +2766,18 @@ export const ThreatDetectionMiniMockup = () => {
 
 export const ExpiryMiniMockup = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (isHovered) {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(0);
+    }
+  }, [isHovered]);
 
   return (
-    <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
       <div
         className="flex h-full w-[200%] transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${activeIndex * 50}%)` }}
@@ -2983,16 +3003,18 @@ export const ConfigDriftMiniMockup = () => (
 
 export const LiveThreatsMiniMockup = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (isHovered) {
+      setActiveIndex(1);
+    } else {
+      setActiveIndex(0);
+    }
+  }, [isHovered]);
 
   return (
-    <div className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-auto max-sm:aspect-auto sm:aspect-[16/10] bg-[#f8fafc] rounded-xl border border-slate-200 flex flex-col font-sans overflow-hidden shadow-sm relative">
       <div
         className="flex h-full w-[200%] transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${activeIndex * 50}%)` }}
