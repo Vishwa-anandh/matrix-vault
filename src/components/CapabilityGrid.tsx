@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 const capabilities = [
   {
     title: "Live, In-Flow SoD Checks",
-    description: "Risk is analyzed inside every create/assign/revoke step — not a separate batch job run after the fact.",
+    description: "Risk is analyzed inside every create/assign/revoke step — not a separate batch job run after the fact.",
     icon: ShieldCheck,
     badgeColor: "bg-transparent text-red-600 border-red-200",
     badge: "Real-time inspection",
@@ -46,7 +46,7 @@ const capabilities = [
   },
   {
     title: "AI Risk Intelligence",
-    description: "AI-generated risk scores, session summaries and executive summaries — not just raw logs.",
+    description: "AI-generated risk scores, session summaries and executive summaries — not just raw logs.",
     icon: BrainCircuit,
     badgeColor: "bg-transparent text-amber-700 border-amber-200",
     badge: "Behavioral scoring",
@@ -119,7 +119,7 @@ export function CapabilityGrid() {
                 </div>
 
                 <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
-                  <span>Matrix Vault core</span>
+                  <span>Matrixvault core</span>
                   <a href={`/features${item.hash}`} className="inline-flex items-center gap-1 text-red-600 hover:text-red-700 font-bold before:absolute before:inset-0">
                     Explore <ArrowRight className="w-3.5 h-3.5" />
                   </a>

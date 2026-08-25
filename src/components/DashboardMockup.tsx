@@ -14,7 +14,7 @@ export function DashboardMockup() {
           <div className="flex items-center gap-3 sm:gap-6 overflow-hidden h-full min-w-0">
             <div className="flex items-center gap-1.5 text-red-600 dark:text-red-500 font-bold shrink-0">
               <ShieldCheck className="w-5 h-5" />
-              <span className="hidden sm:block text-xs font-extrabold tracking-tight">Matrix vault</span>
+              <span className="hidden sm:block text-xs font-extrabold tracking-tight">MATRIXVAULT</span>
             </div>
             
             <div className="flex items-center h-full gap-3 sm:gap-4 text-slate-500 dark:text-slate-400 font-semibold text-[11px] overflow-hidden">

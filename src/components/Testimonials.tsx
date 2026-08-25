@@ -3,7 +3,7 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "Matrix Vault cut our SAP audit preparation time by over 80%. What used to take our compliance team three weeks is now a one-click report.",
+    quote: "MatrixVault cut our SAP audit preparation time by over 80%. What used to take our compliance team three weeks is now a one-click report.",
     author: "Fernanda Santos",
     role: "CISO",
     company: "Global Logistics Inc.",

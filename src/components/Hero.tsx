@@ -168,7 +168,7 @@ export function Hero() {
                 <br className="hidden lg:block" /> with Precision.
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
-                Matrix Vault streamlines access requests, monitors system health
+                Matrixvault streamlines access requests, monitors system health
                 in real-time, and automates Firefighter ID management with
                 AI-powered insights.
               </p>

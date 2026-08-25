@@ -19,7 +19,7 @@ export default defineConfig(() => {
       strictPort: false,
       proxy: {
         '/api': {
-          target: 'https://admin.matrixvault.ai',
+          target: 'https://admin.matrix vault.ai',
           changeOrigin: true,
           secure: true,
         },

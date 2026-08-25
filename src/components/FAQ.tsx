@@ -4,36 +4,36 @@ import { ChevronDown, HelpCircle, Sparkles } from 'lucide-react';
 
 export const faqs = [
   {
-    question: "How long does it take to deploy Matrix Vault into an existing SAP environment?",
-    answer: "Most enterprise deployments are completed within 2 to 4 weeks. Matrix Vault connects via standard SAP OData v2/v4 APIs and RFC connectors, requiring zero custom ABAP modifications to your S/4HANA or ECC 6.0 kernel."
+    question: "How long does it take to deploy Matrixvault into an existing SAP environment?",
+    answer: "Most enterprise deployments are completed within 2 to 4 weeks. Matrixvault connects via standard SAP OData v2/v4 APIs and RFC connectors, requiring zero custom ABAP modifications to your S/4HANA or ECC 6.0 kernel."
   },
   {
-    question: "Does Matrix Vault support managing Firefighter (FF) IDs and Emergency Access?",
-    answer: "Yes, Firefighter ID management is a core capability. Matrix Vault automates FF ID checkout, real-time T-Code session monitoring, and post-session AI log summarization—reducing manual review time by 90% while maintaining full audit trail visibility."
+    question: "Does Matrixvault support managing Firefighter (FF) IDs and Emergency Access?",
+    answer: "Yes, Firefighter ID management is a core capability. Matrixvault automates FF ID checkout, real-time T-Code session monitoring, and post-session AI log summarization— reducing manual review time by 90% while maintaining full audit trail visibility."
   },
   {
     question: "How does the AI Copilot assist administrators with SAP risk intelligence?",
     answer: "The AI Copilot converts raw SAP transaction logs (e.g., SE09, SE38, STMS) into plain-English behavioral risk narratives. It calculates a 0-100 risk score per Firefighter session and highlights high-risk T-Code executions automatically."
   },
   {
-    question: "How does Matrix Vault differ from traditional SAP GRC Access Control software?",
-    answer: "Traditional SAP GRC relies on batch reporting and offline analysis run days after access changes occur. Matrix Vault provides real-time, inline SoD conflict prevention in sub-200ms before authorization changes hit SAP Production, stopping unauthorized access pre-provisioning."
+    question: "How does Matrixvault differ from traditional SAP GRC Access Control software?",
+    answer: "Traditional SAP GRC relies on batch reporting and offline analysis run days after access changes occur. Matrixvault provides real-time, inline SoD conflict prevention in sub-200ms before authorization changes hit SAP Production, stopping unauthorized access pre-provisioning."
   },
   {
-    question: "Which SAP systems and versions are supported by Matrix Vault?",
-    answer: "Matrix Vault natively supports SAP S/4HANA (Cloud & On-Premise), SAP ERP 6.0 (ECC EHP 0-8), SAP BTP (Business Technology Platform), and SAP Solution Manager. It integrates seamlessly via RESTful OData services and SAP NetWeaver interfaces."
+    question: "Which SAP systems and versions are supported by Matrixvault?",
+    answer: "Matrixvault natively supports SAP S/4HANA (Cloud & On-Premise), SAP ERP 6.0 (ECC EHP 0-8), SAP BTP (Business Technology Platform), and SAP Solution Manager. It integrates seamlessly via RESTful OData services and SAP NetWeaver interfaces."
   },
   {
-    question: "What audit evidence and compliance reports does Matrix Vault generate?",
-    answer: "Matrix Vault automatically generates audit-ready PDF and XLSX reports for internal access reviews and audit preparation. Every report includes log verification timestamps and complete approver audit trails."
+    question: "What audit evidence and compliance reports does Matrixvault generate?",
+    answer: "Matrixvault automatically generates audit-ready PDF and XLSX reports for internal access reviews and audit preparation. Every report includes log verification timestamps and complete approver audit trails."
   },
   {
     question: "Is data encrypted and secure during SAP integration?",
-    answer: "Yes, all data in transit is encrypted using TLS 1.3/HTTPS, and data at rest utilizes AES-256 encryption. Matrix Vault operates on zero-trust principles, adhering to SAP Security Guidelines and GDPR data privacy standards without storing customer ERP transactional data."
+    answer: "Yes, all data in transit is encrypted using TLS 1.3/HTTPS, and data at rest utilizes AES-256 encryption. Matrixvault operates on zero-trust principles, adhering to SAP Security Guidelines and GDPR data privacy standards without storing customer ERP transactional data."
   },
   {
-    question: "Can Matrix Vault simulate role changes before modifying SAP Production roles?",
-    answer: "Yes, Matrix Vault includes an interactive SAP Role Simulator that allows security architects to model authorization changes and compare up to 100 SAP roles simultaneously to eliminate redundant T-Codes and SoD conflicts prior to transport."
+    question: "Can Matrixvault simulate role changes before modifying SAP Production roles?",
+    answer: "Yes, Matrixvault includes an interactive SAP Role Simulator that allows security architects to model authorization changes and compare up to 100 SAP roles simultaneously to eliminate redundant T-Codes and SoD conflicts prior to transport."
   }
 ];
 
@@ -54,7 +54,7 @@ export function FAQ() {
             Frequently Asked <span className="text-red-600">Questions</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed">
-            Everything you need to know about implementing Matrix Vault for SAP access governance, SoD risk prevention, and audit compliance.
+            Everything you need to know about implementing Matrixvault for SAP access governance, SoD risk prevention, and audit compliance.
           </p>
         </div>
 

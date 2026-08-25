@@ -152,7 +152,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
                 </div>
                 <div>
                   <h3 className="text-xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                    Login to Matrix Vault
+                    Login to Matrixvault
                   </h3>
                   <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
                     Enter your work email to access your workspace
@@ -236,7 +236,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
               </h3>
 
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed mb-6">
-                It looks like <span className="font-bold text-slate-900 dark:text-white">{email}</span> isn’t connected to an active Matrix Vault workspace yet. Request a demo to get started, or try signing in with another email.
+                It looks like <span className="font-bold text-slate-900 dark:text-white">{email}</span> isn’t connected to an active Matrixvault workspace yet. Request a demo to get started, or try signing in with another email.
               </p>
 
               <div className="space-y-3">
@@ -272,7 +272,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
               </h3>
 
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed mb-6">
-                It looks like <span className="font-bold text-slate-900 dark:text-white">{email}</span> isn’t connected to an active Matrix Vault workspace yet. Request a demo to get started, or try signing in with another email.
+                It looks like <span className="font-bold text-slate-900 dark:text-white">{email}</span> isn’t connected to an active Matrixvault workspace yet. Request a demo to get started, or try signing in with another email.
               </p>
 
               <div className="space-y-3">

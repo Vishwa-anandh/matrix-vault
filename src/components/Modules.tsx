@@ -317,8 +317,8 @@ export function Modules() {
       icon: Users,
       mockup: <DirectoryCatalogMiniMockup />,
       points: [
-        { t: "Role Lens — Side-by-Side Comparison", d: "Compare multiple SAP roles simultaneously using the Role Lens to see exactly which auth objects, fields, and T-codes differ across roles." },
-        { t: "Auth Object Deep Dive", d: "Browse all 151 authorization rows per role combination — filtered by Matched, Unmatched, Profile-Based, or Role-Based sources — with one-click source tracing." }
+        { t: "Role Lens — Side-by-Side Comparison", d: "Compare multiple SAP roles simultaneously using the Role Lens to see exactly which auth objects, fields, and T-codes differ across roles." },
+        { t: "Auth Object Deep Dive", d: "Browse all 151 authorization rows per role combination — filtered by Matched, Unmatched, Profile-Based, or Role-Based sources — with one-click source tracing." }
       ]
     },
     {
@@ -344,7 +344,7 @@ export function Modules() {
       icon: Wrench,
       mockup: <RemediationMiniMockup />,
       points: [
-        { t: "Guided Remediation", d: "Workflows for resolving an identified conflict — reassign, restrict, or mitigate — with every action logged." },
+        { t: "Guided Remediation", d: "Workflows for resolving an identified conflict — reassign, restrict, or mitigate — with every action logged." },
         { t: "Mitigation Control Tracking", d: "Document and track compensating controls against accepted risks, with owners, evidence, and review dates." }
       ]
     },
@@ -366,7 +366,7 @@ export function Modules() {
       mockup: <AccessTrackingMiniMockup />,
       points: [
         { t: "One-Click Emergency Access", d: "Request elevated or emergency access in seconds, with the business justification captured up front." },
-        { t: "Request Tracking", d: "Track the status of every request you've submitted — pending, approved, active, or expired." }
+        { t: "Request Tracking", d: "Track the status of every request you've submitted — pending, approved, active, or expired." }
       ]
     },
     {
@@ -384,7 +384,7 @@ export function Modules() {
       icon: Eye,
       mockup: <SessionMonitoringMiniMockup />,
       points: [
-        { t: "Live Session Monitoring", d: "A live view of every active Firefighter session in progress — who's using it and for how long." },
+        { t: "Live Session Monitoring", d: "A live view of every active Firefighter session in progress — who's using it and for how long." },
         { t: "Tiered Approver Assignment", d: "Designate senior approvers for your most sensitive access tiers for highest scrutiny." }
       ]
     },
@@ -643,7 +643,7 @@ export function Modules() {
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
               Deep-Dive into <br className="md:hidden" />
-              <span className="text-red-600 dark:text-red-500">Matrix Vault.</span>
+              <span className="text-red-600 dark:text-red-500">Matrixvault.</span>
             </h2>
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed max-w-2xl mx-auto">
               Explore the core modules that power our full-stack governance platform, providing unmatched visibility and control over your SAP landscape.
@@ -667,7 +667,11 @@ export function Modules() {
                 </div>
                 <h4 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">Unified Risk Visibility</h4>
                 <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed">
-                  Role Radar gives SAP security teams a single, continuously updated picture of who has access to what, plus the governance tools to keep that access clean over time. Instead of reconstructing access after the fact, your team sees risk as it forms.
+                  Role Radar gives SAP security teams a single, continuously updated view of who has access to what across the SAP landscape. It brings roles, permissions, and access relationships together, making it easier to identify unnecessary or risky access as it emerges.
+                </p>
+
+                <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed mt-4">
+                  With built-in governance, teams can continuously monitor access changes and keep permissions clean over time. Instead of reconstructing access after an issue occurs, Role Radar helps teams see and manage risk as it forms.
                 </p>
               </div>
               <div className="lg:w-1/2 bg-slate-50 lg:bg-transparent dark:bg-slate-800/30 lg:dark:bg-transparent border-t lg:border-none border-slate-200 dark:border-slate-700/60 flex flex-col justify-end pt-12 px-6 sm:px-12 lg:pt-0 lg:px-0 relative overflow-hidden lg:overflow-visible">
@@ -724,7 +728,11 @@ export function Modules() {
                 </div>
                 <h4 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">Governed Elevated Access</h4>
                 <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed">
-                  Firefighter gives teams a controlled way to grant, monitor, and document temporary elevated access. Speed and control stop being a trade-off: a request can be approved in minutes and still leave a complete record behind.
+                  Firefighter gives teams a controlled way to grant, monitor, and document temporary elevated access. Security teams can respond quickly to operational needs while maintaining visibility and control over sensitive permissions, with each access request structured and reviewable.
+                </p>
+
+                <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed mt-4">
+                  Requests can be approved within minutes, while every elevated access session is properly documented. This ensures teams can maintain strong governance and accountability without slowing down critical workflows, leaving a complete record of who requested, approved, and used the access.
                 </p>
               </div>
               <div className="lg:w-1/2 bg-slate-50 lg:bg-transparent dark:bg-slate-800/30 lg:dark:bg-transparent border-t lg:border-none border-slate-200 dark:border-slate-700/60 flex flex-col justify-end pt-12 px-2 sm:px-8 lg:pt-0 lg:px-0 relative overflow-hidden lg:overflow-visible">
@@ -781,7 +789,11 @@ export function Modules() {
                 </div>
                 <h4 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">Continuous Posture Management</h4>
                 <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed">
-                  Vulnerabilities continuously scans your SAP landscape for the misconfigurations, missing patches, and exposed services that turn into real incidents. What used to require a point-in-time security assessment now runs continuously in the background.
+                  Vulnerabilities continuously scans your SAP landscape to identify misconfigurations, missing patches, and exposed services that could create security risks. Teams get continuous visibility into vulnerabilities across the environment, helping them identify and address issues before they become real incidents.
+                </p>
+
+                <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed mt-4">
+                  Instead of relying on point-in-time security assessments, Vulnerabilities continuously monitors your SAP environment in the background. This helps security teams stay ahead of emerging risks, maintain a stronger security posture, and keep the landscape protected over time.
                 </p>
               </div>
               <div className="lg:w-1/2 bg-slate-50 lg:bg-transparent dark:bg-slate-800/30 lg:dark:bg-transparent border-t lg:border-none border-slate-200 dark:border-slate-700/60 flex flex-col justify-end pt-12 px-4 sm:px-8 lg:pt-0 lg:px-0 relative overflow-hidden lg:overflow-visible">

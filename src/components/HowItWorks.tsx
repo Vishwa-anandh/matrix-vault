@@ -10,7 +10,7 @@ const steps = [
   {
     icon: ShieldAlert,
     title: "2. Mitigate or Remediate",
-    description: "Action findings instantly — revoke conflicting access, lock the account, or attach a compensating control without leaving the findings list."
+    description: "Action findings instantly — revoke conflicting access, lock the account, or attach a compensating control without leaving the findings list."
   },
   {
     icon: Layout,
@@ -30,7 +30,7 @@ export function HowItWorks() {
              viewport={{ once: true }}
           >
              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
-               How Matrix Vault Works
+               How Matrixvault Works
              </h2>
              <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed">
                A streamlined, three-step process that eliminates bottlenecks without compromising on enterprise security.

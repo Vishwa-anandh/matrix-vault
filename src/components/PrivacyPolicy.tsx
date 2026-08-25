@@ -5,8 +5,8 @@ export function PrivacyPolicy() {
   return (
     <>
       <Seo
-        title="Privacy Policy | MatrixVault"
-        description="Privacy Policy for using the MatrixVault website, software platform, applications, and services."
+        title="Privacy Policy | Matrixvault"
+        description="Privacy Policy for using the Matrixvault website, software platform, applications, and services."
         path="/privacy-policy"
       />
       <div className="pt-24 pb-16 bg-slate-50 dark:bg-slate-950 min-h-screen">
@@ -22,7 +22,7 @@ export function PrivacyPolicy() {
             >
               Privacy Policy
             </motion.h1>
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -30,7 +30,7 @@ export function PrivacyPolicy() {
             >
               <div><span className="font-semibold text-slate-700 dark:text-slate-300">Effective Date:</span> 31 Jul 2026</div>
               <div><span className="font-semibold text-slate-700 dark:text-slate-300">Last Updated:</span> 03 Aug 2026</div>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
@@ -50,7 +50,7 @@ export function PrivacyPolicy() {
                   <a href="#data-security" className="pl-4 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 hover:border-red-600 dark:hover:border-red-500 transition-colors border-l border-transparent -ml-px py-1">Data Security</a>
                   <a href="#data-retention" className="pl-4 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 hover:border-red-600 dark:hover:border-red-500 transition-colors border-l border-transparent -ml-px py-1">Data Retention</a>
                   <a href="#your-privacy-rights" className="pl-4 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 hover:border-red-600 dark:hover:border-red-500 transition-colors border-l border-transparent -ml-px py-1">Your Privacy Rights</a>
-                  <a href="#children-s-privacy" className="pl-4 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 hover:border-red-600 dark:hover:border-red-500 transition-colors border-l border-transparent -ml-px py-1">Children’s Privacy</a>
+                  <a href="#children-s-privacy" className="pl-4 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 hover:border-red-600 dark:hover:border-red-500 transition-colors border-l border-transparent -ml-px py-1">Children's Privacy</a>
                   <a href="#third-party-links" className="pl-4 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 hover:border-red-600 dark:hover:border-red-500 transition-colors border-l border-transparent -ml-px py-1">Third-Party Links</a>
                   <a href="#data-breach-and-security-incidents" className="pl-4 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 hover:border-red-600 dark:hover:border-red-500 transition-colors border-l border-transparent -ml-px py-1">Data Breach and Security Incidents</a>
                   <a href="#changes-to-this-privacy-policy" className="pl-4 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 hover:border-red-600 dark:hover:border-red-500 transition-colors border-l border-transparent -ml-px py-1">Changes to This Privacy Policy</a>
@@ -69,10 +69,10 @@ export function PrivacyPolicy() {
               >
 
                 <h2 id="scope" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">1. Scope</h2>
-                <p>This Privacy Policy applies to personal data processed through the MatrixVault website, software platform, applications, services, and related offerings (“Services”) provided by Maitsys Inc. (“Maitsys,” “MatrixVault,” “we,” “our,” or “us”).</p>
+                <p>This Privacy Policy applies to personal data processed through the Matrixvault website, software platform, applications, services, and related offerings (“Services”) provided by Maitsys Inc. (“Maitsys,” “Matrixvault,” “we,” “our,” or “us”).</p>
 
                 <h2 id="information-we-may-collect" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">2. Information We May Collect</h2>
-                <p>We may collect and process various types of information, including personal data, depending on how you interact with MatrixVault.</p>
+                <p>We may collect and process various types of information, including personal data, depending on how you interact with Matrixvault.</p>
 
                 <p className="font-semibold text-slate-900 dark:text-white mt-6">Account Information</p>
                 <p>This may include:</p>
@@ -83,7 +83,7 @@ export function PrivacyPolicy() {
                   <li>Job title</li>
                   <li>Username</li>
                   <li>Account identifiers</li>
-                  <li>Assigned MatrixVault roles</li>
+                  <li>Assigned Matrixvault roles</li>
                 </ul>
 
                 <p className="font-semibold text-slate-900 dark:text-white mt-6">Authentication and Security Information</p>
@@ -112,7 +112,7 @@ export function PrivacyPolicy() {
                 </ul>
 
                 <p className="font-semibold text-slate-900 dark:text-white mt-6">Customer Enterprise and SAP Data</p>
-                <p>When authorized by a customer, MatrixVault may process information obtained from connected enterprise systems.</p>
+                <p>When authorized by a customer, Matrixvault may process information obtained from connected enterprise systems.</p>
                 <p>Depending on the subscribed modules, this may include:</p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 marker:text-red-500">
                   <li>SAP user information</li>
@@ -128,13 +128,13 @@ export function PrivacyPolicy() {
                   <li>Audit information</li>
                   <li>Technical system metadata</li>
                 </ul>
-                <p>The specific information processed depends on customer configuration and enabled MatrixVault functionality.</p>
+                <p>The specific information processed depends on customer configuration and enabled Matrixvault functionality.</p>
 
                 <h2 id="how-we-use-information" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">3. How We Use Information
                 </h2>
                 <p>We may process information to:</p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 marker:text-red-500">
-                  <li>Provide MatrixVault services.</li>
+                  <li>Provide Matrixvault services.</li>
                   <li>Authenticate users.</li>
                   <li>Enforce RBAC permissions.</li>
                   <li>Connect authorized SAP systems.</li>
@@ -146,7 +146,7 @@ export function PrivacyPolicy() {
                   <li>Send security and operational notifications.</li>
                   <li>Provide technical support.</li>
                   <li>Diagnose service problems.</li>
-                  <li>Protect MatrixVault against fraud and cyber threats.</li>
+                  <li>Protect Matrixvault against fraud and cyber threats.</li>
                   <li>Maintain audit trails.</li>
                   <li>Improve platform functionality.</li>
                   <li>Meet legal and regulatory obligations.</li>
@@ -155,19 +155,19 @@ export function PrivacyPolicy() {
 
                 <h2 id="customer-controlled-data" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">4. Customer-Controlled Data
                 </h2>
-                <p>For enterprise customers, the customer generally determines what authorized data is made available to MatrixVault and why it is processed.</p>
+                <p>For enterprise customers, the customer generally determines what authorized data is made available to Matrixvault and why it is processed.</p>
                 <p>Where applicable, Maitsys processes such information on behalf of the customer according to contractual instructions.</p>
-                <p>Organizations using MatrixVault are responsible for ensuring that they have an appropriate legal basis and authority to provide data to MatrixVault.</p>
+                <p>Organizations using Matrixvault are responsible for ensuring that they have an appropriate legal basis and authority to provide data to Matrixvault.</p>
 
                 <h2 id="ai-features" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">5. AI Features
                 </h2>
-                <p>Where AI functionality is enabled, MatrixVault may process relevant authorized information to generate security explanations, summaries, recommendations, risk insights, or other requested outputs.</p>
+                <p>Where AI functionality is enabled, Matrixvault may process relevant authorized information to generate security explanations, summaries, recommendations, risk insights, or other requested outputs.</p>
                 <p>Access controls should be applied so AI functionality can retrieve only information the user is authorized to access.</p>
                 <p>Maitsys will describe material changes to the handling of customer information for AI functionality through applicable product documentation, contractual terms, or privacy notices.</p>
 
                 <h2 id="cookies-and-similar-technologies" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">6. Cookies and Similar Technologies
                 </h2>
-                <p>The MatrixVault website may use cookies or similar technologies for:</p>
+                <p>The Matrixvault website may use cookies or similar technologies for:</p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 marker:text-red-500">
                   <li>Authentication</li>
                   <li>Security</li>
@@ -181,7 +181,7 @@ export function PrivacyPolicy() {
                 <h2 id="sharing-of-information" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">7. Sharing of Information
                 </h2>
                 <p>Maitsys does not sell personal data.</p>
-                <p>Information may be shared with authorized service providers and subprocessors where necessary to operate MatrixVault, such as:</p>
+                <p>Information may be shared with authorized service providers and subprocessors where necessary to operate Matrixvault, such as:</p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 marker:text-red-500">
                   <li>Cloud infrastructure providers</li>
                   <li>Authentication providers</li>
@@ -196,7 +196,7 @@ export function PrivacyPolicy() {
 
                 <h2 id="international-data-transfers" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">8. International Data Transfers
                 </h2>
-                <p>MatrixVault may use infrastructure or service providers operating in different countries.</p>
+                <p>Matrixvault may use infrastructure or service providers operating in different countries.</p>
                 <p>Where personal data is transferred internationally, Maitsys will use appropriate contractual, technical, organizational, and legal safeguards as required by applicable law.</p>
                 <p>Customer-specific data residency requirements may be addressed through the applicable customer agreement.</p>
 
@@ -232,7 +232,7 @@ export function PrivacyPolicy() {
 
                 <h2 id="your-privacy-rights" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">11. Your Privacy Rights
                 </h2>
-                <p>Depending on applicable law and your relationship with MatrixVault, individuals may have rights relating to their personal data, including rights to:</p>
+                <p>Depending on applicable law and your relationship with Matrixvault, individuals may have rights relating to their personal data, including rights to:</p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 marker:text-red-500">
                   <li>Request access to personal data.</li>
                   <li>Request correction of inaccurate information.</li>
@@ -241,16 +241,16 @@ export function PrivacyPolicy() {
                   <li>Raise concerns or complaints.</li>
                   <li>Exercise other rights available under applicable data protection law.</li>
                 </ul>
-                <p>Where MatrixVault processes personal data on behalf of an enterprise customer, requests concerning that data may need to be submitted directly to the customer’s organization.</p>
+                <p>Where Matrixvault processes personal data on behalf of an enterprise customer, requests concerning that data may need to be submitted directly to the customer’s organization.</p>
 
                 <h2 id="children-s-privacy" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">12. Children’s Privacy
                 </h2>
-                <p>MatrixVault is an enterprise cybersecurity and governance platform and is not intended for use by children.</p>
-                <p>We do not knowingly design MatrixVault services for the collection of children’s personal data.</p>
+                <p>Matrixvault is an enterprise cybersecurity and governance platform and is not intended for use by children.</p>
+                <p>We do not knowingly design Matrixvault services for the collection of children’s personal data.</p>
 
                 <h2 id="third-party-links" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">13. Third-Party Links
                 </h2>
-                <p>The MatrixVault website may contain links to third-party websites or services.</p>
+                <p>The Matrixvault website may contain links to third-party websites or services.</p>
                 <p>Maitsys is not responsible for the privacy practices of third-party websites. Users should review the applicable privacy policies before providing personal information.</p>
 
                 <h2 id="data-breach-and-security-incidents" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">14. Data Breach and Security Incidents
@@ -260,7 +260,7 @@ export function PrivacyPolicy() {
 
                 <h2 id="changes-to-this-privacy-policy" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">15. Changes to This Privacy Policy
                 </h2>
-                <p>We may update this Privacy Policy to reflect changes in MatrixVault functionality, technology, business practices, or applicable law.</p>
+                <p>We may update this Privacy Policy to reflect changes in Matrixvault functionality, technology, business practices, or applicable law.</p>
                 <p>Material updates will be reflected through an updated “Last Updated” date and, where appropriate, additional notification.</p>
 
                 <h2 id="contact-and-privacy-requests" className="text-2xl font-bold mt-12 mb-6 scroll-mt-24">16. Contact and Privacy Requests

@@ -53,7 +53,7 @@ export function Seo({ title, description, path, canonicalUrl, keywords, noindex,
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={ogImage} />
-      <meta name="twitter:creator" content="@MatrixVault" />
+      <meta name="twitter:creator" content="@Matrix Vault" />
 
       {jsonLd && (
         <script type="application/ld+json">

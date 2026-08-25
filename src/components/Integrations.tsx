@@ -17,7 +17,7 @@ export function Integrations() {
               Deep, native integration with your existing SAP landscape.
             </h2>
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg mb-8 font-medium leading-relaxed">
-              No more manual syncs or spreadsheet exports. Matrix Vault connects directly to your SAP ERP, S/4HANA, and GRC systems to provide real-time access governance and automated provisioning.
+              No more manual syncs or spreadsheet exports. Matrixvault connects directly to your SAP ERP, S/4HANA, and GRC systems to provide real-time access governance and automated provisioning.
             </p>
             
             <div className="space-y-4 mb-8">

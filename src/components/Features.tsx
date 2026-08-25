@@ -39,7 +39,7 @@ export function Features() {
               Every Layer of <span className="text-red-600">SAP Risk.</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed">
-              From access requests to audit reports, Matrix Vault watches, checks, and explains SAP risk in real time — so nothing reaches production unreviewed.
+              From access requests to audit reports, Matrixvault watches, checks, and explains SAP risk in real time — so nothing reaches production unreviewed.
             </p>
           </motion.div>
         </div>
@@ -66,7 +66,7 @@ export function Features() {
                 Risk-Aware by Design
               </h3>
               <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed mb-6">
-                Every access action runs SoD analysis inline. It’s a gate built into the transaction itself—not a separate report run days later.
+                Every access action runs SoD analysis inline. It’s a gate built into the transaction itself—not a separate report run days later.
               </p>
 
               {/* Side-by-Side Comparison Box */}
@@ -81,7 +81,7 @@ export function Features() {
                 </div>
                 <div className="bg-red-50/70 border border-red-200/90 rounded-2xl p-4">
                   <div className="flex items-center gap-1.5 mb-2 text-red-600 font-bold text-xs">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-red-600" /> Matrix Vault
+                    <CheckCircle2 className="w-3.5 h-3.5 text-red-600" /> Matrixvault
                   </div>
                   <p className="text-xs font-bold text-slate-900 leading-snug">
                     Guided wizard with built-in inline SoD checks.
@@ -188,7 +188,7 @@ export function Features() {
                 AI Risk Narratives
               </h3>
               <p className="text-slate-600 text-xs font-medium leading-relaxed mb-4">
-                Firefighter sessions come with AI-written summaries alongside a 0–100 risk score, turning raw logs into insights.
+                Firefighter sessions come with AI-written summaries alongside a 0—œ100 risk score, turning raw logs into insights.
               </p>
 
               <div className="bg-white border border-slate-200 rounded-xl p-3 flex items-center justify-between">

@@ -67,8 +67,8 @@ function Home() {
   return (
     <>
       <Seo
-        title="Matrix Vault — Modern SAP Access Governance & SoD Risk Management"
-        description="Matrix Vault is a lightweight, OData-based SAP access governance layer delivering real-time, in-flow Segregation of Duties (SoD) analysis, AI-assisted risk intelligence, and audit-ready reporting — a modern alternative to traditional SAP GRC."
+        title="Matrix Vault - Modern SAP Access Governance & SoD Risk Management"
+        description="Matrix Vault is a lightweight, OData-based SAP access governance layer delivering real-time, in-flow Segregation of Duties (SoD) analysis, AI-assisted risk intelligence, and audit-ready reporting — a modern alternative to traditional SAP GRC."
         keywords="SAP GRC alternative, SAP Access Governance, SoD Risk Management, Segregation of Duties, SAP Firefighter, SAP Compliance, AI Risk Intelligence"
         path="/"
         jsonLd={[
@@ -81,10 +81,10 @@ function Home() {
             logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` },
             contactPoint: {
               '@type': 'ContactPoint',
-              email: 'contact@matrixvault.com',
+              email: 'contact@matrix vault.com',
               contactType: 'customer service',
             },
-            sameAs: ['https://twitter.com/MatrixVault', 'https://www.linkedin.com/company/matrixvault'],
+            sameAs: ['https://twitter.com/Matrix Vault', 'https://www.linkedin.com/company/matrix vault'],
           },
           {
             '@context': 'https://schema.org',
@@ -158,7 +158,7 @@ function HowItWorksPage() {
     <>
       <Seo
         title="How It Works — Deploy Matrix Vault in Weeks | Matrix Vault"
-        description="See how Matrix Vault deploys into your SAP landscape in 2-4 weeks: model roles before you modify, mitigate findings instantly, and get a one-click audit trail — with native SAP ERP, S/4HANA, and GRC integrations."
+        description="See how Matrix Vault deploys into your SAP landscape in 2-4 weeks: model roles before you modify, mitigate findings instantly, and get a one-click audit trail — with native SAP ERP, S/4HANA, and GRC integrations."
         path="/how-it-works"
       />
       <div className="pt-20">
@@ -230,7 +230,7 @@ function NotFoundPage() {
   return (
     <>
       <Seo
-        title="404 - Page Not Found | Matrix Vault"
+        title="404 - Page Not Found | Matrixvault"
         description="The page you are looking for does not exist."
         noindex
       />

@@ -237,7 +237,7 @@ export function RiskIntelligenceDashboard() {
                     {trend.map((h, i) => (
                       <div
                         key={i}
-                        className="w-full bg-slate-100 dark:bg-slate-800 rounded-t relative overflow-hidden"
+                        className="w-full h-full bg-slate-100 dark:bg-slate-800 rounded-t relative overflow-hidden"
                       >
                         <motion.div
                           initial={{ height: 0 }}

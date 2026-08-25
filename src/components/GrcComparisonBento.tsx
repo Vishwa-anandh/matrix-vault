@@ -21,10 +21,10 @@ const bentoItems = [
     id: 'firefighter',
     domain: 'Emergency Access',
     title: 'Firefighter Emergency Access',
-    badge: 'AI Risk Score 0–100',
+    badge: 'AI Risk Score 0—œ100',
     icon: Flame,
     matrixVaultTitle: 'AI-scored sessions with live revoke',
-    matrixVaultDesc: 'Firefighter requests carry an AI Risk Assessment score (0–100) per session with a plain-language summary of what the user actually did, plus live session revoke.',
+    matrixVaultDesc: 'Firefighter requests carry an AI Risk Assessment score (0—œ100) per session with a plain-language summary of what the user actually did, plus live session revoke.',
     matrixPoints: ['Behavioral risk scoring', 'Live session kill switch', 'AI executive summaries'],
     legacyTitle: 'Standard emergency logs',
     legacyDesc: 'Emergency Access Management logs are available, but AI-generated behavioral risk scoring of sessions is not a standard capability.',
@@ -50,7 +50,7 @@ const bentoItems = [
     badge: '6-7 Step Wizard',
     icon: Zap,
     matrixVaultTitle: 'Guided wizard with inline SoD',
-    matrixVaultDesc: 'Guided 6–7 step wizard with SoD acknowledgement built directly into the flow.',
+    matrixVaultDesc: 'Guided 6—œ7 step wizard with SoD acknowledgement built directly into the flow.',
     matrixPoints: ['Guided 6-7 step workflow', 'Inline SoD acknowledgement'],
     legacyTitle: 'Complex workflow routing',
     legacyDesc: 'Access requests typically routed through configurable workflows (MSMP/BRF+); risk analysis is often a separate step.',
@@ -156,10 +156,10 @@ export function GrcComparisonBento() {
               <span>Platform comparison</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight leading-tight">
-              Matrix Vault <span className="text-red-600">vs. Traditional SAP GRC</span>
+              Matrixvault <span className="text-red-600">vs. Traditional SAP GRC</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed">
-              Discover how Matrix Vault's modern OData platform transforms SAP governance across all 7 core domains.
+              Discover how Matrixvault's modern OData platform transforms SAP governance across all 7 core domains.
             </p>
           </motion.div>
         </div>
@@ -172,22 +172,22 @@ export function GrcComparisonBento() {
             <div className="col-span-4 p-6 lg:p-8 flex items-end">
               <h3 className="text-sm font-extrabold text-slate-400 tracking-wider">Feature & Capability</h3>
             </div>
-            <div className="col-span-4 p-6 lg:p-8 bg-red-50/50 border-x border-red-100/50 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-red-100 rounded-full blur-[40px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
-              <div className="relative z-10">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-red-200 text-red-600 text-[10px] font-bold mb-3 shadow-sm">
-                  <Shield className="w-3.5 h-3.5" /> Modern OData
-                </div>
-                <h3 className="text-xl font-extrabold text-red-600 tracking-tight">Matrix Vault</h3>
-                <p className="text-xs text-red-700/70 font-semibold mt-1">Real-time inline prevention</p>
-              </div>
-            </div>
-            <div className="col-span-4 p-6 lg:p-8 bg-slate-50/50 border-r border-slate-200/50">
+            <div className="col-span-4 p-6 lg:p-8 bg-slate-50/50 border-x border-slate-200/50">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-500 text-[10px] font-bold mb-3 shadow-sm">
                 <XCircle className="w-3.5 h-3.5" /> Legacy ABAP
               </div>
               <h3 className="text-xl font-extrabold text-slate-900 tracking-tight">Traditional SAP GRC</h3>
               <p className="text-xs text-slate-500 font-semibold mt-1">Batch-based detection</p>
+            </div>
+            <div className="col-span-4 p-6 lg:p-8 bg-red-50/50 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-red-100 rounded-full blur-[40px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+              <div className="relative z-10">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-red-200 text-red-600 text-[10px] font-bold mb-3 shadow-sm">
+                  <Shield className="w-3.5 h-3.5" /> Modern OData
+                </div>
+                <h3 className="text-xl font-extrabold text-red-600 tracking-tight">Matrixvault</h3>
+                <p className="text-xs text-red-700/70 font-semibold mt-1">Real-time inline prevention</p>
+              </div>
             </div>
           </div>
 
@@ -203,7 +203,7 @@ export function GrcComparisonBento() {
                   className={`grid grid-cols-1 lg:grid-cols-12 transition-colors duration-300 hover:bg-slate-50/50 group ${!isLast ? 'border-b border-slate-100' : ''}`}
                 >
                   {/* Feature Cell */}
-                  <div className="col-span-1 lg:col-span-4 p-6 lg:p-8 flex flex-col justify-center border-b lg:border-b-0 border-slate-100">
+                  <div className="col-span-1 lg:col-span-4 p-6 lg:p-8 flex flex-col justify-center border-b lg:border-b-0 border-slate-100 relative">
                     <div className="flex items-center gap-3 mb-3 lg:mb-4">
                       <div className="p-2.5 bg-slate-100 text-slate-600 rounded-xl shrink-0 group-hover:scale-105 group-hover:bg-red-50 group-hover:text-red-600 transition-all">
                         <Icon className="w-5 h-5" />
@@ -211,30 +211,13 @@ export function GrcComparisonBento() {
                       <span className="text-[11px] font-extrabold text-slate-400 tracking-wide">{item.domain}</span>
                     </div>
                     <h4 className="text-lg font-extrabold text-slate-900 leading-tight mb-2">{item.title}</h4>
-                    <Link to="/features" className="inline-flex items-center gap-1 text-xs font-bold text-red-600 hover:text-red-700 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                    <Link to="/features" className="absolute bottom-6 right-6 lg:bottom-8 lg:right-8 inline-flex items-center gap-1 text-xs font-bold text-red-600 hover:text-red-700 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
                       Explore <ArrowRight className="w-3 h-3" />
                     </Link>
                   </div>
 
-                  {/* Matrix Vault Cell */}
-                  <div className="col-span-1 lg:col-span-4 p-6 lg:p-8 bg-red-50/30 lg:border-x lg:border-red-100/50 border-b lg:border-b-0 border-red-100/50 flex flex-col justify-center">
-                    <div className="lg:hidden inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-600 text-[10px] font-bold mb-3 shadow-xs w-fit">
-                      <Shield className="w-3.5 h-3.5" /> Matrix Vault
-                    </div>
-                    <h5 className="text-sm font-extrabold text-slate-900 mb-2">{item.matrixVaultTitle}</h5>
-                    <p className="text-xs text-slate-600 leading-relaxed mb-4">{item.matrixVaultDesc}</p>
-                    <div className="space-y-1.5 mt-auto">
-                      {item.matrixPoints.map((point, pIdx) => (
-                        <div key={pIdx} className="flex items-start gap-2 text-xs font-semibold text-slate-700">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-red-600 shrink-0 mt-0.5" />
-                          <span>{point}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
                   {/* Legacy GRC Cell */}
-                  <div className="col-span-1 lg:col-span-4 p-6 lg:p-8 flex flex-col justify-center bg-slate-50/30 lg:border-r lg:border-slate-100">
+                  <div className="col-span-1 lg:col-span-4 p-6 lg:p-8 flex flex-col justify-center bg-slate-50/30 lg:border-x lg:border-slate-200/50 border-b lg:border-b-0 border-slate-100">
                     <div className="lg:hidden inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-[10px] font-bold mb-3 shadow-xs w-fit">
                       <XCircle className="w-3.5 h-3.5" /> Traditional SAP GRC
                     </div>
@@ -244,6 +227,23 @@ export function GrcComparisonBento() {
                       {item.legacyPoints.map((point, pIdx) => (
                         <div key={pIdx} className="flex items-start gap-2 text-xs font-semibold text-slate-500">
                           <XCircle className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                          <span>{point}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* MatrixVault Cell */}
+                  <div className="col-span-1 lg:col-span-4 p-6 lg:p-8 bg-red-50/30 border-b lg:border-b-0 border-red-100/50 flex flex-col justify-center">
+                    <div className="lg:hidden inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-600 text-[10px] font-bold mb-3 shadow-xs w-fit">
+                      <Shield className="w-3.5 h-3.5" /> Matrixvault
+                    </div>
+                    <h5 className="text-sm font-extrabold text-slate-900 mb-2">{item.matrixVaultTitle}</h5>
+                    <p className="text-xs text-slate-600 leading-relaxed mb-4">{item.matrixVaultDesc}</p>
+                    <div className="space-y-1.5 mt-auto">
+                      {item.matrixPoints.map((point, pIdx) => (
+                        <div key={pIdx} className="flex items-start gap-2 text-xs font-semibold text-slate-700">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-red-600 shrink-0 mt-0.5" />
                           <span>{point}</span>
                         </div>
                       ))}

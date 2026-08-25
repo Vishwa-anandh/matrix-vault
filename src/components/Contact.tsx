@@ -156,7 +156,7 @@ export function Contact() {
                 </div>
                 <div className="min-w-0">
                   <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Email Us</h3>
-                  <p className="text-slate-600 dark:text-slate-400 break-words">contact@maitsys.com</p>
+                  <a href="mailto:contact@maitsys.com" className="text-slate-600 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors break-words">contact@maitsys.com</a>
                 </div>
               </div>
 
@@ -166,7 +166,7 @@ export function Contact() {
                 </div>
                 <div className="min-w-0">
                   <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Call Us</h3>
-                  <p className="text-slate-600 dark:text-slate-400">+1 (978) 472-2177</p>
+                  <a href="tel:+19784722177" className="text-slate-600 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors inline-block">+1 (978) 472-2177</a>
                 </div>
               </div>
 

@@ -50,7 +50,7 @@ export function Comparison() {
               One Platform. <span className="text-red-600">Every Layer of SAP Risk.</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed max-w-3xl mx-auto">
-              From access requests to audit reports, Matrix Vault watches, checks, and explains SAP risk in real time — so nothing reaches production unreviewed.
+              From access requests to audit reports, Matrixvault watches, checks, and explains SAP risk in real time — so nothing reaches production unreviewed.
             </p>
           </motion.div>
         </div>
@@ -73,7 +73,7 @@ export function Comparison() {
                 Risk-Aware Access & Pre-Provisioning Control
               </h3>
               <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed">
-                Every access request executes inline SoD conflict detection before assignment. It’s an active safety gate built into the transaction pipeline itself—eliminating post-audit remediation cycles.
+                Every access request executes inline SoD conflict detection before assignment. It’s an active safety gate built into the transaction pipeline itself—eliminating post-audit remediation cycles.
               </p>
 
               <div className="flex items-center gap-4 text-xs font-bold text-slate-700 pt-2">
@@ -188,7 +188,7 @@ export function Comparison() {
                 AI-Written Firefighter Log Summaries
               </h3>
               <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed mb-5">
-                Matrix Vault converts raw Firefighter session logs into plain-English behavioral narratives paired with a 0-100 risk score.
+                Matrixvault converts raw Firefighter session logs into plain-English behavioral narratives paired with a 0-100 risk score.
               </p>
 
               {/* AI Narrative Preview Box */}

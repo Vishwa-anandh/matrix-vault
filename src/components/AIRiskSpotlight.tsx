@@ -32,7 +32,7 @@ export function AIRiskSpotlight() {
               From Raw Logs to <span className="text-red-600">AI Risk Intelligence</span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg font-medium leading-relaxed">
-              Matrix Vault translates cryptic SAP logs into plain-English narratives, giving non-technical stakeholders clear visibility into Firefighter sessions.
+              Matrixvault translates cryptic SAP logs into plain-English narratives, giving non-technical stakeholders clear visibility into Firefighter sessions.
             </p>
           </motion.div>
         </div>
